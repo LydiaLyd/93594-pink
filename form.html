@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>HTML Academy: Пинк</title>
+    <!-- <link href="css/style.min.css" rel="stylesheet"> -->
+  </head>
+  <body>
+
+
+
+    <header class="page-header">
+      <div class="page-header__navbar">
+        <div class="page-header__navbar-header">
+          <div class="page-header__navbar-header-inner">
+            <div class="page-header__logo-xs">
+              <a class="page-header__logo-link" href="index.html" title="Вернуться на главную">
+                <img class="page-header__logo-xs" src="img/logo_pink-header-xs.png" alt="Pink logo">
+              </a>
+            </div>
+
+            <button class="page-header__nav-toggle" type="button">
+              <span class="page-header__toggle-lines"></span>
+              <span class="page-header__sr-only">Переключатель меню</span>
+            </button>
+          </div>
+        </div>
+
+        <div class="page-header__navbar-nav">
+          <div class="page-header__navbar-nav-inner">
+            <div class="page-header__main-nav-wrap">
+              <nav class="main-nav">
+                <ul class="main-nav__list">
+                  <li class="main-nav__item">
+                    <a class="main-nav__link" href="index.html">Информация</a>
+                  </li>
+                  <li class="main-nav__item">
+                    <a class="main-nav__link" href="#">Возможности</a>
+                  </li>
+                  <li class="main-nav__item">
+                    <a class="main-nav__link" href="#">Отзывы</a>
+                  </li>
+                  <li class="main-nav__item">
+                    <a class="main-nav__link" href="#">Стоимость</a>
+                  </li>
+                </ul>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="page-header__intro">
+        <div class="page-header__intro-inner">
+          <div class="page-header__heading-wrap">
+            <h1 class="page-header__heading">
+              <span class="page-header__heading-part">Конкурс на самое</span>
+              <span class="page-header__heading-part">безбашеное</span>
+              <span class="page-header__heading-part">путешествие с Пинк</span>
+            </h1>
+          </div>
+        </div>
+      </div>
+    </header>
+
+
+
+    <form class="story-form" action="/echo" method="post" enctype="multipart/form-data">
+      <fieldset class="story-form__fullname">
+        <p class="story-form__fullname-text">
+          Поделитесь своей историей и получите шанс выиграть ценный приз — 1000 миль на вашу бонусную карту! Пожалуйста, заполните форму ниже:
+        </p>
+        <p class="story-form__fullname-field-wrap">
+          <label class="story-form__fullname-label" for="firstname">Имя: *</label>
+          <input class="story-form__fullname-field" name="firstname" id="firstname" type="text" placeholder="Введите ваше имя" required>
+        </p>
+        <p class="story-form__fullname-field-wrap">
+          <label class="story-form__fullname-label" for="lastname">Фамилия: *</label>
+          <input class="story-form__fullname-field" name="lastname" id="lastname" type="text" placeholder="Укажите фамилию" required>
+        </p>
+        <p class="story-form__fullname-field-wrap">
+          <label class="story-form__fullname-label" for="patronymic">Отчество:</label>
+          <input class="story-form__fullname-field" name="patronymic" id="patronymic" type="text" placeholder="Ну и отчество тоже">
+        </p>
+      </fieldset>
+
+      <fieldset class="story-form__app">
+        <legend class="story-form__app-heading">С каким приложением путешествовали? *</legend>
+        <ul class="story-form__app-list">
+          <li class="story-form__app-item">
+            <input class="story-form__app-field" name="app" id="iOS" type="radio" checked required>
+            <label class="story-form__app-label" for="iOS">Pink для iOS</label>
+          </li>
+          <li class="story-form__app-item">
+            <input class="story-form__app-field" name="app" id="android" type="radio" required>
+            <label class="story-form__app-label" for="android">Pink на Android</label>
+          </li>
+          <li class="story-form__app-item">
+            <input class="story-form__app-field" name="app" id="windows-phone" type="radio" required>
+            <label class="story-form__app-label" for="windows-phone">Windows Phone</label>
+          </li>
+        </ul>
+      </fieldset>
+
+      <fieldset class="story-form__time">
+        <legend class="story-form__time-heading">Когда Вы путешествовали? *</legend>
+        <p class="story-form__time-field-wrap">
+          <input class="story-form__time-field" name="departure-date" id="departure-date" type="date" value="2015-04-01" required>
+          <label class="story-form__time-label" for="departure-date">Дата выезда</label>
+        </p>
+        <p class="story-form__time-field-wrap">
+          <span class="story-form__time-btns-group">
+            <button class="btn  btn--minus" type="button">
+              <i class="icon  icon-minus"></i>
+              <span class="btn__sr-only">-</span>
+            </button>
+            <input class="story-form__time-field" name="departure-date" id="departure-date" type="number" placeholder="10 дней" required>
+            <button class="btn  btn--plus" type="button">
+              <i class="icon  icon-plus"></i>
+              <span class="btn__sr-only">+</span>
+            </button>
+          </span>
+          <label class="story-form__time-label" for="departure-date">Продолжительность</label>
+        </p>
+        <p class="story-form__time-field-wrap">
+          <input class="story-form__time-field" name="return-date" id="return-date" type="date" value="2015-04-01" required>
+          <label class="story-form__time-label" for="return-date">Дата возвращения</label>
+        </p>
+      </fieldset>
+
+      <fieldset class="story-form__companions">
+        <legend class="story-form__companions-heading">Количество попутчиков *</legend>
+        <p class="story-form__companions-field-wrap">
+          <label class="story-form__companions-label  story-form__companions-label--sr-only" for="companions-amount">Количество попутчиков *</label>
+          <span class="story-form__time-btns-group">
+            <button class="btn  btn--minus" type="button">
+              <i class="icon  icon-minus"></i>
+              <span class="btn__sr-only">-</span>
+            </button>
+            <input class="story-form__companions-field" name="companions-amount" id="companions-amount" type="number" placeholder="2 чел." required>
+            <button class="btn  btn--plus" type="button">
+              <i class="icon  icon-plus"></i>
+              <span class="btn__sr-only">+</span>
+            </button>
+          </span>
+        </p>
+
+        <ul class="story-form__companions-list">
+          <li class="story-form__companions-item">
+            <div class="story-form__companion-num-wrap">
+              <span class="story-form__companion-num-symbol">№</span>
+              <span class="story-form__companion-num-val">1</span>
+            </div>
+            <div class="story-form__companion-fields-wrap">
+              <p class="story-form__companion-field-wrap">
+                <label class="story-form__companion-label" for="companion-name">Имя: *</label>
+                <input class="story-form__companion-field" name="companion-name" id="companion-name" type="text" placeholder="Введите ваше имя" required>
+              </p>
+              <p class="story-form__companion-field-wrap">
+                <label class="story-form__companion-label" for="companion-nickname">Прозвище:</label>
+                <input class="story-form__companion-field" name="companion-nickname" id="companion-nickname" type="text" placeholder="Ну как же без этого!">
+              </p>
+            </div>
+          </li>
+
+          <li class="story-form__companions-item">
+            <div class="story-form__companion-num-wrap">
+              <span class="story-form__companion-num-symbol">№</span>
+              <span class="story-form__companion-num-val">2</span>
+            </div>
+            <div class="story-form__companion-fields-wrap">
+              <p class="story-form__companion-field-wrap">
+                <label class="story-form__companion-label" for="companion-name">Имя: *</label>
+                <input class="story-form__companion-field" name="companion-name" id="companion-name" type="text" placeholder="Введите ваше имя" required>
+              </p>
+              <p class="story-form__companion-field-wrap">
+                <label class="story-form__companion-label" for="companion-nickname">Прозвище:</label>
+                <input class="story-form__companion-field" name="companion-nickname" id="companion-nickname" type="text" placeholder="Ну как же без этого!">
+              </p>
+            </div>
+          </li>
+        </ul>
+      </fieldset>
+
+      <fieldset class="story-form__achievements">
+        <legend class="story-form__achievements-heading">Ваши безбашенные достижения в путешествии</legend>
+        <ul class="story-form__achievements-list">
+          <li class="story-form__achievements-item">
+            <input class="story-form__achievements-field" name="achievements" id="achievement-1" type="checkbox" checked>
+            <label class="story-form__achievements-label" for="achievement-1">Сделал селфи с акулой</label>
+          </li>
+          <li class="story-form__achievements-item">
+            <input class="story-form__achievements-field" name="achievements" id="achievement-2" type="checkbox" checked>
+            <label class="story-form__achievements-label" for="achievement-2">Обгорел на пляже</label>
+          </li>
+          <li class="story-form__achievements-item">
+            <input class="story-form__achievements-field" name="achievements" id="achievement-3" type="checkbox">
+            <label class="story-form__achievements-label" for="achievement-3">Видел Чака Норриса</label>
+          </li>
+          <li class="story-form__achievements-item">
+            <input class="story-form__achievements-field" name="achievements" id="achievement-4" type="checkbox">
+            <label class="story-form__achievements-label" for="achievement-4">Накупил сувениров</label>
+          </li>
+          <li class="story-form__achievements-item">
+            <input class="story-form__achievements-field" name="achievements" id="achievement-5" type="checkbox" checked>
+            <label class="story-form__achievements-label" for="achievement-5">Удержал башню</label>
+          </li>
+          <li class="story-form__achievements-item">
+            <input class="story-form__achievements-field" name="achievements" id="achievement-6" type="checkbox">
+            <label class="story-form__achievements-label" for="achievement-6">Разгромил отель</label>
+          </li>
+        </ul>
+      </fieldset>
+
+      <fieldset class="story-form__photos">
+        <legend class="story-form__photos-heading">Ваши фотографии из поездки *</legend>
+        <!-- TO DO: разобраться как вывести на кнопке текст "Загрузить фото". Попробую через js-->
+        <input class="btn  btn--white" name="upload-photos" id="upload-photos" data-btn-text="Загрузить фото" type="file" multiple accept="image/*" required>
+        <ul class="story-form__photos-list">
+          <li class="story-form__photos-item">
+            <img class="story-form__photo" src="img/img_form-img-1.jpg" width="67" height="68" alt="Photo">
+            <button class="btn  btn--cross" type="button">
+              <i class="icon  icon--cross"></i>
+              <span class="btn__sr-only">Delete</span>
+            </button>
+          </li>
+          <li class="story-form__photos-item">
+            <img class="story-form__photo" src="img/img_form-img-2.jpg" width="68" height="68" alt="Photo">
+            <button class="btn  btn--cross" type="button">
+              <i class="icon  icon--cross"></i>
+              <span class="btn__sr-only">Delete</span>
+            </button>
+          </li>
+          <li class="story-form__photos-item">
+            <img class="story-form__photo" src="img/img_form-img-3.jpg" width="67" height="68" alt="Photo">
+            <button class="btn  btn--cross" type="button">
+              <i class="icon  icon--cross"></i>
+              <span class="btn__sr-only">Delete</span>
+            </button>
+          </li>
+          <li class="story-form__photos-item">
+            <img class="story-form__photo" src="img/img_form-img-4.jpg" width="67" height="67" alt="Photo">
+            <button class="btn  btn--cross" type="button">
+              <i class="icon  icon--cross"></i>
+              <span class="btn__sr-only">Delete</span>
+            </button>
+          </li>
+          <li class="story-form__photos-item">
+            <img class="story-form__photo" src="img/img_form-img-5.jpg" width="68" height="67" alt="Photo">
+            <button class="btn  btn--cross" type="button">
+              <i class="icon  icon--cross"></i>
+              <span class="btn__sr-only">Delete</span>
+            </button>
+          </li>
+          <li class="story-form__photos-item">
+            <img class="story-form__photo" src="img/img_form-img-6.jpg" width="67" height="67" alt="Photo">
+            <button class="btn  btn--cross" type="button">
+              <i class="icon  icon--cross"></i>
+              <span class="btn__sr-only">Delete</span>
+            </button>
+          </li>
+          <li class="story-form__photos-item">
+            <img class="story-form__photo" src="img/img_form-img-7.jpg" width="68" height="67" alt="Photo">
+            <button class="btn  btn--cross" type="button">
+              <i class="icon  icon--cross"></i>
+              <span class="btn__sr-only">Delete</span>
+            </button>
+          </li>
+          <li class="story-form__photos-item">
+            <img class="story-form__photo" src="img/img_form-img-8.jpg" width="68" height="67" alt="Photo">
+            <button class="btn  btn--cross" type="button">
+              <i class="icon  icon--cross"></i>
+              <span class="btn__sr-only">Delete</span>
+            </button>
+          </li>
+        </ul>
+      </fieldset>
+
+      <p class="story-form__btn-wrap"><button class="btn  btn--green" type="submit">Отправить форму</button></p>
+      <p class="story-form__prompt">* — обязательные поля</p>
+    </form>
+
+
+
+    <footer class="page-footer">
+      <div class="page-footer__inner">
+        <div class="page-footer__logo">
+          <img class="page-footer__logo-img" src="img/logo_pink-footer-xs.png" alt="Pink logo">
+        </div>
+
+        <div class="page-footer__socials-wrap">
+          <ul class="socials">
+            <li class="socials__item">
+              <a class="socials__link" href="#" title="Мы в Twitter">
+                <i class="icon  icon--twitter"></i>
+                <span class="socials__sr-only">Мы в Twitter</span>
+              </a>
+            </li>
+
+            <li class="socials__item">
+              <a class="socials__link" href="#" title="Мы на Facebook">
+                <i class="icon  icon--facebook"></i>
+                <span class="socials__sr-only">Мы на Facebook</span>
+              </a>
+            </li>
+
+            <li class="socials__item">
+              <a class="socials__link" href="#" title="Мы в Youtube">
+                <i class="icon  icon--youtube"></i>
+                <span class="socials__sr-only">Мы в Youtube</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="page-footer__design">
+          <span class="page-footer__design-text">Разработано</span>
+          <a class="page-footer__design-link" href="http://htmlacademy.ru" title="Перейти на htmlacademy.ru" target="_blank">
+            <i class="icon  icon--htmlacademy"></i>
+            <span class="page-footer__sr-only">HTML Academy</span>
+          </a>
+        </div>
+      </div>
+    </footer>
+
+
+
+    <div class="popup-success">
+      <div class="popup-success__text-wrap">
+        <b class="popup-success__heading">Ваша заявка отправлена</b>
+        <p class="popup-success__text">Спасибо за ваше участие, ваша заявка уже поступила к нам. В ближайшее время мы рассмотрим ее и оповестим вас.</p>
+      </div>
+      <div class="popup-success__btn-wrap"><button class="btn  btn--green  btn--block" type="button">Закрыть окно</button></div>
+    </div>
+
+
+
+    <div class="popup-failure">
+      <div class="popup-failure__text-wrap">
+        <b class="popup-failure__heading">Что-то пошло не так!</b>
+        <p class="popup-failure__text">Проверьте поля, выделенные красным, скорее всего вы забыли их заполнить</p>
+      </div>
+      <div class="popup-failure__btn-wrap"><button class="btn  btn--green  btn--block" type="button">Ок</button></div>
+    </div>
+
+
+
+    <script src="js/script.min.js"></script>
+
+
+
+  </body>
+</html>

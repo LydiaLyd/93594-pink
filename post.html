@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>HTML Academy: Пинк</title>
+    <!-- <link href="css/style.min.css" rel="stylesheet"> -->
+  </head>
+  <body>
+
+
+
+    <header class="page-header">
+      <div class="page-header__navbar">
+        <div class="page-header__navbar-header">
+          <div class="page-header__navbar-header-inner">
+            <div class="page-header__logo-xs">
+              <a class="page-header__logo-link" href="index.html" title="Вернуться на главную">
+                <img class="page-header__logo-xs" src="img/logo_pink-header-xs.png" alt="Pink logo">
+              </a>
+            </div>
+
+            <button class="page-header__nav-toggle" type="button">
+              <span class="page-header__toggle-lines"></span>
+              <span class="page-header__sr-only">Переключатель меню</span>
+            </button>
+          </div>
+        </div>
+
+        <div class="page-header__navbar-nav">
+          <div class="page-header__navbar-nav-inner">
+            <div class="page-header__main-nav-wrap">
+              <nav class="main-nav">
+                <ul class="main-nav__list">
+                  <li class="main-nav__item">
+                    <a class="main-nav__link" href="index.html">Информация</a>
+                  </li>
+                  <li class="main-nav__item">
+                    <a class="main-nav__link" href="#">Возможности</a>
+                  </li>
+                  <li class="main-nav__item">
+                    <a class="main-nav__link" href="#">Отзывы</a>
+                  </li>
+                  <li class="main-nav__item">
+                    <a class="main-nav__link" href="#">Стоимость</a>
+                  </li>
+                </ul>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="page-header__intro">
+        <div class="page-header__intro-inner">
+          <div class="page-header__heading-wrap">
+            <h1 class="page-header__heading">Блог путешественников, пользователей Пинк</h1>
+          </div>
+        </div>
+      </div>
+    </header>
+
+
+
+    <div class="post-container">
+      <div class="post-container__post-wrap">
+        <article class="post">
+          <heading class="post__head"><h2 class="post__heading">Антон и Надя в Тайланде</h2></heading>
+          <p class="post__publication">
+            <span class="post__publication-text">Опубликовано:</span>
+            <time class="post__publication-date" datetime="2015-05-13">6 месяцев назад</time>
+          </p>
+          <p class="post__headnote">Читайте рассказ о том, как семейная пара посещала Тайланд, стараясь максимально избегать избитых туристических мест и районов.</p>
+          <div class="post__content">
+            <h3 class="post__h3">Предыстория</h3>
+            <p class="post__text">В Азию нам хотелось попасть уже давно, но все время что-то останавливало. Также не давал покоя вопрос гигиены и чистоты вокруг. Были сомнения и на счет местной еды. Однако, увидев выгодные билеты на <a class="post__link" href="http://www.skyscanner.ru/">skyscanner.ru</a>, мы все-таки решились!</p>
+            <h3 class="post__h3">Выбор отеля</h3>
+            <p class="post__text">В Тайланде огромный разброс по стоимости отелей и так же сильно отличаются и они сами. Так как достопримечательности щедро разбросаны по всей стране, то чтобы посетить их все, нужно пожить в нескольких разных городах. В итоге мы остановились на следующих:</p>
+            <ul class="post__list">
+              <li class="post__list-item">Point Yamu by Como (Пхукет)</li>
+              <li class="post__list-item">Amari Vogue Hotel (Краби)</li>
+              <li class="post__list-item">Photo Hotel (Пхукет)</li>
+            </ul>
+            <p class="post__text">В выборе отелей мы учитывали как расположение, так и отзывы на Tripadvisor. Например, вот, что пишут люди про Point Yamu:</p>
+            <blockquote class="post__quote">
+              <p class="post__quote-text">Замечательное место,в которое хочется вернуться обязательно! Персонал отзывчивый и внимательный,еда-потрясающая. Отель расположен в тихом и уединенном месте-в чем вся и прелесть. СПА отличный. Потрясающие виды.</p>
+              <address class="post__quote-adress">Олег, г. Москва</address>
+            </blockquote>
+            <h3 class="post__h3">Местная еда</h3>
+            <p class="post__text">Существует мнение, что вся еда в Тайланде экстремально острая. Это мнение сложилось не напрасно! Но не стоит делать из этого проблему — просто попросите сделать ваше блюдо «not spicy». Желающие могут попробовать жареных тараканчиков. Мы не рискнули.</p>
+          </div>
+        </article>
+      </div>
+
+      <div class="post-container__btns-group">
+        <a class="btn  btn--white  btn--post-prev" href="#">Пред.</a>
+        <a class="btn  btn--white  btn--post-next" href="#">След.</a>
+        <a class="btn  btn--white  btn--post-back" href="blog.html">Назад к списку</a>
+      </div>
+    </div>
+
+
+
+    <footer class="page-footer">
+      <div class="page-footer__inner">
+        <div class="page-footer__logo">
+          <img class="page-footer__logo-img" src="img/logo_pink-footer-xs.png" alt="Pink logo">
+        </div>
+
+        <div class="page-footer__socials-wrap">
+          <ul class="socials">
+            <li class="socials__item">
+              <a class="socials__link" href="#" title="Мы в Twitter">
+                <i class="icon  icon--twitter"></i>
+                <span class="socials__sr-only">Мы в Twitter</span>
+              </a>
+            </li>
+
+            <li class="socials__item">
+              <a class="socials__link" href="#" title="Мы на Facebook">
+                <i class="icon  icon--facebook"></i>
+                <span class="socials__sr-only">Мы на Facebook</span>
+              </a>
+            </li>
+
+            <li class="socials__item">
+              <a class="socials__link" href="#" title="Мы в Youtube">
+                <i class="icon  icon--youtube"></i>
+                <span class="socials__sr-only">Мы в Youtube</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="page-footer__design">
+          <span class="page-footer__design-text">Разработано</span>
+          <a class="page-footer__design-link" href="http://htmlacademy.ru" title="Перейти на htmlacademy.ru" target="_blank">
+            <i class="icon  icon--htmlacademy"></i>
+            <span class="page-footer__sr-only">HTML Academy</span>
+          </a>
+        </div>
+      </div>
+    </footer>
+
+
+
+  </body>
+</html>
