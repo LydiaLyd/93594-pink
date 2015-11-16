@@ -10,97 +10,81 @@
 
 
 
-    <!-- TO DO: save in _lib/ -->
-    <header class="page-header">
-      <div class="page-header__navbar">
-        <div class="page-header__navbar-header">
-          <div class="page-header__navbar-header-inner">
-            <div class="page-header__logo-xs">
-              <img class="page-header__logo-xs" src="img/logo_pink-header-xs.png" alt="Pink logo">
-            </div>
-
-            <!-- TO DO: save in _lib/ -->
-            <button class="page-header__nav-toggle" type="button">
-              <span class="page-header__toggle-lines"></span>
-              <span class="page-header__sr-only">Переключатель меню</span>
-            </button>
-          </div>
+    <div class="navbar">
+      <div class="navbar__header">
+        <div class="logo">
+          <img class="logo__img  logo__img--header-xs" src="img/logo_pink-header-xs.png" width="74" height="24" alt="Pink logo">
         </div>
-
-        <div class="page-header__navbar-nav">
-          <div class="page-header__navbar-nav-inner">
-            <div class="page-header__main-nav-wrap">
-              <nav class="main-nav">
-                <ul class="main-nav__list">
-                  <li class="main-nav__item">
-                    <a class="main-nav__link" href="index.html">Информация</a>
-                    <span class="main-nav__sr-only">Текущая страница</span>
-                  </li>
-                  <li class="main-nav__item">
-                    <a class="main-nav__link" href="#">Возможности</a>
-                  </li>
-                  <li class="main-nav__item">
-                    <a class="main-nav__link" href="#">Отзывы</a>
-                  </li>
-                  <li class="main-nav__item">
-                    <a class="main-nav__link" href="#">Стоимость</a>
-                  </li>
-                </ul>
-              </nav>
-            </div>
-          </div>
-        </div>
+        <button class="navbar__nav-toggle" type="button">
+          <span class="navbar__toggle-lines"></span>
+          <span class="navbar__text-hidden">Переключатель меню</span>
+        </button>
       </div>
 
-      <div class="page-header__intro">
-        <div class="page-header__intro-inner">
-          <div class="page-header__heading-wrap">
-            <h1 class="page-header__heading">Взгляните на жизнь иначе!</h1>
+      <div class="navbar__nav">
+        <nav class="main-nav">
+          <ul class="main-nav__list">
+            <li class="main-nav__item  main-nav__item--current">
+              <a class="main-nav__link" href="index.html">Информация</a>
+            </li>
+            <li class="main-nav__item">
+              <a class="main-nav__link" href="blog.html">Блог</a>
+            </li>
+            <li class="main-nav__item">
+              <a class="main-nav__link" href="#">Отзывы</a>
+            </li>
+            <li class="main-nav__item">
+              <a class="main-nav__link" href="#">Конкурс</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+
+
+
+    <div class="intro">
+      <div class="intro__inner">
+        <h1 class="intro__heading">Взгляните на жизнь иначе!</h1>
+        <div class="intro__content">
+          <p class="intro__text"><a class="btn  btn--transparent" href="#">Скачать приложение</a></p>
+          <div class="intro__imgs-wrap">
+            <img class="intro__img" src="img/logo_apple.svg" width="46" height="57" alt="Apple logo">
+            <img class="intro__img" src="img/logo_android.svg" width="42" height="47" alt="Android logo">
+            <img class="intro__img" src="img/logo_microsoft.svg" width="44" height="42" alt="Microsoft logo">
           </div>
-          <div class="page-header__intro-content">
-            <p class="page-header__intro-text"><a class="btn  btn--transparent" href="#">Скачать приложение</a></p>
-            <div class="page-header__intro-imgs-wrap">
-              <img class="page-header__intro-logo" src="img/logo_apple.svg" width="46" height="57" alt="Apple logo">
-              <img class="page-header__intro-logo" src="img/logo_android.svg" width="42" height="47" alt="Android logo">
-              <img class="page-header__intro-logo" src="img/logo_microsoft.svg" width="44" height="42" alt="Microsoft logo">
-            </div>
-            <p class="page-header__intro-text">
-              <span class="page-header__text-part">Доступно для iPhone, iPad, Android,</span>
-              <span class="page-header__text-part">Windows phone, Mac OS, Windows 8</span>
-            </p>
-          </div>
+          <p class="intro__text">
+            <span class="intro__text-part">Доступно для iPhone, iPad, Android,</span>
+            <span class="intro__text-part">Windows phone, Mac OS, Windows 8</span>
+          </p>
         </div>
       </div>
-    </header>
+    </div>
 
 
 
     <section class="info">
-      <div class="info__heading-wrap">
-        <h2 class="info__heading">
-          <span class="info__heading-part">Устали от серости мегаполиса?</span>
-          <span class="info__heading-part">Нам есть, что вам предложить!</span>
-        </h2>
-      </div>
+      <h2 class="info__heading">
+        <span class="info__heading-part">Устали от серости мегаполиса?</span>
+        <span class="info__heading-part">Нам есть, что вам предложить!</span>
+      </h2>
       <div class="info__content">
-        <div class="info__content-inner">
-          <div class="info__items">
-            <div class="info__item">
-              <h3 class="info__item-heading">Поднимает настроение</h3>
-              <p class="info__item-text">Приложение позволит вам победить осеннюю хандру и депрессию буквально в несколько кликов!</p>
-            </div>
-            <div class="info__item">
-              <h3 class="info__item-heading">Меняет мир вокруг</h3>
-              <p class="info__item-text">Сделайте снимок и украсьте его смайликом или текстовой подписью, чтобы усилить эффект</p>
-            </div>
-            <div class="info__item">
-              <h3 class="info__item-heading">Заводит новых друзей</h3>
-              <p class="info__item-text">Ставьте лайки, комментируте, делитесь фотографиями с друзьями и заводите новых</p>
-            </div>
+        <div class="info__items">
+          <div class="info__item">
+            <h3 class="info__item-heading">Поднимает настроение</h3>
+            <p class="info__item-text">Приложение позволит вам победить осеннюю хандру и депрессию буквально в несколько кликов!</p>
           </div>
-          <div class="info__img-wrap">
-            <img class="info__img" src="img/img_iphone-screen-xs.png" alt="Image">
+          <div class="info__item">
+            <h3 class="info__item-heading">Меняет мир вокруг</h3>
+            <p class="info__item-text">Сделайте снимок и украсьте его смайликом или текстовой подписью, чтобы усилить эффект</p>
           </div>
+          <div class="info__item">
+            <h3 class="info__item-heading">Заводит новых друзей</h3>
+            <p class="info__item-text">Ставьте лайки, комментируте, делитесь фотографиями с друзьями и заводите новых</p>
+          </div>
+        </div>
+        <div class="info__img-wrap">
+          <img class="info__img" src="img/img_iphone-screen-xs.png" alt="Image">
         </div>
       </div>
     </section>
@@ -183,15 +167,15 @@
               <td class="cost__table-cell">Розовый фильтр</td>
               <td class="cost__table-cell" data-th="Розовый фильтр">
                 <i class="icon  icon--yes"></i>
-                <span class="cost__sr-only">Есть</span>
+                <span class="cost__text-hidden">Есть</span>
               </td>
               <td class="cost__table-cell" data-th="Розовый фильтр">
                 <i class="icon  icon--no"></i>
-                <span class="cost__sr-only">Нет</span>
+                <span class="cost__text-hidden">Нет</span>
               </td>
               <td class="cost__table-cell" data-th="Розовый фильтр">
                 <i class="icon  icon--no"></i>
-                <span class="cost__sr-only">Нет</span>
+                <span class="cost__text-hidden">Нет</span>
               </td>
             </tr>
 
@@ -199,15 +183,15 @@
               <td class="cost__table-cell">Смайлики</td>
               <td class="cost__table-cell" data-th="Смайлики">
                 <i class="icon  icon--yes"></i>
-                <span class="cost__sr-only">Есть</span>
+                <span class="cost__text-hidden">Есть</span>
               </td>
               <td class="cost__table-cell" data-th="Смайлики">
                 <i class="icon  icon--no"></i>
-                <span class="cost__sr-only">Нет</span>
+                <span class="cost__text-hidden">Нет</span>
               </td>
               <td class="cost__table-cell" data-th="Смайлики">
                 <i class="icon  icon--no"></i>
-                <span class="cost__sr-only">Нет</span>
+                <span class="cost__text-hidden">Нет</span>
               </td>
             </tr>
 
@@ -215,15 +199,15 @@
               <td class="cost__table-cell">Комментарии</td>
               <td class="cost__table-cell" data-th="Комментарии">
                 <i class="icon  icon--yes"></i>
-                <span class="cost__sr-only">Есть</span>
+                <span class="cost__text-hidden">Есть</span>
               </td>
               <td class="cost__table-cell" data-th="Комментарии">
                 <i class="icon  icon--no"></i>
-                <span class="cost__sr-only">Нет</span>
+                <span class="cost__text-hidden">Нет</span>
               </td>
               <td class="cost__table-cell" data-th="Комментарии">
                 <i class="icon  icon--no"></i>
-                <span class="cost__sr-only">Нет</span>
+                <span class="cost__text-hidden">Нет</span>
               </td>
             </tr>
           </table>
@@ -234,32 +218,30 @@
 
 
     <section class="contacts">
-      <div class="contacts__content">
-        <div class="contacts__content-inner">
-          <h2 class="contacts__heading">
-            <span class="contacts__heading-part">Остались вопросы?</span>
-            <span class="contacts__heading-part">Свяжитесь с нами!</span>
-          </h2>
-          <address class="contacts__items">
-            <div class="contacts__item">
-              <p class="contacts__item-text"><b class="contacts__text-emphasis">Звоните:</b></p>
-              <p class="contacts__item-text"><a class="contacts__item-link" href="#">+7 (812) 555-66-66</a></p>
-            </div>
-            <div class="contacts__item">
-              <p class="contacts__item-text"><b class="contacts__text-emphasis">Пишите:</b></p>
-              <p class="contacts__item-text"><a class="contacts__item-link" href="#">mail@htmlacademy.ru</a></p>
-            </div>
-            <div class="contacts__item">
-              <p class="contacts__item-text"><b class="contacts__text-emphasis">Приезжайте в гости:</b></p>
-              <p class="contacts__item-text">
-                <span class="contacts__location">
-                  ул. Большая<br>
-                  Конюшенная, 19/8
-                </span>
-              </p>
-            </div>
-          </address>
-        </div>
+      <div class="contacts__inner">
+        <p class="contacts__heading">
+          <span class="contacts__heading-part">Остались вопросы?</span>
+          <span class="contacts__heading-part">Свяжитесь с нами!</span>
+        </p>
+        <address class="contacts__items">
+          <div class="contacts__item">
+            <p class="contacts__item-text"><b class="contacts__text-emphasis">Звоните:</b></p>
+            <p class="contacts__item-text"><a class="contacts__item-link" href="tel:+78125556666">+7 (812) 555-66-66</a></p>
+          </div>
+          <div class="contacts__item">
+            <p class="contacts__item-text"><b class="contacts__text-emphasis">Пишите:</b></p>
+            <p class="contacts__item-text"><a class="contacts__item-link" href="#">mail@htmlacademy.ru</a></p>
+          </div>
+          <div class="contacts__item">
+            <p class="contacts__item-text"><b class="contacts__text-emphasis">Приезжайте в гости:</b></p>
+            <p class="contacts__item-text">
+              <span class="contacts__location">
+                ул. Большая<br>
+                Конюшенная, 19/8
+              </span>
+            </p>
+          </div>
+        </address>
       </div>
 
       <div class="contacts__map" id="map"></div>
@@ -267,8 +249,8 @@
 
 
 
-    <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&amp;sensor=false"></script>
-    <script src="js/script.min.js"></script>
+    <!-- <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&amp;sensor=false"></script>
+    <script src="js/script.min.js"></script> -->
 
 
 

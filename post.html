@@ -10,71 +10,61 @@
 
 
 
-    <header class="page-header">
-      <div class="page-header__navbar">
-        <div class="page-header__navbar-header">
-          <div class="page-header__navbar-header-inner">
-            <div class="page-header__logo-xs">
-              <a class="page-header__logo-link" href="index.html" title="Вернуться на главную">
-                <img class="page-header__logo-xs" src="img/logo_pink-header-xs.png" alt="Pink logo">
-              </a>
-            </div>
-
-            <button class="page-header__nav-toggle" type="button">
-              <span class="page-header__toggle-lines"></span>
-              <span class="page-header__sr-only">Переключатель меню</span>
-            </button>
-          </div>
+    <div class="navbar">
+      <div class="navbar__header">
+        <div class="logo">
+          <a class="logo__link" href="index.html" title="Вернуться на главную">
+            <img class="logo__img  logo__img--header-xs" src="img/logo_pink-header-xs.png" width="74" height="24" alt="Pink logo">
+          </a>
         </div>
-
-        <div class="page-header__navbar-nav">
-          <div class="page-header__navbar-nav-inner">
-            <div class="page-header__main-nav-wrap">
-              <nav class="main-nav">
-                <ul class="main-nav__list">
-                  <li class="main-nav__item">
-                    <a class="main-nav__link" href="index.html">Информация</a>
-                  </li>
-                  <li class="main-nav__item">
-                    <a class="main-nav__link" href="#">Возможности</a>
-                  </li>
-                  <li class="main-nav__item">
-                    <a class="main-nav__link" href="#">Отзывы</a>
-                  </li>
-                  <li class="main-nav__item">
-                    <a class="main-nav__link" href="#">Стоимость</a>
-                  </li>
-                </ul>
-              </nav>
-            </div>
-          </div>
-        </div>
+        <button class="navbar__nav-toggle" type="button">
+          <span class="navbar__toggle-lines"></span>
+          <span class="navbar__text-hidden">Переключатель меню</span>
+        </button>
       </div>
 
-      <div class="page-header__intro">
-        <div class="page-header__intro-inner">
-          <div class="page-header__heading-wrap">
-            <h1 class="page-header__heading">Блог путешественников, пользователей Пинк</h1>
-          </div>
-        </div>
+      <div class="navbar__nav">
+        <nav class="main-nav">
+          <ul class="main-nav__list">
+            <li class="main-nav__item">
+              <a class="main-nav__link" href="index.html">Информация</a>
+            </li>
+            <li class="main-nav__item  main-nav__item--current">
+              <a class="main-nav__link" href="blog.html">Блог</a>
+            </li>
+            <li class="main-nav__item">
+              <a class="main-nav__link" href="#">Отзывы</a>
+            </li>
+            <li class="main-nav__item">
+              <a class="main-nav__link" href="#">Конкурс</a>
+            </li>
+          </ul>
+        </nav>
       </div>
-    </header>
+    </div>
+
+
+
+    <div class="intro">
+      <div class="intro__inner">
+        <h1 class="intro__heading">Блог путешественников, пользователей Пинк</h1>
+      </div>
+    </div>
 
 
 
     <div class="post-container">
       <div class="post-container__post-wrap">
         <article class="post">
-          <heading class="post__head"><h2 class="post__heading">Антон и Надя в Тайланде</h2></heading>
-          <p class="post__publication">
-            <span class="post__publication-text">Опубликовано:</span>
-            <time class="post__publication-date" datetime="2015-05-13">6 месяцев назад</time>
-          </p>
-          <p class="post__headnote">Читайте рассказ о том, как семейная пара посещала Тайланд, стараясь максимально избегать избитых туристических мест и районов.</p>
+          <header class="post__header">
+            <h2 class="post__heading">Антон и Надя в Тайланде</h2>
+            <p class="post__date">Опубликовано: <time datetime="2015-05-13">6 месяцев назад</time></p>
+            <p class="post__headnote">Читайте рассказ о том, как семейная пара посещала Тайланд, стараясь максимально избегать избитых туристических мест и районов.</p>
+          </header>
           <div class="post__content">
-            <h3 class="post__h3">Предыстория</h3>
+            <h3 class="post__content-title">Предыстория</h3>
             <p class="post__text">В Азию нам хотелось попасть уже давно, но все время что-то останавливало. Также не давал покоя вопрос гигиены и чистоты вокруг. Были сомнения и на счет местной еды. Однако, увидев выгодные билеты на <a class="post__link" href="http://www.skyscanner.ru/">skyscanner.ru</a>, мы все-таки решились!</p>
-            <h3 class="post__h3">Выбор отеля</h3>
+            <h3 class="post__content-title">Выбор отеля</h3>
             <p class="post__text">В Тайланде огромный разброс по стоимости отелей и так же сильно отличаются и они сами. Так как достопримечательности щедро разбросаны по всей стране, то чтобы посетить их все, нужно пожить в нескольких разных городах. В итоге мы остановились на следующих:</p>
             <ul class="post__list">
               <li class="post__list-item">Point Yamu by Como (Пхукет)</li>
@@ -86,7 +76,7 @@
               <p class="post__quote-text">Замечательное место,в которое хочется вернуться обязательно! Персонал отзывчивый и внимательный,еда-потрясающая. Отель расположен в тихом и уединенном месте-в чем вся и прелесть. СПА отличный. Потрясающие виды.</p>
               <address class="post__quote-adress">Олег, г. Москва</address>
             </blockquote>
-            <h3 class="post__h3">Местная еда</h3>
+            <h3 class="post__content-title">Местная еда</h3>
             <p class="post__text">Существует мнение, что вся еда в Тайланде экстремально острая. Это мнение сложилось не напрасно! Но не стоит делать из этого проблему — просто попросите сделать ваше блюдо «not spicy». Желающие могут попробовать жареных тараканчиков. Мы не рискнули.</p>
           </div>
         </article>
@@ -103,40 +93,41 @@
 
     <footer class="page-footer">
       <div class="page-footer__inner">
-        <div class="page-footer__logo">
-          <img class="page-footer__logo-img" src="img/logo_pink-footer-xs.png" alt="Pink logo">
+        <div class="page-footer__column">
+          <div class="logo">
+            <a class="logo__link" href="index.html" title="Вернуться на главную"></a>
+            <img class="logo__img  logo__img--footer-xs" src="img/logo_pink-footer-xs.png" width="145" height="40" alt="Pink logo">
+          </div>
         </div>
 
-        <div class="page-footer__socials-wrap">
+        <div class="page-footer__column">
           <ul class="socials">
             <li class="socials__item">
               <a class="socials__link" href="#" title="Мы в Twitter">
                 <i class="icon  icon--twitter"></i>
-                <span class="socials__sr-only">Мы в Twitter</span>
+                <span class="socials__text-hidden">Мы в Twitter</span>
               </a>
             </li>
-
             <li class="socials__item">
               <a class="socials__link" href="#" title="Мы на Facebook">
                 <i class="icon  icon--facebook"></i>
-                <span class="socials__sr-only">Мы на Facebook</span>
+                <span class="socials__text-hidden">Мы на Facebook</span>
               </a>
             </li>
-
             <li class="socials__item">
               <a class="socials__link" href="#" title="Мы в Youtube">
                 <i class="icon  icon--youtube"></i>
-                <span class="socials__sr-only">Мы в Youtube</span>
+                <span class="socials__text-hidden">Мы в Youtube</span>
               </a>
             </li>
           </ul>
         </div>
 
-        <div class="page-footer__design">
-          <span class="page-footer__design-text">Разработано</span>
-          <a class="page-footer__design-link" href="http://htmlacademy.ru" title="Перейти на htmlacademy.ru" target="_blank">
+        <div class="page-footer__column">
+          <span class="page-footer__text">Разработано</span>
+          <a class="page-footer__link" href="http://htmlacademy.ru" title="Перейти на htmlacademy.ru" target="_blank">
             <i class="icon  icon--htmlacademy"></i>
-            <span class="page-footer__sr-only">HTML Academy</span>
+            <span class="page-footer__text-hidden">HTML Academy</span>
           </a>
         </div>
       </div>
