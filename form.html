@@ -47,7 +47,7 @@
 
     <div class="intro">
       <div class="intro__inner">
-        <h1 class="intror__heading">
+        <h1 class="intro__heading">
           <span class="intro__heading-part">Конкурс на самое</span>
           <span class="intro__heading-part">безбашеное</span>
           <span class="intro__heading-part">путешествие с Пинк</span>
@@ -138,9 +138,9 @@
 
           <ul class="companions__list">
             <li class="companions__item">
-              <div class="companions__num-wrap">
-                <span class="companions__num-symbol">№</span>
-                <span class="companions__num-val">1</span>
+              <div class="companions__number">
+                <span class="companions__symbol">№</span>
+                <span class="companions__value">1</span>
               </div>
               <div class="companions__fields-wrap">
                 <p class="companions__field-wrap">
@@ -155,9 +155,9 @@
             </li>
 
             <li class="companions__item">
-              <div class="companions__num-wrap">
-                <span class="companions__num-symbol">№</span>
-                <span class="companions__num-val">1</span>
+              <div class="companions__number">
+                <span class="companions__symbol">№</span>
+                <span class="companions__value">1</span>
               </div>
               <div class="companions__fields-wrap">
                 <p class="companions__field-wrap">
@@ -206,7 +206,7 @@
         <fieldset class="photos">
           <legend class="photos__heading">Ваши фотографии из поездки *</legend>
           <!-- TO DO: разобраться как вывести на кнопке текст "Загрузить фото". Попробую через js-->
-          <input class="btn  btn--white" name="upload-photos" id="upload-photos" data-btn-text="Загрузить фото" type="file" multiple accept="image/*" required>
+          <input class="btn  btn--white" name="upload-photos" id="upload-photos" data-value="Загрузить фото" type="file" multiple accept="image/*" required>
           <ul class="photos__list">
             <li class="photos__item">
               <img class="photos__photo" src="img/img_form-img-1.jpg" width="67" height="68" alt="Photo">
@@ -278,8 +278,9 @@
       <div class="page-footer__inner">
         <div class="page-footer__column">
           <div class="logo">
-            <a class="logo__link" href="index.html" title="Вернуться на главную"></a>
-            <img class="logo__img  logo__img--footer-xs" src="img/logo_pink-footer-xs.png" width="145" height="40" alt="Pink logo">
+            <a class="logo__link" href="index.html" title="Вернуться на главную">
+              <img class="logo__img  logo__img--footer-xs" src="img/logo_pink-footer-xs.png" width="145" height="40" alt="Pink logo">
+            </a>
           </div>
         </div>
 

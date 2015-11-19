@@ -91,41 +91,39 @@
 
 
 
-    <section class="reviews">
-      <div class="reviews__inner">
-        <div class="reviews__slider">
-          <input class="reviews__slider-radio-btn" id="toggle-reviews-1" name="toggle-reviews" type="radio" checked>
-          <input class="reviews__slider-radio-btn" id="toggle-reviews-2" name="toggle-reviews" type="radio">
-          <input class="reviews__slider-radio-btn" id="toggle-reviews-3" name="toggle-reviews" type="radio">
+    <section class="reviews-slider">
+      <div class="reviews-slider__inner">
+        <input class="reviews-slider__toggle" id="quote-1" name="quotes" type="radio" checked>
+        <input class="reviews-slider__toggle" id="quote-2" name="quotes" type="radio">
+        <input class="reviews-slider__toggle" id="quote-3" name="quotes" type="radio">
 
-          <div class="reviews__slider-controls">
-            <label class="reviews__slider-control" for="toggle-reviews-1"></label>
-            <label class="reviews__slider-control" for="toggle-reviews-2"></label>
-            <label class="reviews__slider-control" for="toggle-reviews-3"></label>
-          </div>
+        <div class="reviews-slider__controls">
+          <label class="reviews-slider__control" for="quote-1"></label>
+          <label class="reviews-slider__control" for="quote-2"></label>
+          <label class="reviews-slider__control" for="quote-3"></label>
+        </div>
 
-          <div class="reviews__slides-wrap">
-            <div class="reviews__slides">
-              <div class="reviews__slide">
-                <blockquote class="reviews__quote">
-                  <p class="reviews__quote-author"><b>Николай Петров</b></p>
-                  <p class="reviews__quote-text">«Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!»</p>
-                </blockquote>
-              </div>
+        <div class="reviews-slider__slides-wrap">
+          <div class="reviews-slider__slides">
+            <div class="reviews-slider__slide">
+              <blockquote class="reviews-quote">
+                <p class="reviews-quote__author"><b>Николай Петров</b></p>
+                <p class="reviews-quote__text">«Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!»</p>
+              </blockquote>
+            </div>
 
-              <div class="reviews__slide">
-                <blockquote class="reviews__quote">
-                  <p class="reviews__quote-author"><b>Николай Петров</b></p>
-                  <p class="reviews__quote-text">«Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!»</p>
-                </blockquote>
-              </div>
+            <div class="reviews-slider__slide">
+              <blockquote class="reviews-quote">
+                <p class="reviews-quote__author"><b>Николай Петров</b></p>
+                <p class="reviews-quote__text">«Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!»</p>
+              </blockquote>
+            </div>
 
-              <div class="reviews__slide">
-                <blockquote class="reviews__quote">
-                  <p class="reviews__quote-author"><b>Николай Петров</b></p>
-                  <p class="reviews__quote-text">«Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!»</p>
-                </blockquote>
-              </div>
+            <div class="reviews-slider__slide">
+              <blockquote class="reviews-quote">
+                <p class="reviews-quote__author"><b>Николай Петров</b></p>
+                <p class="reviews-quote__text">«Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!»</p>
+              </blockquote>
             </div>
           </div>
         </div>
@@ -136,78 +134,78 @@
 
     <section class="cost">
       <div class="cost__inner">
-        <input class="cost__toggle" id="toggle-cost-1" name="toggle-cost" type="radio">
-        <input class="cost__toggle" id="toggle-cost-2" name="toggle-cost" type="radio" checked>
-        <input class="cost__toggle" id="toggle-cost-3" name="toggle-cost" type="radio">
+        <input class="cost__toggle" id="price-1" name="cost" type="radio">
+        <input class="cost__toggle" id="price-2" name="cost" type="radio" checked>
+        <input class="cost__toggle" id="price-3" name="cost" type="radio">
 
         <div class="cost__controls">
-          <label class="cost__control" for="toggle-cost-1"></label>
-          <label class="cost__control" for="toggle-cost-2"></label>
-          <label class="cost__control" for="toggle-cost-3"></label>
+          <label class="cost__control" for="price-1"></label>
+          <label class="cost__control" for="price-2"></label>
+          <label class="cost__control" for="price-3"></label>
         </div>
 
         <div class="cost__table-wrap">
-          <table class="cost__table">
-            <tr class="cost__table-row">
-              <th class="cost__table-heading">
-                <b class="cost__price-name">Стандарт</b>
-                <span class="cost__price-value">3,99 USD</span>
+          <table class="cost-table">
+            <tr class="cost-table__row">
+              <th class="cost-table__heading">
+                <b class="cost-table__name">Стандарт</b>
+                <span class="cost-table__value">3,99 USD</span>
               </th>
-              <th class="cost__table-heading">
-                <b class="cost__price-name">Стандарт</b>
-                <span class="cost__price-value">3,99 USD</span>
+              <th class="cost-table__heading">
+                <b class="cost-table__name">Стандарт</b>
+                <span class="cost-table__value">3,99 USD</span>
               </th>
-              <th class="cost__table-heading">
-                <b class="cost__price-name">Стандарт</b>
-                <span class="cost__price-value">3,99 USD</span>
+              <th class="cost-table__heading">
+                <b class="cost-table__name">Стандарт</b>
+                <span class="cost-table__value">3,99 USD</span>
               </th>
             </tr>
 
-            <tr class="cost__table-row">
-              <td class="cost__table-cell">Розовый фильтр</td>
-              <td class="cost__table-cell" data-th="Розовый фильтр">
+            <tr class="cost-table__row">
+              <td class="cost-table__cell">Розовый фильтр</td>
+              <td class="cost-table__cell" data-feature="Розовый фильтр">
                 <i class="icon  icon--yes"></i>
-                <span class="cost__text-hidden">Есть</span>
+                <span class="cost-table__text-hidden">Есть</span>
               </td>
-              <td class="cost__table-cell" data-th="Розовый фильтр">
+              <td class="cost-table__cell" data-feature="Розовый фильтр">
                 <i class="icon  icon--no"></i>
-                <span class="cost__text-hidden">Нет</span>
+                <span class="cost-table__text-hidden">Нет</span>
               </td>
-              <td class="cost__table-cell" data-th="Розовый фильтр">
+              <td class="cost-table__cell" data-feature="Розовый фильтр">
                 <i class="icon  icon--no"></i>
-                <span class="cost__text-hidden">Нет</span>
+                <span class="cost-table__text-hidden">Нет</span>
               </td>
             </tr>
 
-            <tr class="cost__table-row">
-              <td class="cost__table-cell">Смайлики</td>
-              <td class="cost__table-cell" data-th="Смайлики">
+            <tr class="cost-table__row">
+              <td class="cost-table__cell">Смайлики</td>
+              <td class="cost-table__cell" data-feature="Смайлики">
                 <i class="icon  icon--yes"></i>
-                <span class="cost__text-hidden">Есть</span>
+                <span class="cost-table__text-hidden">Есть</span>
               </td>
-              <td class="cost__table-cell" data-th="Смайлики">
+              <td class="cost-table__cell" data-feature="Смайлики">
                 <i class="icon  icon--no"></i>
-                <span class="cost__text-hidden">Нет</span>
+                <span class="cost-table__text-hidden">Нет</span>
               </td>
-              <td class="cost__table-cell" data-th="Смайлики">
+              <td class="cost-table__cell" data-feature="Смайлики">
                 <i class="icon  icon--no"></i>
-                <span class="cost__text-hidden">Нет</span>
+                <span class="cost-table__text-hidden">Нет</span>
               </td>
             </tr>
 
-            <tr class="cost__table-row">
-              <td class="cost__table-cell">Комментарии</td>
-              <td class="cost__table-cell" data-th="Комментарии">
+            <tr class="cost-table__row">
+              <td class="cost-table__cell">Комментарии</td>
+              <td class="cost-table__cell" data-feature="Комментарии">
                 <i class="icon  icon--yes"></i>
-                <span class="cost__text-hidden">Есть</span>
+                <span class="cost-table__text-hidden">Есть</span>
               </td>
-              <td class="cost__table-cell" data-th="Комментарии">
+              <td class="cost-table__cell" data-feature="Комментарии">
                 <i class="icon  icon--no"></i>
-                <span class="cost__text-hidden">Нет</span>
+                <span class="cost-table__text-hidden">Нет</span>
               </td>
-              <td class="cost__table-cell" data-th="Комментарии">
+              <td class="cost-table__cell" data-feature="Комментарии">
                 <i class="icon  icon--no"></i>
-                <span class="cost__text-hidden">Нет</span>
+                <span class="cost-table__text-hidden">Нет</span>
               </td>
             </tr>
           </table>
@@ -225,27 +223,27 @@
         </p>
         <address class="contacts__items">
           <div class="contacts__item">
-            <p class="contacts__item-text"><b class="contacts__text-emphasis">Звоните:</b></p>
-            <p class="contacts__item-text"><a class="contacts__item-link" href="tel:+78125556666">+7 (812) 555-66-66</a></p>
+            <p class="contacts__text"><b class="contacts__text-emphasis">Звоните:</b></p>
+            <p class="contacts__text"><a class="contacts__link" href="tel:+78125556666">+7 (812) 555-66-66</a></p>
           </div>
           <div class="contacts__item">
-            <p class="contacts__item-text"><b class="contacts__text-emphasis">Пишите:</b></p>
-            <p class="contacts__item-text"><a class="contacts__item-link" href="#">mail@htmlacademy.ru</a></p>
+            <p class="contacts__text"><b class="contacts__text-emphasis">Пишите:</b></p>
+            <p class="contacts__text"><a class="contacts__link" href="#">mail@htmlacademy.ru</a></p>
           </div>
           <div class="contacts__item">
-            <p class="contacts__item-text"><b class="contacts__text-emphasis">Приезжайте в гости:</b></p>
-            <p class="contacts__item-text">
-              <span class="contacts__location">
-                ул. Большая<br>
-                Конюшенная, 19/8
-              </span>
+            <p class="contacts__text"><b class="contacts__text-emphasis">Приезжайте в гости:</b></p>
+            <p class="contacts__text">
+              <span class="contacts__text-part">ул. Большая</span>
+              <span class="contacts__text-part">Конюшенная, 19/8</span>  
             </p>
           </div>
         </address>
       </div>
-
-      <div class="contacts__map" id="map"></div>
     </section>
+
+
+
+    <div class="map" id="map"></div>
 
 
 
