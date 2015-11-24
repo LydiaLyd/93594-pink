@@ -1,0 +1,44 @@
+.main-nav {
+
+  &__list {
+    .ul-reset;
+  }
+
+  &__item {
+
+    &--current {
+      color: @nav-link-color--current;
+    }
+  }
+
+  &__link {
+    display: block;
+    padding: 18px 30px;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 32px;
+    text-align: center;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: @nav-link-color;
+    background-color: @nav-link-bg--xs;
+    border-top: 1px solid @blue-33;
+    border-bottom: 1px solid #000;
+    transition:
+      color .15s,
+      background-color .15s;
+
+    &:hover {
+      text-decoration: none;
+      color: @nav-link-color--hover-xs;
+    }
+
+    &:active {
+      color: @nav-link-color--active-xs;
+    }
+  }
+
+  &__text-hidden {
+    display: none;
+  }
+}

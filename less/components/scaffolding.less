@@ -1,0 +1,34 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+body {
+  min-width: 320px;
+  font-size: @font-size-base;
+  line-height: @line-height-base;
+  font-family: @font-family-base;
+  color: @text-color;
+  background-color: @body-bg;
+}
+
+a {
+  text-decoration: none;
+  color: @link-color;
+  transition: color .15s;
+
+  &:hover {
+    text-decoration: underline;
+    color: @link-color--hover;
+  }
+
+  &:active {
+    text-decoration: none;
+    color: @link-color--active;
+  }
+}
+
+table,
+blockquote {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}

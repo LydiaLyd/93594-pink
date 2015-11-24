@@ -1,0 +1,76 @@
+.intro {
+  color: #fff;
+  text-align: center;
+  background:
+    transparent url(../img/bg_iphone-hand-xs.png) left 173px no-repeat,
+    @blue-15 url(../img/bg_intro-xs.jpg) top no-repeat;
+  background-size: auto, auto 460px;
+
+  &__inner {
+
+  }
+
+  &__heading {
+    margin-top: 0;
+    margin-bottom: 0;
+    padding-top: 90px;
+    padding-bottom: 310px;
+    font-weight: 300;
+    font-size: 24px;
+    line-height: 30px;
+    color: #fff;
+  }
+
+  &__heading-part {
+    display: block;
+  }
+
+  &__content {
+    padding: 30px 20px;
+    background-color: @blue-15;
+  }
+
+  &__text {
+
+    &:first-child {
+      margin-top: 0;
+      margin-bottom: 30px;
+    }
+
+    &:last-child {
+      margin-top: 25px;
+      margin-bottom: 0;
+      font-weight: 300;
+    }
+  }
+
+  &__text-part {
+    display: block;
+  }
+
+  &__imgs-wrap {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 205px;
+    .center;
+  }
+
+  &__img {
+
+    &:nth-child(1) {
+      width: 46px;
+      height: 57px;
+    }
+
+    &:nth-child(2) {
+      width: 42px;
+      height: 47px;
+    }
+
+    &:nth-child(3) {
+      width: 44px;
+      height: 42px;
+    }
+  }
+}

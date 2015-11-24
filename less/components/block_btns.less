@@ -1,0 +1,46 @@
+.btn {
+  // common styles
+
+  display: inline-block;
+  padding: 15px 30px;
+
+  font-weight: 500;
+  font-size: @btn-font-size;
+  line-height: @btn-line-hight;
+  text-decoration: none;
+  text-align: center;
+
+  color: @btn-color;
+  background-color: @btn-bg;
+  border: none;
+  outline: none;
+  border-radius: 30px;
+
+  transition:
+    color .15s,
+    border-color .15s,
+    background-color .15s,
+    box-shadow .15s;
+
+  &:hover {
+    text-decoration: none;
+  }
+
+  // various btn types go here
+
+  &--transparent {
+    padding: 16px 35px;
+    border: 3px solid #fff;
+    background-color: transparent;
+
+    &:hover {
+      color: @pink-49;
+      background-color: #fff;
+    }
+
+    &:active {
+      color: fade(@pink-49, 30%);
+      background-color: #fff;
+    }
+  }
+}

@@ -1,0 +1,66 @@
+.cost-table {
+  width: 262.5%;
+  margin-top: 0;
+  margin-bottom: 0;
+  line-height: 30px;
+  text-transform: uppercase;
+  border-collapse: collapse;
+  transition: transform .25s;
+
+  &__row {
+
+  }
+
+  &__heading,
+  &__cell {
+    border: 2px solid @grey-90;
+  }
+
+  &__heading {
+    padding: 15px;
+    color: #fff;
+    background-color: @blue-21;
+    border-bottom: none;
+
+    // label
+    &:nth-child(2) {
+      .has-label("Хит", @zi-cost-label, 500, @pink-49);
+    }
+  }
+
+  &__name,
+  &__value {
+    display: block;
+  }
+
+  &__name {
+    margin-bottom: 3px;
+    font-size: 18px;
+  }
+
+  &__value {
+    font-weight: 300;
+    font-size: 24px;
+  }
+
+  &__cell {
+    padding: 15px 25px;
+    background-color: #fff;
+
+    &:first-child {
+      display: none;
+    }
+
+    .cost-table__row:nth-child(2) &:not(:first-child) {
+      border-top: none;
+    }
+
+    .cost-table__row:not(:first-child) &:not(:first-child)::before {
+      content: attr(data-feature);
+    }
+  }
+
+  &__text-hidden {
+    display: none;
+  }
+}
