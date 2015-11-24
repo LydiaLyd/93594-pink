@@ -22,7 +22,7 @@
     "gulp-postcss": "6.0.x",
     "gulp-livereload": "3.8.x",
     "gulp-csso": "1.0.x",
-    "gulp-gulp-rename": "1.2.x",
+    "gulp-rename": "1.2.x",
     "gulp-csscomb": "3.0.x"
   },
   "scripts": {
