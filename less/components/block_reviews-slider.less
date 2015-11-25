@@ -1,0 +1,73 @@
+.reviews-slider {
+
+  &__inner {
+    position: relative;
+    padding: 45px 20px 80px;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  &__toggle {
+    display: none;
+  }
+
+  &__controls {
+    position: absolute;
+    bottom: 40px;
+    left: 50%;
+    z-index: @zi-reviews-slider-controls;
+    display: flex;
+    justify-content: space-between;
+    width: 60px;
+    font-size: 0;
+    text-align: center;
+    transform: translateX(-50%);
+  }
+
+  &__control {
+    width: 12px;
+    height: 12px;
+    background-color: @grey-76;
+    border: 3px solid #fff;
+    border-radius: 50%;
+    cursor: pointer;
+    transition:
+      background-color .15s,
+      border-color .15s;
+  }
+
+  &__toggle[id="quote-1"]:checked ~ &__controls &__control[for="quote-1"],
+  &__toggle[id="quote-2"]:checked ~ &__controls &__control[for="quote-2"],
+  &__toggle[id="quote-3"]:checked ~ &__controls &__control[for="quote-3"] {
+    background-color: #fff;
+    border-color: @blue-21;
+  }
+
+  &__slides-wrap {
+    width: 280px;
+    .center;
+    overflow: hidden;
+  }
+
+  &__slides {
+    display: flex;
+    width: 300%;
+    transition: transform .25s;
+  }
+
+  &__toggle[id="quote-1"]:checked ~ &__slides-wrap &__slides  {
+    transform: translateX(0);
+  }
+
+  &__toggle[id="quote-2"]:checked ~ &__slides-wrap &__slides  {
+    transform: translateX(-33.3333333333%);
+  }
+
+  &__toggle[id="quote-3"]:checked ~ &__slides-wrap &__slides  {
+    transform: translateX(-66.6666666666%);
+  }
+
+  &__slide {
+    width: 33.3333333333%;
+  }
+}

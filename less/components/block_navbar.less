@@ -1,0 +1,112 @@
+.navbar {
+  position: fixed;
+  top: 0;
+  z-index: @zi-navbar;
+  width: 100%;
+
+  &__header {
+    position: relative;
+    z-index: @zi-navbar-header;
+    display: flex;
+    justify-content: space-between;
+    padding-left: 20px;
+    padding-right: 20px;
+    background-color: fade(@blue-15, 70%);
+    border-bottom: 1px solid transparent;
+    transition:
+      background-color .25s,
+      border-color .15s;
+
+    // don't know how to name it better
+    &--active {
+      background-color: @nav-link-bg--xs;
+      border-bottom: 1px solid #000;
+    }
+  }
+
+  &__toggle {
+    position: relative;
+    width: 90px;
+    height: 66px;
+    margin-right: -20px;
+    padding: 20px 20px;
+    border: none;
+    outline: none;
+    background-color: transparent;
+  }
+
+  &__lines {
+    position: absolute;
+    top: 31px;
+    right: 20px;
+    width: 50px;
+    height: 4px;
+    background-color: #fff;
+    transition:
+      width .15s,
+      background-color .15s;
+
+    &::before, &::after {
+      content: '';
+      position: absolute;
+      right: 0;
+      width: 100%;
+      height: 4px;
+      background-color: #fff;
+      transition:
+        left .25s,
+        width .25s,
+        background-color .25s,
+        transform .25s;
+    }
+
+    &::before {
+      top: -10px;
+      transform-origin: right top;
+    }
+
+    &::after {
+      top: 10px;
+      transform-origin: right bottom;
+    }
+
+    // crossing lines
+    &--cross {
+      width: 23px;
+      background-color: transparent;
+
+      &::before, &::after {
+        width: 28px;
+      }
+
+      &::before {
+        top: -9px;
+        transform: rotate(-45deg);
+      }
+
+      &::after {
+        top: 9px;
+        transform: rotate(45deg);
+      }
+    }
+  }
+
+  &__text-hidden {
+    display: none;
+  }
+
+  // Navbar nav
+
+  &__nav {
+    position: absolute;
+    width: 100%;
+    z-index: @zi-navbar-nav;
+    transform: translateY(-1000px);
+    transition: transform 0s;
+
+    &--drop-down {
+      transform: translateY(0);
+      transition: transform .45s ease-out;
+    }
+  }
+}
