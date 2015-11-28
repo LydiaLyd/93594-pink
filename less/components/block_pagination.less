@@ -1,0 +1,47 @@
+.pagination {
+  display: flex;
+  justify-content: space-between;
+  width: 280px;
+  margin: 0 auto;
+  padding-left: 0;
+  list-style: none;
+
+  &__item {
+    padding-left: 0;
+    font-size: 18px;
+    line-height: 30px;
+    text-align: center;
+
+    // сброс дефолтного отступа снизу
+    &:not(:last-child) {
+      margin-bottom: 0;
+    }
+
+    // сброс дефолтного маркера
+    &::before {
+      display: none;
+    }
+
+    &--current {
+      width: 62px;
+      height: 62px;
+      padding: 13px 10px;
+      border: 2px solid @pink-49;
+      border-radius: 3px;
+    }
+  }
+
+  &__text-hidden {
+    display: none;
+  }
+
+  &__link {
+    display: block;
+    width: 62px;
+    height: 62px;
+    padding: 13px 10px;
+    border: 2px solid @grey-90;
+    border-radius: 3px;
+    color: @blue-21;
+  }
+}

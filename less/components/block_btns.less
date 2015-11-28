@@ -2,6 +2,7 @@
   // common styles
 
   display: inline-block;
+  vertical-align: baseline;
   padding: 15px 30px;
 
   font-weight: 500;
@@ -42,5 +43,136 @@
       color: fade(@pink-49, 30%);
       background-color: #fff;
     }
+  }
+
+  &--intro {
+    margin-bottom: 30px;
+  }
+
+  &--minus,
+  &--plus {
+    position: relative;
+    width: 58px;
+    height: 58px;
+    padding: 0;
+    border: 2px solid @grey-90;
+    border-radius: 0;
+    background-color: #fff;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 27px;
+      height: 3px;
+      background-color: @blue-21;
+      transform: translate(-50%, -50%);
+    }
+  }
+
+  &--minus {
+    border-top-left-radius: 3px;
+    border-bottom-left-radius: 3px;
+  }
+
+  &--plus {
+    border-top-right-radius: 3px;
+    border-bottom-right-radius: 3px;
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 27px;
+      height: 3px;
+      background-color: @blue-21;
+      transform: translate(-50%, -50%) rotate(90deg);
+      transform-origin: center;
+    }
+  }
+
+  &__text-hidden {
+    display: none;
+  }
+
+  &--white {
+    color: @blue-21;
+    background-color: #fff;
+    border: 2px solid @grey-90;
+    border-radius: 3px;
+  }
+
+  &--upload {
+    width: 100%;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    text-transform: uppercase;
+    cursor: pointer;
+  }
+
+  &--upload-hidden {
+    display: none;
+  }
+
+  &--cross {
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: @zi-btn--cross;
+    padding: 0;
+    width: 32px;
+    height: 32px;
+    background-color: #fff;
+    border: 2px solid @grey-90;
+    transform: translate(50%, -50%);
+
+    &::before,
+    &::after {
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 14px;
+      height: 2px;
+      background-color: #c5c5c5;
+    }
+
+    &::before {
+      transform: translate(-50%, -50%) rotate(-45deg);
+    }
+
+    &::after {
+      transform: translate(-50%, -50%) rotate(45deg);
+    }
+  }
+
+  &--green {
+    width: 100%;
+    padding: 16px;
+    padding-bottom: 16px;
+    line-height: 30px;
+    text-transform: uppercase;
+    background-color: @green-41;
+    border-radius: 0;
+  }
+
+  &--post-prev,
+  &--post-next,
+  &--post-back {
+    padding-top: 14px;
+    padding-bottom: 14px;
+    line-height: 30px;
+    border-radius: 3px;
+  }
+
+  &--post-prev,
+  &--post-next {
+    width: 46%;
+  }
+
+  &--post-back {
+    width: 100%;
   }
 }

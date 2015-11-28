@@ -1,0 +1,124 @@
+.companions {
+  margin-left: 0;
+  margin-right: 0;
+  padding: 40px 20px;
+  background-color: @grey-94;
+  border: none;
+
+  &__heading {
+    margin-top: 0;
+    margin-bottom: 40px;
+    line-height: 18px;
+    text-transform: uppercase;
+    text-align: center;
+    color: @pink-49;
+  }
+
+  &__field-wrap {
+    &--amount {
+      margin-bottom: 30px;
+      padding-bottom: 50px;
+      border-bottom: 2px solid @grey-90;
+    }
+
+    &:first-child {
+      margin-top: 0;
+    }
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  &__label {
+    display: block;
+    padding-bottom: 5px;
+    padding-left: 20px;
+    padding-right: 20px;
+    text-transform: uppercase;
+    color: @pink-49;
+    cursor: pointer;
+
+    &--text-hidden {
+      display: none;
+    }
+  }
+
+  &__field {
+    display: block;
+    width: 100%;
+    padding: 15px 20px;
+    font-size: 18px;
+    background-color: @grey-94;
+    border: 2px solid @grey-90;
+    border-radius: 3px;
+    outline: none;
+    transition: background-color .15s;
+
+    &:hover,
+    &:focus {
+      background-color: #fff;
+    }
+
+    &::-moz-placeholder { color: @blue-21; } // not working
+    &::-webkit-input-placeholder { color: @blue-21; }
+    &::-ms-input-placeholder { color: @blue-21; }
+    &::placeholder { color: @blue-21; }
+  }
+
+  &__btns-group {
+    display: flex;
+
+    .companions__field {
+      width: 176px;
+      text-align: center;
+      border-left: none;
+      border-right: none;
+      border-radius: 0;
+    }
+  }
+
+  &__list {
+    .ul-reset;
+  }
+
+  &__item {
+    display: flex;
+    align-items: flex-start;
+    padding-left: 0;
+
+    // сброс дефолтного маркера
+    &::before {
+      display: none;
+    }
+
+    &:not(:last-child) {
+      margin-bottom: 40px;
+    }
+  }
+
+  &__number {
+
+  }
+
+  &__symbol {
+    padding-bottom: 5px;
+    text-align: center;
+    color: @pink-49;
+  }
+
+  &__value {
+    width: 58px;
+    padding: 12px;
+    text-align: center;
+    border-top: 2px solid @grey-90;
+    border-bottom: 2px solid @grey-90;
+    border-left: 2px solid @grey-90;
+  }
+
+  &__fields-wrap {
+    .companions__field-wrap {
+
+    }
+  }
+}

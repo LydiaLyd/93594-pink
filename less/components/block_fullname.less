@@ -1,0 +1,51 @@
+.fullname {
+  margin-left: 0;
+  margin-right: 0;
+  padding: 45px 20px;;
+  border: none;
+
+  &__text {
+    margin-top: 0;
+    margin-bottom: 40px;
+    text-align: center;
+  }
+
+  &__field-wrap {
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  &__label {
+    display: block;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: 5px;
+    text-transform: uppercase;
+    color: @pink-49;
+    cursor: pointer;
+  }
+
+  &__field {
+    display: block;
+    width: 100%;
+    padding: 15px 20px;
+    font-size: 18px;
+    background-color: @grey-94;
+    border: 2px solid @grey-90;
+    border-radius: 3px;
+    outline: none;
+    transition: background-color .15s;
+
+    &:hover,
+    &:focus {
+      background-color: #fff;
+    }
+
+    &::-moz-placeholder { color: @blue-21; } // not working
+    &::-webkit-input-placeholder { color: @blue-21; }
+    &::-ms-input-placeholder { color: @blue-21; }
+    &::placeholder { color: @blue-21; }
+  }
+}

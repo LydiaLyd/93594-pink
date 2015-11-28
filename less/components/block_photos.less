@@ -1,0 +1,100 @@
+.photos {
+  margin-left: 0;
+  margin-right: 0;
+  padding: 40px 20px 30px;
+  background-color: @grey-94;
+  border: none;
+
+  &__heading {
+    margin-top: 0;
+    margin-bottom: 40px;
+    line-height: 18px;
+    text-transform: uppercase;
+    text-align: center;
+    color: @pink-49;
+  }
+
+  &__field-wrap {
+    margin-bottom: 35px;
+    padding-bottom: 30px;
+    border-bottom: 2px solid  @grey-90;
+  }
+
+  &__list {
+    height: 315px;
+    .ul-reset;
+    .clearfix;
+  }
+
+  &__item {
+    position: relative;
+    float: left;
+    padding-left: 0;
+
+    // сброс дефолтного отступа снизу
+    &:not(:last-child) {
+      margin-bottom: 0;
+    }
+
+    &:not(:nth-child(3n+3)) {
+      margin-right: 44px;
+    }
+
+    // не работает
+    &:not(:nth-child(n-3)) {
+      margin-top: 23px;
+    }
+
+    // сброс дефолтного маркера
+    &::before {
+      display: none;
+    }
+
+    &::after {
+      display: block;
+      margin-top: 10px;
+      font-size: 12px;
+      line-height: 18px;
+      text-transform: uppercase;
+      color: @blue-21;
+    }
+
+    &:nth-child(1)::after {
+      content: "img-1.jpg";
+    }
+
+    &:nth-child(2)::after {
+      content: "img-2.jpg";
+    }
+
+    &:nth-child(3)::after {
+      content: "img-3.jpg";
+    }
+
+    &:nth-child(4)::after {
+      content: "img-4.jpg";
+    }
+
+    &:nth-child(5)::after {
+      content: "img-5.jpg";
+    }
+
+    &:nth-child(6)::after {
+      content: "img-6.jpg";
+    }
+
+    &:nth-child(7)::after {
+      content: "img-7.jpg";
+    }
+
+    &:nth-child(8)::after {
+      content: "img-8.jpg";
+    }
+  }
+
+  &__photo {
+    display: block;
+    width: 68px;
+    height: 68px;
+  }
+}
