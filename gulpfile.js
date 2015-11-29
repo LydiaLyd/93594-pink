@@ -25,15 +25,15 @@ gulp.task("style", function() {
     .pipe(livereload());
 });
 
-gulp.task("start", ["style"], function() {
-  livereload.listen();
-  gulp.watch("less/**/*.less", ["style"]);
-});
-
 gulp.task("csscomb", function() {
   gulp.src("css/style.css")
   .pipe(csscomb())
   .pipe(gulp.dest("./style.css"));
+});
+
+gulp.task("start", ["style"], function() {
+  livereload.listen();
+  gulp.watch("less/**/*.less", ["style"]);
 });
 
 

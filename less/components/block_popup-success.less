@@ -1,0 +1,38 @@
+.popup-success {
+  position: fixed;
+  z-index: @zi-popup-overlay;
+  display: none;
+  width: 100%;
+  height: 100%;
+
+  &--show {
+    display: block;
+  }
+
+  &__inner {
+    position: fixed;
+    top: 50%;
+    width: 100%;
+    background: #fff;
+    box-shadow: 0 7px 15px 7px fade(#000, 15%);
+    transform: translateY(-50%);
+  }
+
+  &__text-wrap {
+    padding: 40px 23px 35px;
+    text-align: center;
+  }
+
+  &__heading {
+    font-size: 18px;
+  }
+
+  &__text {
+    margin-bottom: 0;
+  }
+
+  &__btn-wrap {
+    padding: 50px 20px;
+    background-color: @grey-94;
+  }
+}
