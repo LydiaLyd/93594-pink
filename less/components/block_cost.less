@@ -3,8 +3,17 @@
   padding-bottom: 100px;
   .bg-diagonal(90px, #fff, @grey-94, 25px);
 
-  &__inner {
+  @media(min-width: 700px) {
+    padding-top: 85px;
+    padding-bottom: 65px;
+    background-size: 100% 55px;
+  }
 
+  &__inner {
+    @media(min-width: 700px) {
+      width: 88.57142857142857%;
+      .center
+    }
   }
 
   &__toggle {
@@ -22,6 +31,10 @@
     font-size: 0;
     text-align: center;
     transform: translateX(-50%);
+
+    @media(min-width: 700px) {
+      display: none;
+    }
   }
 
   &__control {
@@ -53,6 +66,10 @@
 
   &__toggle[id="price-2"]:checked ~ &__table-wrap .cost-table  {
     transform: translateX(-31%); // magic number
+
+    @media(min-width: 700px) {
+      transform: none;
+    }
   }
 
   &__toggle[id="price-3"]:checked ~ &__table-wrap .cost-table  {

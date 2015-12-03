@@ -7,8 +7,18 @@
   border-collapse: collapse;
   transition: transform .25s;
 
-  &__row {
+  @media(min-width: 700px) {
+    width: 100%;
+  }
 
+  &__row {
+    @media(min-width: 700px) {
+      // empty heading cell
+      &:first-child::before {
+        content: '';
+        display: table-cell;
+      }
+    }
   }
 
   &__heading,
@@ -22,9 +32,26 @@
     background-color: @blue-21;
     border-bottom: none;
 
+    @media(min-width: 700px) {
+      padding-top: 17px;
+      padding-bottom: 17px;
+
+      &:nth-child(2)::before {
+        top: 5px;
+        left: -30px;
+      }
+    }
+
     // label
     &:nth-child(2) {
       .has-label("Хит", @zi-cost-label, 500, @pink-49);
+
+      @media(min-width: 700px) {
+        &::before {
+          top: 4px;
+          left: -31px;
+        }
+      }
     }
   }
 
@@ -36,19 +63,41 @@
   &__name {
     margin-bottom: 3px;
     font-size: 18px;
+
+    @media(min-width: 700px) {
+      margin-bottom: 11px;
+      font-size: 16px;
+      line-height: 1;
+    }
   }
 
   &__value {
     font-weight: 300;
     font-size: 24px;
+
+    @media(min-width: 700px) {
+      font-size: 18px;
+      line-height: 1;
+    }
   }
 
   &__cell {
     padding: 15px 25px;
     background-color: #fff;
 
+    @media(min-width: 700px) {
+      width: 25%;
+      padding: 8px 15px;
+    }
+
     &:first-child {
       display: none;
+
+      @media(min-width: 700px) {
+        display: table-cell;
+        font-size: 14px;
+        text-transform: none;
+      }
     }
 
     .cost-table__row:nth-child(2) &:not(:first-child) {
@@ -57,6 +106,10 @@
 
     .cost-table__row:not(:first-child) &:not(:first-child)::before {
       content: attr(data-feature);
+
+      @media(min-width: 700px) {
+        content: none;
+      }
     }
   }
 

@@ -4,6 +4,13 @@ h1, h2, h3, h4, h5, h6 {
   font-family: @headings-font-family;
 }
 
+h1, h2 {
+  @media(min-width: 700px) {
+    font-size: 40px;
+    line-height: 48px;
+  }
+}
+
 h1 {
   font-weight: 300;
   font-size: @h1-font-size;
@@ -24,6 +31,13 @@ h3 {
   font-size: @h3-font-size;
   line-height: @h3-line-height;
   text-transform: uppercase;
+
+  @media(min-width: 700px) {
+    margin-top: 65px;
+    margin-bottom: 30px;
+    font-size: 24px;
+    line-height: 30px;
+  }
 }
 
 h4 {
@@ -60,6 +74,10 @@ ul {
     position: relative;
     padding-left: 20px;
 
+    @media(min-width: 700px) {
+      padding-left: 35px;
+    }
+
     &:not(:last-child) {
       margin-bottom: 35px;
     }
@@ -82,6 +100,10 @@ blockquote {
   padding-left: 20px;
   padding-right: 25px;
   border-left: 2px solid @pink-49;
+
+  @media(min-width: 700px) {
+    padding-left: 35px;
+  }
 
   p {
     margin-top: 0;

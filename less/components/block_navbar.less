@@ -7,10 +7,6 @@
   &__header {
     position: relative;
     z-index: @zi-navbar-header;
-    display: flex;
-    justify-content: space-between;
-    padding-left: 20px;
-    padding-right: 20px;
     background-color: fade(@blue-15, 70%);
     border-bottom: 1px solid transparent;
     transition:
@@ -21,6 +17,21 @@
     &--active {
       background-color: @nav-link-bg--xs;
       border-bottom: 1px solid #000;
+    }
+  }
+
+  &__wrap {
+    display: flex;
+    justify-content: space-between;
+    padding-left: 20px;
+    padding-right: 20px;
+
+    @media(min-width: 700px) {
+      align-items: center;
+      width: 88.57142857142857%;
+      .center;
+      padding-left: 0;
+      padding-right: 0;
     }
   }
 

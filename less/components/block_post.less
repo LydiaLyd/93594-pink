@@ -1,10 +1,28 @@
 .post {
-  padding: 40px 20px 35px;
+  padding-left: 20px;
+  padding-right: 20px;
+  margin-bottom: 35px;
+
+  @media(min-width: 700px) {
+    padding-left: 0;
+    padding-right: 0;
+  }
 
   &__header {
+    margin-bottom: 30px;
+    padding-top: 40px;
     padding-bottom: 30px;
     text-align: center;
     border-bottom: 1px solid @grey-90;
+
+    @media(min-width: 700px) {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-bottom: 45px;
+      padding-bottom: 0;
+      border-bottom: none;
+    }
   }
 
   &__heading {
@@ -12,17 +30,30 @@
     font-weight: 700;
     font-size: 30px;
     line-height: 36px;
+
+    @media(min-width: 700px) {
+      order: -2;
+      width: 400px;
+      font-size: 50px;
+      line-height: 60px;
+    }
   }
 
   &__headnote {
     margin-bottom: 0;
-
     font-size: 16px;
     line-height: 27px;
+
+    @media(min-width: 700px) {
+      order: -1;
+      margin-top: 0;
+      margin-bottom: 45px;
+      font-size: 24px;
+      line-height: 40px;
+    }
   }
 
   &__content {
-    padding-top: 30px;
     .children-reset;
   }
 }

@@ -1,16 +1,36 @@
 .page-footer {
 
+  &--main-page {
+    display: none;
+
+    @media(min-width: 700px) {
+      display: block;
+    }
+  }
+
   &__inner {
     display: flex;
     flex-direction: column;
     align-items: center;
     padding: 45px 20px 50px;
+
+    @media(min-width: 700px) {
+      flex-direction: row;
+      justify-content: space-between;
+      width: 88.57142857142857%;
+      .center;
+      padding: 38px 0;
+    }
   }
 
   &__column {
     &:nth-child(1),
     &:nth-child(2) {
       margin-bottom: 40px;
+
+      @media(min-width: 700px) {
+        margin-bottom: 0;
+      }
     }
 
     &:nth-child(3) {
@@ -19,7 +39,7 @@
   }
 
   &__text {
-
+    font-size: 14px;
   }
 
   &__link {
@@ -29,6 +49,6 @@
   }
 
   &__text-hidden {
-
+    display: none;
   }
 }

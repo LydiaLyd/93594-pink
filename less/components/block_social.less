@@ -7,14 +7,12 @@
   &__item {
     padding-left: 0;
 
-    // сброс дефолтного отступа снизу
-    &:not(:last-child) {
-      margin-bottom: 0;
-    }
-
-    // сброс дефолтного маркера
+    // сброс дефолтного маркера и отступа снизу
     &::before {
       display: none;
+    }
+    &:not(:last-child) {
+      margin-bottom: 0;
     }
   }
 

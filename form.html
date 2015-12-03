@@ -12,13 +12,20 @@
 
     <div class="navbar">
       <div class="navbar__header">
-        <a class="logo" href="index.html" title="Вернуться на главную">
-          <img class="logo__img  logo__img--header-xs" src="img/logo_pink-header-xs.png" width="74" height="24" alt="Pink logo">
-        </a>
-        <button class="navbar__toggle" type="button">
-          <span class="navbar__lines"></span>
-          <span class="navbar__text-hidden">Переключатель меню</span>
-        </button>
+        <!-- Добавила центровщик -->
+        <div class="navbar__wrap">
+          <a class="logo" href="index.html" title="Вернуться на главную">
+            <picture>
+              <source media="(min-width: 700px)" srcset="img/logo_pink-header-sm.svg" width="145" height="40" alt="Pink logo">
+              <img class="logo__img  logo__img--header" src="img/logo_pink-header-xs.svg" width="74" height="24" alt="Pink logo">
+            </picture>
+            </svg>
+          </a>
+          <button class="navbar__toggle" type="button">
+            <span class="navbar__lines"></span>
+            <span class="navbar__text-hidden">Переключатель меню</span>
+          </button>
+        </div>
       </div>
 
       <div class="navbar__nav">
@@ -54,7 +61,7 @@
     <div class="story-form">
       <form action="/echo" method="post" enctype="multipart/form-data">
         <fieldset class="fullname">
-          <p class="fullname__text">Поделитесь своей историей и получите шанс выиграть ценный приз — 1000 миль на вашу бонусную карту!</p>
+          <p class="fullname__text">Поделитесь своей историей и получите шанс выиграть ценный приз — 1000 миль на вашу бонусную карту! <span class="fullname__text-hidden-xs">Пожалуйста, заполните форму ниже:</span></p>
           <p class="fullname__field-wrap">
             <label class="fullname__label" for="firstname">Имя: *</label>
             <input class="fullname__field" name="firstname" id="firstname" type="text" placeholder="Введите ваше имя" required>
@@ -70,7 +77,6 @@
         </fieldset>
 
         <fieldset class="app">
-          <!-- поменяла legend на p, т.к. legend настроить не получилось -->
           <p class="app__heading">С каким приложением путешествовали? *</p>
           <ul class="app__list">
             <li class="app__item">
@@ -89,15 +95,12 @@
         </fieldset>
 
         <fieldset class="time">
-          <!-- поменяла legend на p, т.к. legend настроить не получилось -->
           <p class="time__heading">Когда Вы путешествовали? *</p>
-          <p class="time__field-wrap">
+          <div class="time__field-wrap">
             <input class="time__field" name="departure-date" id="departure-date" type="date" value="2015-04-01" required>
             <label class="time__label" for="departure-date">Дата выезда</label>
-          </p>
-          <!-- Поменяла p на div -->
+          </div>
           <div class="time__field-wrap">
-            <!-- Поменяла span на div -->
             <div class="time__btns-group">
               <button class="btn  btn--minus" type="button">
                 <i class="icon  icon-minus"></i>
@@ -111,19 +114,16 @@
             </div>
             <label class="time__label" for="duration">Продолжительность</label>
           </div>
-          <p class="time__field-wrap">
+          <div class="time__field-wrap">
             <input class="time__field" name="return-date" id="return-date" type="date" value="2015-04-01" required>
             <label class="time__label" for="return-date">Дата возвращения</label>
-          </p>
+          </div>
         </fieldset>
 
         <fieldset class="companions">
-          <!-- поменяла legend на p, т.к. legend настроить не получилось -->
           <p class="companions__heading">Количество попутчиков *</p>
-          <!-- Поменяла p на div -->
           <div class="companions__field-wrap  companions__field-wrap--amount">
             <label class="companions__label  companions__label--text-hidden" for="companions-amount">Количество попутчиков *</label>
-            <!-- Поменяла span на div -->
             <div class="companions__btns-group">
               <button class="btn  btn--minus" type="button">
                 <i class="icon  icon-minus"></i>
@@ -140,7 +140,6 @@
           <ul class="companions__list">
             <li class="companions__item">
               <div class="companions__number">
-                <!-- Поменяла spanы на divы -->
                 <div class="companions__symbol">№</div>
                 <div class="companions__value">1</div>
               </div>
@@ -154,11 +153,11 @@
                   <input class="companions__field" name="companion-nickname" id="companion-nickname-1" type="text" placeholder="Ну как же без этого!">
                 </p>
               </div>
+              <button class="btn  btn--companions" type="button">Удалить</button>
             </li>
 
             <li class="companions__item">
               <div class="companions__number">
-                <!-- Поменяла spanы на divы -->
                 <div class="companions__symbol">№</div>
                 <div class="companions__value">2</div>
               </div>
@@ -172,12 +171,12 @@
                   <input class="companions__field" name="companion-nickname" id="companion-nickname-2" type="text" placeholder="Ну как же без этого!">
                 </p>
               </div>
+              <button class="btn  btn--companions" type="button">Удалить</button>
             </li>
           </ul>
         </fieldset>
 
         <fieldset class="achievements">
-          <!-- поменяла legend на p, т.к. legend настроить не получилось -->
           <p class="achievements__heading">Ваши безбашенные достижения в путешествии</p>
           <ul class="achievements__list">
             <li class="achievements__item">
@@ -208,7 +207,6 @@
         </fieldset>
 
         <fieldset class="photos">
-          <!-- поменяла legend на p, т.к. legend настроить не получилось -->
           <p class="photos__heading">Ваши фотографии из поездки *</p>
           <div class="photos__field-wrap">
             <input class="btn  btn--upload-hidden" name="upload-photos" id="upload-photos" type="file" multiple accept="image/*" required>
@@ -274,8 +272,10 @@
           </ul>
         </fieldset>
 
-        <p class="story-form__btn-wrap"><button class="btn  btn--green" type="submit">Отправить форму</button></p>
-        <p class="story-form__prompt"><span class="story-form__symbol">*</span> — обязательные поля</p>
+        <div class="story-form__bottom">
+          <button class="btn  btn--green  btn--story-form" type="submit">Отправить форму</button>
+          <p class="story-form__prompt"><span class="story-form__symbol">*</span> — обязательные поля</p>
+        </div>
       </form>
     </div>
 
@@ -284,8 +284,8 @@
     <footer class="page-footer">
       <div class="page-footer__inner">
         <div class="page-footer__column">
-          <a class="logo  logo--footer-xs" href="index.html" title="Вернуться на главную">
-            <img class="logo__img  logo__img--footer-xs" src="img/logo_pink-footer-xs.png" width="145" height="40" alt="Pink logo">
+          <a class="logo  logo--footer" href="index.html" title="Вернуться на главную">
+            <img class="logo__img  logo__img--footer" src="img/logo_pink-footer-xs.png" width="145" height="40" alt="Pink logo">
           </a>
         </div>
 
@@ -325,7 +325,6 @@
 
 
     <div class="popup-success">
-      <!-- Добавила обертку, чтобы можно было сделать оверлей -->
       <div class="popup-success__inner">
         <div class="popup-success__text-wrap">
           <b class="popup-success__heading">Ваша заявка отправлена</b>
@@ -338,7 +337,6 @@
 
 
     <div class="popup-failure">
-      <!-- Добавила обертку, чтобы можно было сделать оверлей -->
       <div class="popup-failure__inner">
         <div class="popup-failure__text-wrap">
           <b class="popup-failure__heading">Что-то пошло не так!</b>
