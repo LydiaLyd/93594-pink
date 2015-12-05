@@ -47,6 +47,10 @@
 
   &--intro {
     margin-bottom: 30px;
+
+    @media(min-width: 700px) {
+      margin-bottom: 45px;
+    }
   }
 
   &--minus,
@@ -58,6 +62,11 @@
     border: 2px solid @grey-90;
     border-radius: 0;
     background-color: #fff;
+
+    @media(min-width: 700px) {
+      width: 64px;
+      height: 64px;
+    }
 
     &::before {
       content: "";
@@ -104,10 +113,27 @@
     border-radius: 3px;
   }
 
+  &--companions {
+    display: none;
+
+    @media(min-width: 700px) {
+      display: inline-block;
+      margin-right: -30px;
+      margin-top: 40px;
+      font-weight: 400;
+      font-size: 14px;
+      text-transform: uppercase;
+      color: @blue-21;
+      background-color: #fff;
+      border-radius: 0;
+    }
+  }
+
   &--upload {
     width: 100%;
     padding-top: 20px;
     padding-bottom: 20px;
+    font-weight: 700;
     text-transform: uppercase;
     cursor: pointer;
   }
@@ -128,6 +154,11 @@
     border: 2px solid @grey-90;
     transform: translate(50%, -50%);
 
+    @media(min-width: 700px) {
+      width: 56px;
+      height: 56px;
+    }
+
     &::before,
     &::after {
       content: "";
@@ -137,6 +168,10 @@
       width: 14px;
       height: 2px;
       background-color: #c5c5c5;
+
+      @media(min-width: 700px) {
+        width: 26px;
+      }
     }
 
     &::before {
@@ -149,13 +184,22 @@
   }
 
   &--green {
-    width: 100%;
     padding: 16px;
     padding-bottom: 16px;
     line-height: 30px;
     text-transform: uppercase;
     background-color: @green-41;
     border-radius: 0;
+  }
+
+  &--story-form {
+    width: 100%;
+
+    @media(min-width: 700px) {
+      width: auto;
+      padding-left: 55px;
+      padding-right: 55px;
+    }
   }
 
   &--post-prev,
@@ -169,10 +213,38 @@
 
   &--post-prev,
   &--post-next {
-    width: 46%;
+    flex-grow: 1;
+
+    @media(min-width: 700px) {
+      flex-grow: 1;
+      width: auto;
+    }
+  }
+
+  &--post-prev {
+    margin-right: 20px;
+
+    @media(min-width: 700px) {
+      order: 1;
+      margin-right: 0;
+    }
+  }
+
+  &--post-next {
+    @media(min-width: 700px) {
+      order: 3;
+    }
   }
 
   &--post-back {
     width: 100%;
+
+    @media(min-width: 700px) {
+      flex-grow: 2;
+      order: 2;
+      width: auto;
+      margin-left: 20px;
+      margin-right: 20px;
+    }
   }
 }

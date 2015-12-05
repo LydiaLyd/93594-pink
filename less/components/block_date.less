@@ -4,4 +4,35 @@
   line-height: 27px;
   text-transform: uppercase;
   color: @pink-49;
+
+  @media(min-width: 700px) {
+    font-size: 14px;
+    line-height: 30px;
+  }
+
+  &--post {
+    @media(min-width: 700px) {
+      position: relative;
+      width: 100%;
+      margin-top: 0;
+      margin-bottom: 0;
+
+      &::before {
+        content: "";
+        position: absolute;
+        top: 50%;
+        left: 0;
+        right: 0;
+        z-index: @zi-date-decoration;
+        border-bottom: 2px dotted @grey-90;
+        transform: translateY(-50%);
+      }
+    }
+  }
+
+  &__text {
+    padding-left: 25px;
+    padding-right: 25px;
+    background-color: #fff;
+  }
 }

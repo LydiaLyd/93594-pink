@@ -7,16 +7,6 @@
   &__item {
     padding-left: 0;
 
-    // сброс дефолтного отступа снизу
-    &:not(:last-child) {
-      margin-bottom: 0;
-    }
-
-    // сброс дефолтного маркера
-    &::before {
-      display: none;
-    }
-
     &--current {
       color: @nav-link-color--current;
     }

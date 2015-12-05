@@ -4,20 +4,44 @@
   background: @blue-15 url(../img/bg_intro-xs.jpg) top no-repeat;
   background-size: auto 460px;
 
+  @media(min-width: 700px) {
+    background-image: url(../img/bg_intro-sm.jpg);
+    background-size: auto;
+  }
+
   &--main-page {
     background:
       transparent url(../img/bg_iphone-hand-xs.png) left 173px no-repeat,
       @blue-15 url(../img/bg_intro-xs.jpg) top no-repeat;
     background-size: auto, auto 460px;
+
+    @media(min-width: 700px) {
+      background-image:
+        url(../img/bg_iphone-hand-sm.png),
+        url(../img/bg_intro-sm.jpg);
+      background-position: right bottom, top;
+      background-size: auto, auto 727px;
+    }
   }
 
   &__inner {
+    @media(min-width: 700px) {
+      width: 88.57142857142857%;
+      .center;
+    }
 
+    &--main-page {
+      @media(min-width: 700px) {
+        padding: 209px 42.85714285714286% 93px 0;
+      }
+    }
   }
 
   &__heading {
+    width: 285px;
     margin-top: 0;
     margin-bottom: 0;
+    margin: 0 auto;
     padding-top: 95px;
     padding-bottom: 35px;
     font-weight: 300;
@@ -25,24 +49,56 @@
     line-height: 30px;
     color: #fff;
 
+    @media(min-width: 700px) {
+      width: 585px;
+      padding-top: 180px;
+      padding-bottom: 86px;
+      font-size: 50px;
+      line-height: 60px;
+    }
+
     &--main-page {
       padding-bottom: 305px;
+      @media(min-width: 700px) {
+        width: 190px;
+        margin-bottom: 35px;
+        padding-top: 0;
+        padding-bottom: 0;
+        font-size: 40px;
+        line-height: 48px;
+      }
     }
 
     &--form-page {
       padding-bottom: 55px;
+
+      @media(min-width: 700px) {
+        width: 475px;
+        padding-bottom: 80px;
+      }
     }
   }
 
   &__content {
     padding: 30px 20px;
+    line-height: 24px;
     background-color: @blue-15;
+
+    @media(min-width: 700px) {
+      padding: 0;
+      font-size: 18px;
+      background: none;
+    }
   }
 
   &__text {
     margin-top: 25px;
     margin-bottom: 0;
     font-weight: 300;
+
+    @media(min-width: 700px) {
+      margin-top: 40px;
+    }
   }
 
   &__text-part {

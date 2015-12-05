@@ -12,13 +12,20 @@
 
     <div class="navbar">
       <div class="navbar__header">
-        <a class="logo" href="index.html" title="Вернуться на главную">
-          <img class="logo__img  logo__img--header-xs" src="img/logo_pink-header-xs.png" width="74" height="24" alt="Pink logo">
-        </a>
-        <button class="navbar__toggle" type="button">
-          <span class="navbar__lines"></span>
-          <span class="navbar__text-hidden">Переключатель меню</span>
-        </button>
+        <!-- Добавила центровщик -->
+        <div class="navbar__wrap">
+          <a class="logo" href="index.html" title="Вернуться на главную">
+            <picture>
+              <source media="(min-width: 700px)" srcset="img/logo_pink-header-sm.svg" width="145" height="40" alt="Pink logo">
+              <img class="logo__img  logo__img--header" src="img/logo_pink-header-xs.svg" width="74" height="24" alt="Pink logo">
+            </picture>
+            </svg>
+          </a>
+          <button class="navbar__toggle" type="button">
+            <span class="navbar__lines"></span>
+            <span class="navbar__text-hidden">Переключатель меню</span>
+          </button>
+        </div>
       </div>
 
       <div class="navbar__nav">
@@ -55,7 +62,7 @@
       <article class="post">
         <header class="post__header">
           <h2 class="post__heading">Антон и Надя в Тайланде</h2>
-          <p class="date">Опубликовано: <time datetime="2015-05-13">6 месяцев назад</time></p>
+          <p class="date  date--post"><span class="date__text">Опубликовано: <time datetime="2015-05-13">6 месяцев назад</time></span></p>
           <p class="post__headnote">Читайте рассказ о том, как семейная пара посещала Тайланд, стараясь максимально избегать избитых туристических мест и районов.</p>
         </header>
         <div class="post__content">
@@ -63,15 +70,15 @@
           <p>В Азию нам хотелось попасть уже давно, но все время что-то останавливало. Также не давал покоя вопрос гигиены и чистоты вокруг. Были сомнения и на счет местной еды. Однако, увидев выгодные билеты на <a class="post__link" href="http://www.skyscanner.ru/">skyscanner.ru</a>, мы все-таки решились!</p>
           <h3>Выбор отеля</h3>
           <p>В Тайланде огромный разброс по стоимости отелей и так же сильно отличаются и они сами. Так как достопримечательности щедро разбросаны по всей стране, то чтобы посетить их все, нужно пожить в нескольких разных городах. В итоге мы остановились на следующих:</p>
-          <ul>
-            <li>Point Yamu by Como (Пхукет)</li>
-            <li>Amari Vogue Hotel (Краби)</li>
-            <li>Photo Hotel (Пхукет)</li>
+          <ul class="post__list">
+            <li class="post__item">Point Yamu by Como (Пхукет)</li>
+            <li class="post__item">Amari Vogue Hotel (Краби)</li>
+            <li class="post__item">Photo Hotel (Пхукет)</li>
           </ul>
           <p>В выборе отелей мы учитывали как расположение, так и отзывы на Tripadvisor. Например, вот, что пишут люди про Point Yamu:</p>
-          <blockquote>
-            <p>Замечательное место,в которое хочется вернуться обязательно! Персонал отзывчивый и внимательный,еда-потрясающая. Отель расположен в тихом и уединенном месте - в чем вся и прелесть. СПА отличный. Потрясающие виды.</p>
-            <address>Олег, г. Москва</address>
+          <blockquote class="post__quote">
+            <p class="post__text">Замечательное место,в которое хочется вернуться обязательно! Персонал отзывчивый и внимательный, еда-потрясающая. Отель расположен в тихом и уединенном месте - в чем вся и прелесть. СПА отличный. Потрясающие виды.</p>
+            <address class="post__address">Олег, г. Москва</address>
           </blockquote>
           <h3>Местная еда</h3>
           <p>Существует мнение, что вся еда в Тайланде экстремально острая. Это мнение сложилось не напрасно! Но не стоит делать из этого проблему — просто попросите сделать ваше блюдо «not spicy». Желающие могут попробовать жареных тараканчиков. Мы не рискнули.</p>
@@ -90,8 +97,8 @@
     <footer class="page-footer">
       <div class="page-footer__inner">
         <div class="page-footer__column">
-          <a class="logo  logo--footer-xs" href="index.html" title="Вернуться на главную">
-            <img class="logo__img  logo__img--footer-xs" src="img/logo_pink-footer-xs.png" width="145" height="40" alt="Pink logo">
+          <a class="logo  logo--footer" href="index.html" title="Вернуться на главную">
+            <img class="logo__img  logo__img--footer" src="img/logo_pink-footer-xs.png" width="145" height="40" alt="Pink logo">
           </a>
         </div>
 

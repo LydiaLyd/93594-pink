@@ -12,13 +12,20 @@
 
     <div class="navbar">
       <div class="navbar__header">
-        <a class="logo" href="index.html" title="Вернуться на главную">
-          <img class="logo__img  logo__img--header-xs" src="img/logo_pink-header-xs.png" width="74" height="24" alt="Pink logo">
-        </a>
-        <button class="navbar__toggle" type="button">
-          <span class="navbar__lines"></span>
-          <span class="navbar__text-hidden">Переключатель меню</span>
-        </button>
+        <!-- Добавила центровщик -->
+        <div class="navbar__wrap">
+          <a class="logo" href="index.html" title="Вернуться на главную">
+            <picture>
+              <source media="(min-width: 700px)" srcset="img/logo_pink-header-sm.svg" width="145" height="40" alt="Pink logo">
+              <img class="logo__img  logo__img--header" src="img/logo_pink-header-xs.svg" width="74" height="24" alt="Pink logo">
+            </picture>
+            </svg>
+          </a>
+          <button class="navbar__toggle" type="button">
+            <span class="navbar__lines"></span>
+            <span class="navbar__text-hidden">Переключатель меню</span>
+          </button>
+        </div>
       </div>
 
       <div class="navbar__nav">
@@ -103,8 +110,8 @@
     <footer class="page-footer">
       <div class="page-footer__inner">
         <div class="page-footer__column">
-          <a class="logo  logo--footer-xs" href="index.html" title="Вернуться на главную">
-            <img class="logo__img  logo__img--footer-xs" src="img/logo_pink-footer-xs.png" width="145" height="40" alt="Pink logo">
+          <a class="logo  logo--footer" href="index.html" title="Вернуться на главную">
+            <img class="logo__img  logo__img--footer" src="img/logo_pink-footer-xs.png" width="145" height="40" alt="Pink logo">
           </a>
         </div>
 

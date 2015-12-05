@@ -1,11 +1,23 @@
 .contacts {
   padding-top: 45px;
   text-align: center;
+  // bottom mask
+  .bg-triangle(70px, @zi-contacts-triangle-mask, 30px, transparent, #fff);
 
+  @media(min-width: 700px) {
+    padding-top: 50px;
+    padding-bottom: 95px;
+
+    &::before, &::after {
+      height: 70px;
+    }
+  }
 
   &__inner {
-    // bottom mask
-    .bg-triangle(70px, @zi-contacts-triangle-mask, 30px, transparent, #fff);
+    @media(min-width: 700px) {
+      width: 88.57142857142857%;
+      .center;
+    }
   }
 
   &__heading {
@@ -14,18 +26,39 @@
     font-weight: 300;
     font-size: 24px;
     line-height: 30px;
+
+    @media(min-width: 700px) {
+      width: 380px;
+      margin-bottom: 45px;
+      font-size: 40px;
+      line-height: 48px;
+    }
   }
 
   &__items {
     padding-left: 20px;
     padding-right: 20px;
     font-style: normal;
+
+    @media(min-width: 700px) {
+      display: flex;
+      justify-content: space-around;
+      flex-wrap: wrap;
+      width: 600px;
+      .center;
+      padding-left: 0;
+      padding-right: 0;
+    }
   }
 
   &__item {
 
     &:not(:last-child) {
       margin-bottom: 20px;
+
+      @media(min-width: 700px) {
+        margin-bottom: 40px;
+      }
     }
   }
 
@@ -43,6 +76,11 @@
     &:last-child {
       margin-bottom: 0;
       color: @pink-49;
+
+      @media(min-width: 700px) {
+        width: 290px;
+        .center;
+      }
     }
   }
 
@@ -51,7 +89,5 @@
     line-height: 24px;
   }
 
-  &__link {
-
-  }
+  &__link {}
 }

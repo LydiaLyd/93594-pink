@@ -6,21 +6,31 @@
   padding-left: 0;
   list-style: none;
 
+  @media(min-width: 700px) {
+    position: relative;
+    width: 400px;
+    margin-right: 0;
+    margin-left: 0;
+    padding-left: 60px;
+    padding-right: 60px;
+
+    &::before {
+      content: "Стр.";
+      position: absolute;
+      top: 50%;
+      left: 0;
+      font-weight: 700;
+      text-transform: uppercase;
+      transform: translateY(-50%);
+    }
+  }
+
   &__item {
     padding-left: 0;
+    font-weight: 700;
     font-size: 18px;
     line-height: 30px;
     text-align: center;
-
-    // сброс дефолтного отступа снизу
-    &:not(:last-child) {
-      margin-bottom: 0;
-    }
-
-    // сброс дефолтного маркера
-    &::before {
-      display: none;
-    }
 
     &--current {
       width: 62px;

@@ -1,53 +1,77 @@
 .photos {
   margin-left: 0;
   margin-right: 0;
-  padding: 40px 20px 30px;
+  padding: 40px 0 17px;
   background-color: @grey-94;
   border: none;
+
+  @media(min-width: 700px) {
+    position: relative;
+    display: flex;
+    margin-bottom: 60px;
+    padding: 40px 0 20px;
+    background-color: #fff;
+    border: 2px solid @grey-90;
+    border-radius: 3px;
+  }
 
   &__heading {
     margin-top: 0;
     margin-bottom: 40px;
+    padding-left: 20px;
+    padding-right: 20px;
+    font-size: 14px;
     line-height: 18px;
     text-transform: uppercase;
     text-align: center;
     color: @pink-49;
+
+    @media(min-width: 700px) {
+      position: absolute;
+      top: 0;
+      left: 50%;
+      margin-bottom: 0;
+      background-color: #fff;
+      transform: translate(-50%, -50%);
+    }
   }
 
   &__field-wrap {
-    margin-bottom: 35px;
+    margin-bottom: 23px;
+    padding-left: 20px;
+    padding-right: 20px;
     padding-bottom: 30px;
     border-bottom: 2px solid  @grey-90;
+
+    @media(min-width: 700px) {
+      width: 80.64516129032258%;
+      .center;
+      margin-bottom: 42px;
+      padding-left: 0;
+      padding-right: 0;
+      padding-bottom: 40px;
+    }
   }
 
   &__list {
-    height: 315px;
+    display: flex;
+    flex-wrap: wrap;
     .ul-reset;
-    .clearfix;
+
+    @media(min-width: 700px) {
+      padding-left: 25px;
+      padding-right: 25px;
+    }
   }
 
   &__item {
     position: relative;
-    float: left;
-    padding-left: 0;
+    width: 68px;
+    margin: 11px 20px;
 
-    // сброс дефолтного отступа снизу
-    &:not(:last-child) {
-      margin-bottom: 0;
-    }
-
-    &:not(:nth-child(3n+3)) {
-      margin-right: 44px;
-    }
-
-    // не работает
-    &:not(:nth-child(n-3)) {
-      margin-top: 23px;
-    }
-
-    // сброс дефолтного маркера
-    &::before {
-      display: none;
+    @media(min-width: 700px) {
+      width: 120px;
+      margin: 23px 35px;
     }
 
     &::after {
@@ -57,6 +81,11 @@
       line-height: 18px;
       text-transform: uppercase;
       color: @blue-21;
+
+      @media(min-width: 700px) {
+        font-size: 14px;
+        line-height: 26px;
+      }
     }
 
     &:nth-child(1)::after {
@@ -94,7 +123,7 @@
 
   &__photo {
     display: block;
-    width: 68px;
-    height: 68px;
+    width: 100%;
+    height: auto;
   }
 }
