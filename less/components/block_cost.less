@@ -9,10 +9,22 @@
     background-size: 100% 55px;
   }
 
+  @media(min-width: 960px) {
+    padding-top: 155px;
+    padding-bottom: 90px;
+    background-size: 100% 100px;
+  }
+
   &__inner {
     @media(min-width: 700px) {
       width: 88.57142857142857%;
       .center
+    }
+
+    @media(min-width: 960px) {
+      width: 960px;
+      padding-left: 10px;
+      padding-right: 10px;
     }
   }
 
@@ -24,7 +36,7 @@
     position: absolute;
     bottom: 45px;
     left: 50%;
-    z-index: @zi-cost-slider-controls;
+    z-index: @zi_cost-slider-controls;
     display: flex;
     justify-content: space-between;
     width: 60px;
@@ -40,19 +52,26 @@
   &__control {
     width: 12px;
     height: 12px;
-    background-color: @grey-76;
+    background-color: fade(@blue-21, 30%);
     border: 3px solid @grey-94;
     border-radius: 50%;
     cursor: pointer;
     transition:
       background-color .15s,
       border-color .15s;
+
+    &:hover {
+      background-color: fade(@blue-21, 60%);
+    }
+    &:active {
+      background-color: fade(@blue-21, 10%);
+    }
   }
 
   &__toggle[id="price-1"]:checked ~ &__controls &__control[for="price-1"],
   &__toggle[id="price-2"]:checked ~ &__controls &__control[for="price-2"],
   &__toggle[id="price-3"]:checked ~ &__controls &__control[for="price-3"] {
-    background-color: #fff;
+    background-color: fade(@blue-21, 10%);
     border-color: @blue-21;
   }
 

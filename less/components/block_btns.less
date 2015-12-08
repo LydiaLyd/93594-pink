@@ -1,18 +1,16 @@
 .btn {
-  // common styles
-
   display: inline-block;
   vertical-align: baseline;
   padding: 15px 30px;
 
   font-weight: 500;
-  font-size: @btn-font-size;
-  line-height: @btn-line-hight;
+  font-size: 18px;
+  line-height: 18px;
   text-decoration: none;
   text-align: center;
 
-  color: @btn-color;
-  background-color: @btn-bg;
+  color: #fff;
+  background-color: @blue-21;
   border: none;
   outline: none;
   border-radius: 30px;
@@ -26,8 +24,6 @@
   &:hover {
     text-decoration: none;
   }
-
-  // various btn types go here
 
   &--transparent {
     padding: 16px 35px;
@@ -51,17 +47,29 @@
     @media(min-width: 700px) {
       margin-bottom: 45px;
     }
+    @media(min-width: 960px) {
+      margin-bottom: 57px;
+    }
   }
 
   &--minus,
   &--plus {
     position: relative;
+    flex-shrink: 0;
     width: 58px;
     height: 58px;
     padding: 0;
     border: 2px solid @grey-90;
     border-radius: 0;
     background-color: #fff;
+
+    &:hover {
+      border-color: @blue-21;
+    }
+    &:active {
+      background-color: @blue-21;
+      border-color: @blue-21;
+    }
 
     @media(min-width: 700px) {
       width: 64px;
@@ -76,7 +84,13 @@
       width: 27px;
       height: 3px;
       background-color: @blue-21;
-      transform: translate(-50%, -50%);
+      transform:
+      translate(-50%, -50%);
+      transition: background-color .15s;
+    }
+
+    &:active::before {
+      background-color: #fff;
     }
   }
 
@@ -99,6 +113,12 @@
       background-color: @blue-21;
       transform: translate(-50%, -50%) rotate(90deg);
       transform-origin: center;
+      transition: background-color .15s;
+    }
+
+    &:active::after {
+      background-color: #fff;
+      border-color: @blue-21;
     }
   }
 
@@ -126,6 +146,15 @@
       color: @blue-21;
       background-color: #fff;
       border-radius: 0;
+
+      &:hover {
+        text-decoration: underline;
+        color: @pink-49;
+      }
+      &:active {
+        text-decoration: none;
+        color: fade(@pink-49, 30%);
+      }
     }
   }
 
@@ -136,6 +165,15 @@
     font-weight: 700;
     text-transform: uppercase;
     cursor: pointer;
+
+    &:hover {
+      border-color: @blue-21;
+    }
+    &:active {
+      color: #fff;
+      background-color: @blue-21;
+      border-color: @blue-21;
+    }
   }
 
   &--upload-hidden {
@@ -146,13 +184,21 @@
     position: absolute;
     top: 0;
     right: 0;
-    z-index: @zi-btn--cross;
+    z-index: @zi_btn--cross;
     padding: 0;
     width: 32px;
     height: 32px;
     background-color: #fff;
     border: 2px solid @grey-90;
     transform: translate(50%, -50%);
+
+    &:hover {
+      border-color: @blue-21;
+    }
+    &:active {
+      background-color: @blue-21;
+      border-color: @blue-21;
+    }
 
     @media(min-width: 700px) {
       width: 56px;
@@ -168,6 +214,7 @@
       width: 14px;
       height: 2px;
       background-color: #c5c5c5;
+      transition: background-color .15s;
 
       @media(min-width: 700px) {
         width: 26px;
@@ -181,6 +228,16 @@
     &::after {
       transform: translate(-50%, -50%) rotate(45deg);
     }
+
+    &:hover::before,
+    &:hover::after {
+      background-color: @blue-21;
+    }
+
+    &:active::before,
+    &:active::after {
+      background-color: #fff;
+    }
   }
 
   &--green {
@@ -190,6 +247,14 @@
     text-transform: uppercase;
     background-color: @green-41;
     border-radius: 0;
+
+    &:hover {
+      background-color: @green-36;
+    }
+    &:active {
+      color: rgba(255, 255, 255, .3);
+      background-color: @green-36;
+    }
   }
 
   &--story-form {
@@ -207,8 +272,20 @@
   &--post-back {
     padding-top: 14px;
     padding-bottom: 14px;
+    font-weight: 700;
+    font-size: 18px;
     line-height: 30px;
+    text-transform: uppercase;
     border-radius: 3px;
+
+    &:hover {
+      border-color: @blue-21;
+    }
+    &:active {
+      color: #fff;
+      background-color: @blue-21;
+      border-color: @blue-21;
+    }
   }
 
   &--post-prev,
@@ -247,4 +324,24 @@
       margin-right: 20px;
     }
   }
+
+  &--disabled {
+    background-color: @grey-90;
+
+    &:hover,
+    &:active {
+      color: #fff;
+      background-color: @grey-90;
+    }
+  }
+
+  &--in-progress {
+    animation: change-color 2s linear infinite;
+  }
+}
+
+@keyframes change-color {
+  0% {color: rgba(255, 255, 255, .3)}
+  50% {color: rgba(255, 255, 255, .7)}
+  100% {color: rgba(255, 255, 255, .3)}
 }

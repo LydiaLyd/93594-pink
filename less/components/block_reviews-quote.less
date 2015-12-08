@@ -19,6 +19,10 @@
       margin-bottom: 5px;
       font-size: 20px;
     }
+
+    @media(min-width: 960px) {
+      font-size: 24px;
+    }
   }
 
   &__info {
@@ -30,6 +34,10 @@
       font-size: 14px;
       color: @blue-21;
     }
+
+    @media(min-width: 960px) {
+      font-size: 18px;
+    }
   }
 
   &__text {
@@ -38,8 +46,21 @@
 
     @media(min-width: 700px) {
       order: -1;
-      margin-bottom: 40px;
+      margin-bottom: 38px;
       font-size: 18px;
+    }
+  }
+
+  &__icon {
+    display: none;
+
+    @media(min-width: 960px) {
+      order: -1;
+      display: block;
+      width: 76px;
+      height: 64px;
+      margin-bottom: 45px;
+      fill: @grey-93;
     }
   }
 }

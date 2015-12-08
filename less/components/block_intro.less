@@ -4,23 +4,66 @@
   background: @blue-15 url(../img/bg_intro-xs.jpg) top no-repeat;
   background-size: auto 460px;
 
+  @media (min-resolution: 2dppx) {
+    background-image: url(../img/bg_intro-xs-2x.jpg);
+  }
+  @media (min-resolution: 3dppx) {
+    background-image: url(../img/bg_intro-xs-3x.jpg);
+  }
+
   @media(min-width: 700px) {
     background-image: url(../img/bg_intro-sm.jpg);
     background-size: auto;
+  }
+  @media (min-resolution: 2dppx) and (min-width: 700px) {
+    background-image: url(../img/bg_intro-sm-2x.jpg);
+  }
+
+  @media(min-width: 960px) {
+    background-image: url(../img/bg_intro-md.jpg);
+    background-size: auto 850px;
   }
 
   &--main-page {
     background:
       transparent url(../img/bg_iphone-hand-xs.png) left 173px no-repeat,
       @blue-15 url(../img/bg_intro-xs.jpg) top no-repeat;
-    background-size: auto, auto 460px;
+    background-size: auto 286px, auto 460px;
+
+    @media (min-resolution: 2dppx) {
+      background-image:
+        url(../img/bg_iphone-hand-xs-2x.png),
+        url(../img/bg_intro-xs-2x.jpg);
+    }
+    @media (min-resolution: 3dppx) {
+      background-image:
+        url(../img/bg_iphone-hand-xs-3x.png),
+        url(../img/bg_intro-xs-3x.jpg);
+    }
 
     @media(min-width: 700px) {
       background-image:
         url(../img/bg_iphone-hand-sm.png),
         url(../img/bg_intro-sm.jpg);
       background-position: right bottom, top;
-      background-size: auto, auto 727px;
+      background-size: auto 545px, auto 727px;
+    }
+    @media (min-resolution: 2dppx) and (min-width: 700px) {
+      background-image:
+        url(../img/bg_iphone-hand-sm-2x.png),
+        url(../img/bg_intro-sm-2x.jpg);
+    }
+
+    @media(min-width: 960px) {
+      background-image:
+        url(../img/bg_iphone-hand-md.png),
+        url(../img/bg_intro-md.jpg);
+      background-size: auto 645px, auto 850px;
+    }
+    @media (min-resolution: 2dppx) and (min-width: 960px) {
+      background-image:
+        url(../img/bg_iphone-hand-md-2x.png),
+        url(../img/bg_intro-md.jpg);
     }
   }
 
@@ -30,9 +73,19 @@
       .center;
     }
 
+    @media(min-width: 960px) {
+      width: 960px;
+      padding-left: 10px;
+      padding-right: 10px;
+    }
+
     &--main-page {
       @media(min-width: 700px) {
         padding: 209px 42.85714285714286% 93px 0;
+      }
+
+      @media(min-width: 960px) {
+        padding: 220px 650px 120px 10px;
       }
     }
   }
@@ -59,6 +112,7 @@
 
     &--main-page {
       padding-bottom: 305px;
+
       @media(min-width: 700px) {
         width: 190px;
         margin-bottom: 35px;
@@ -66,6 +120,13 @@
         padding-bottom: 0;
         font-size: 40px;
         line-height: 48px;
+      }
+
+      @media(min-width: 960px) {
+        width: 235px;
+        margin-bottom: 55px;
+        font-size: 50px;
+        line-height: 60px;
       }
     }
 
@@ -75,6 +136,12 @@
       @media(min-width: 700px) {
         width: 475px;
         padding-bottom: 80px;
+      }
+
+      @media(min-width: 960px) {
+        width: 720px;
+        padding-top: 170px;
+        padding-bottom: 105px;
       }
     }
   }
@@ -99,10 +166,10 @@
     @media(min-width: 700px) {
       margin-top: 40px;
     }
-  }
 
-  &__text-part {
-    display: block;
+    @media(min-width: 960px) {
+      margin-top: 57px;
+    }
   }
 
   &__imgs-wrap {

@@ -44,12 +44,18 @@
 
     // label
     &:nth-child(2) {
-      .has-label("Хит", @zi-cost-label, 500, @pink-49);
+      .has-label("Хит", @zi_cost-label, 500, @pink-49);
 
       @media(min-width: 700px) {
         &::before {
           top: 4px;
           left: -31px;
+        }
+      }
+
+      @media(min-width: 960px) {
+        &::before {
+          font-size: 14px;
         }
       }
     }
@@ -69,6 +75,10 @@
       font-size: 16px;
       line-height: 1;
     }
+
+    @media(min-width: 960px) {
+      font-size: 18px;
+    }
   }
 
   &__value {
@@ -79,15 +89,27 @@
       font-size: 18px;
       line-height: 1;
     }
+
+    @media(min-width: 960px) {
+      font-size: 24px;
+      line-height: 30px;
+    }
   }
 
   &__cell {
+    position: relative;
     padding: 15px 25px;
     background-color: #fff;
+    text-align: right;
 
     @media(min-width: 700px) {
       width: 25%;
       padding: 8px 15px;
+      text-align: center;
+    }
+
+    @media(min-width: 960px) {
+      padding: 15px 22px;
     }
 
     &:first-child {
@@ -96,7 +118,12 @@
       @media(min-width: 700px) {
         display: table-cell;
         font-size: 14px;
+        text-align: left;
         text-transform: none;
+      }
+      
+      @media(min-width: 960px) {
+        font-size: 18px;
       }
     }
 
@@ -106,6 +133,10 @@
 
     .cost-table__row:not(:first-child) &:not(:first-child)::before {
       content: attr(data-feature);
+      position: absolute;
+      top: 50%;
+      left: 25px;
+      transform: translateY(-50%);
 
       @media(min-width: 700px) {
         content: none;
@@ -115,5 +146,18 @@
 
   &__text-hidden {
     display: none;
+  }
+
+  &__icon-yes,
+  &__icon-no {
+    vertical-align: middle;
+  }
+
+  &__icon-yes {
+    fill: @green-50;
+  }
+
+  &__icon-no {
+    fill: @orange-54;
   }
 }

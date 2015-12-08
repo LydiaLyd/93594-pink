@@ -2,14 +2,12 @@
 
 <div class="navbar">
   <div class="navbar__header">
-    <!-- Добавила центровщик -->
     <div class="navbar__wrap">
       <a class="logo" href="index.html" title="Вернуться на главную">
         <picture>
           <source media="(min-width: 700px)" srcset="img/logo_pink-header-sm.svg" width="145" height="40" alt="Pink logo">
           <img class="logo__img  logo__img--header" src="img/logo_pink-header-xs.svg" width="74" height="24" alt="Pink logo">
         </picture>
-        </svg>
       </a>
       <button class="navbar__toggle" type="button">
         <span class="navbar__lines"></span>
@@ -19,6 +17,9 @@
   </div>
 
   <div class="navbar__nav">
+    <a class="logo  logo--nav" href="index.html" title="Вернуться на главную">
+      <img class="logo__img  logo__img--header" src="img/logo_pink-header-md.svg" width="74" height="24" alt="Pink logo">
+    </a>
     <nav class="main-nav">
       <ul class="main-nav__list">
         <li class="main-nav__item  main-nav__item--current">
@@ -28,10 +29,10 @@
           <a class="main-nav__link" href="blog.html">Блог</a>
         </li>
         <li class="main-nav__item">
-          <a class="main-nav__link" href="#">Отзывы</a>
+          <a class="main-nav__link" href="post.html">Отзывы</a>
         </li>
         <li class="main-nav__item">
-          <a class="main-nav__link" href="#">Конкурс</a>
+          <a class="main-nav__link" href="form.html">Конкурс</a>
         </li>
       </ul>
     </nav>
@@ -56,7 +57,10 @@
   <div class="page-footer__inner">
     <div class="page-footer__column">
       <a class="logo  logo--footer" href="index.html" title="Вернуться на главную">
-        <img class="logo__img  logo__img--footer" src="img/logo_pink-footer-xs.png" width="145" height="40" alt="Pink logo">
+        <picture>
+          <source media="(min-width: 960px)" srcset="img/logo_pink-footer-md.svg" width="145" height="40" alt="Pink logo">
+          <img class="logo__img  logo__img--footer" src="img/logo_pink-footer-xs.png" width="145" height="40" alt="Pink logo">
+        </picture>
       </a>
     </div>
 
@@ -64,19 +68,19 @@
       <ul class="social">
         <li class="social__item">
           <a class="social__link" href="#" title="Мы в Twitter">
-            <i class="icon  icon--twitter"></i>
+            <svg class="social__icon" width="20" height="14"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-twitter"></use></svg>
             <span class="social__text-hidden">Мы в Twitter</span>
           </a>
         </li>
         <li class="social__item">
           <a class="social__link" href="#" title="Мы на Facebook">
-            <i class="icon  icon--facebook"></i>
+            <svg class="social__icon" width="25" height="17"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-facebook"></use></svg>
             <span class="social__text-hidden">Мы на Facebook</span>
           </a>
         </li>
         <li class="social__item">
           <a class="social__link" href="#" title="Мы в Youtube">
-            <i class="icon  icon--youtube"></i>
+            <svg class="social__icon" width="20" height="14"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-youtube"></use></svg>
             <span class="social__text-hidden">Мы в Youtube</span>
           </a>
         </li>
@@ -84,11 +88,84 @@
     </div>
 
     <div class="page-footer__column">
-      <span class="page-footer__text">Разработано:</span>
       <a class="page-footer__link" href="http://htmlacademy.ru" title="Перейти на htmlacademy.ru" target="_blank">
-        <i class="icon  icon--htmlacademy"></i>
+        <span class="page-footer__text">Разработано:</span>
+        <svg class="page-footer__icon" width="27" height="34"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-htmlacademy"></use></svg>
         <span class="page-footer__text-hidden">HTML Academy</span>
       </a>
     </div>
   </div>
 </footer>
+
+
+
+<!-- SVG sprite -->
+
+<svg class="sprite" style="display: none">
+  <symbol id="icon-htmlacademy" x="0px" y="0px" viewBox="0 0 26.943 34.09" enable-background="new 0 0 26.943 34.09" xml:space="preserve">
+    <path d="M13.62,0.017L13.472,0L0,1.412v24.661l13.472,8.017l13.43-7.99l0.042-0.026V1.412L13.62,0.017z M25.019,12.127L13.495,5.334l-0.001-0.104L13.407,5.28l-0.088-0.056v0.109L1.925,12.118V3.147l11.547-1.212l11.547,1.212V12.127z M13.405,6.787L24.923,13.5	l-4.479,2.64l-7.093-4.221l-0.013,1.415l5.904,3.513l-0.86,0.507l-5.031-2.992l-0.013,1.415l3.827,2.275l-0.782,0.523l-3.032-1.787	l-0.013,1.413l1.852,1.091l-1.8,1.081L2.034,13.622L13.405,6.787z M1.925,15.127l11.411,6.791l0.015,1.044l-7.941-4.728L5.395,19.65l7.979,4.796l0.017,1.076l-7.972-4.741l-0.013,1.415l8.021,4.821l0.045,0.026l8.143-4.872v-1.268l-0.011-0.148v-3.761l3.415-2.036	v10.02L13.472,31.85L1.925,24.979V15.127z"
+    />
+  </symbol>
+
+  <symbol id="icon-facebook" x="0px" y="0px" viewBox="0 0 8.673 18.944" enable-background="new 0 0 8.673 18.944" xml:space="preserve">
+    <path d="M6.275,3.357c0.799,0,1.599,0,2.398,0c0-1.119,0-2.238,0-3.357c-0.959,0-1.92,0-2.878,0C2.656,0.181,1.54,2.387,1.948,6.115
+    H0v3.517h1.958c0,3.104,0,6.208,0,9.312c1.279,0,2.558,0,3.837,0c0-3.104,0-6.208,0-9.312h2.857V6.115H5.786
+    C5.765,5.07,5.75,3.709,6.275,3.357z" />
+  </symbol>
+
+  <symbol id="icon-twitter" x="0px" y="0px" viewBox="0 0 17.5 14.663" enable-background="new 0 0 17.5 14.663" xml:space="preserve">
+    <g id="W6EeEF_1_">
+      <g>
+        <path fill-rule="evenodd" clip-rule="evenodd" d="M11.283,0.153c1.736-0.485,3.074,0.263,3.685,1.151
+        c0.694-0.226,1.372-0.47,2.072-0.691c-0.004,0.841-0.538,1.478-0.883,1.727C16.861,2.506,17.5,1.86,17.5,1.86
+        c-0.175,0.976-1.035,1.746-1.611,1.977C15.65,10.429,12.617,14.793,5.507,14.66c-0.538,0,0.077,0-0.46,0
+        c-0.422,0-4.29-0.45-5.047-1.843c2.341,0.192,4.011-0.412,4.835-1.15c-0.989-0.293-2.761-0.464-3.07-2.881c0.362,0.105,0.583,0.223,1.228,0.117C1.757,8.067,0.385,7.366,0.461,5.218c0.294,0.32,1.1,0.523,1.381,0.461
+        c-0.725-0.235-2.03-3.281-0.921-4.836C2.794,2.654,4.769,4.364,8.29,4.528C8.506,2.288,9.461,0.787,11.283,0.153z" />
+      </g>
+    </g>
+  </symbol>
+
+  <symbol id="icon-youtube" x="0px" y="0px" viewBox="0 0 14.64 13.96" enable-background="new 0 0 14.64 13.96" xml:space="preserve">
+    <path d="M1.775,13.78C0.799,14.257,0,13.758,0,12.671V1.29c0-1.088,0.799-1.585,1.775-1.109l12.133,5.932
+    c0.975,0.478,0.975,1.258,0,1.736L1.775,13.78z" />
+  </symbol>
+
+  <symbol id="icon-yes" x="0px" y="0px" viewBox="0 0 30.375 21.688" enable-background="new 0 0 30.375 21.688" xml:space="preserve">
+    <path d="M29.936,0.439c-0.586-0.586-1.535-0.586-2.121,0L10.188,18.066l-7.627-7.627c-0.586-0.586-1.535-0.586-2.121,0
+    s-0.586,1.535,0,2.121l8.688,8.688c0.293,0.293,0.677,0.439,1.061,0.439s0.768-0.146,1.061-0.439L29.936,2.561
+    C30.521,1.975,30.521,1.025,29.936,0.439z" />
+  </symbol>
+
+  <symbol id="icon-no" x="0px" y="0px" viewBox="0 0 26.752 26.752" enable-background="new 0 0 26.752 26.752" xml:space="preserve">
+    <path d="M15.497,13.376L26.312,2.562c0.586-0.585,0.586-1.535,0-2.121s-1.535-0.586-2.121,0L13.376,11.255L2.562,0.439
+    c-0.586-0.586-1.535-0.586-2.121,0c-0.586,0.585-0.586,1.535,0,2.121l10.814,10.815L0.439,24.19c-0.586,0.586-0.586,1.535,0,2.121
+    c0.293,0.293,0.677,0.439,1.061,0.439s0.768-0.146,1.061-0.439l10.815-10.814L24.19,26.312c0.293,0.293,0.677,0.439,1.061,0.439
+    s0.768-0.146,1.061-0.439c0.586-0.586,0.586-1.535,0-2.121L15.497,13.376z" />
+  </symbol>
+
+  <symbol id="icon-left" x="0px" y="0px" viewBox="0 0 21.706 41.719" enable-background="new 0 0 21.706 41.719" xml:space="preserve">
+    <path d="M2.045,20.859L21.458,1.446c0.331-0.331,0.331-0.867,0-1.198c-0.33-0.331-0.867-0.331-1.197,0L0.248,20.261
+    c-0.331,0.33-0.331,0.867,0,1.197l20.013,20.013c0.164,0.165,0.382,0.248,0.599,0.248s0.434-0.083,0.599-0.248
+    c0.331-0.331,0.331-0.867,0-1.198L2.045,20.859z" />
+  </symbol>
+
+  <symbol id="icon-right" x="0px" y="0px" viewBox="0 0 21.706 41.719" enable-background="new 0 0 21.706 41.719" xml:space="preserve">
+    <path d="M19.661,20.859L0.248,1.446c-0.331-0.331-0.331-0.867,0-1.198c0.33-0.331,0.867-0.331,1.197,0l20.013,20.012
+    c0.33,0.33,0.33,0.867,0,1.197L1.445,41.471c-0.164,0.165-0.382,0.248-0.599,0.248s-0.434-0.083-0.599-0.248
+    c-0.331-0.331-0.331-0.867,0-1.198L19.661,20.859z" />
+  </symbol>
+
+  <symbol id="icon-post" x="0px" y="0px" viewBox="2 3 28 26" enable-background="new 2 3 28 26" xml:space="preserve">
+    <path d="M29,3H3C2.448,3,2,3.448,2,4s0.448,1,1,1h25v16H15c-0.041,0-0.076,0.018-0.116,0.023
+    c-0.067,0.008-0.13,0.018-0.195,0.039c-0.068,0.021-0.127,0.053-0.187,0.088c-0.033,0.02-0.071,0.025-0.102,0.05L8,26v-4
+    c0-0.553-0.448-1-1-1H4V8c0-0.552-0.448-1-1-1S2,7.448,2,8v14c0,0.553,0.448,1,1,1h3v5c0,0.379,0.214,0.725,0.553,0.895
+    C6.694,28.965,6.848,29,7,29c0.212,0,0.423-0.066,0.6-0.2l7.733-5.8H29c0.553,0,1-0.447,1-1V4C30,3.448,29.553,3,29,3z" />
+  </symbol>
+
+  <symbol id="icon-quotes" x="0px" y="0px"  viewBox="0 0 78.673 63.788" enable-background="new 0 0 78.673 63.788" xml:space="preserve">
+    <g>
+      <path d="M72.354,39.632c-2.797-2.401-6.636-3.604-11.518-3.604h-5.67c0.473-4.081,1.278-7.397,2.421-9.948c1.141-2.551,2.854-5.044,5.139-7.477c2.363-2.51,4.685-4.531,6.97-6.063c2.283-1.53,5.274-3.356,8.978-5.477L74.42,0		c-2.441,1.495-5.474,3.42-9.096,5.779c-3.623,2.359-7.048,5.228-10.276,8.607c-3.151,3.302-5.83,7.056-8.033,11.261c-2.206,4.204-3.308,8.861-3.308,13.97c0,7.232,1.456,13.07,4.371,17.511c2.913,4.44,7.755,6.661,14.529,6.661		c4.33,0,7.737-1.436,10.218-4.311s3.721-5.967,3.721-9.273C76.546,45.559,75.147,42.034,72.354,39.632z" />
+      <path d="M19.019,18.603c2.362-2.51,4.685-4.531,6.97-6.063c2.283-1.53,5.274-3.356,8.978-5.477L30.713,0c-2.441,1.495-5.475,3.42-9.095,5.779c-3.624,2.359-7.05,5.228-10.278,8.607c-3.149,3.302-5.828,7.056-8.032,11.261		C1.103,29.851,0,34.508,0,39.616c0,7.232,1.457,13.07,4.371,17.511c2.912,4.44,7.756,6.661,14.529,6.661c4.33,0,7.737-1.436,10.218-4.311c2.481-2.875,3.722-5.967,3.722-9.273c0-4.646-1.399-8.17-4.194-10.572c-2.796-2.401-6.635-3.604-11.517-3.604h-5.671c0.473-4.081,1.3-7.416,2.481-10.007C15.12,23.432,16.812,20.958,19.019,18.603z" />
+    </g>
+  </symbol>
+</svg>

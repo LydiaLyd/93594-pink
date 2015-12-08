@@ -7,7 +7,6 @@
 
   @media(min-width: 700px) {
     position: relative;
-    display: flex;
     margin-bottom: 60px;
     padding: 45px 60px 55px;
     background-color: #fff;
@@ -36,6 +35,20 @@
     }
   }
 
+  &__group {
+    flex-grow: 1;
+
+    @media(min-width: 700px) {
+      width: 300px;
+      margin-right: 18px;
+    }
+
+    @media(min-width: 960px) {
+      display: flex;
+      justify-content: space-between;
+    }
+  }
+
   &__field-wrap {
     &--amount {
       margin-bottom: 30px;
@@ -44,6 +57,18 @@
 
       @media(min-width: 700px) {
         padding-bottom: 40px;
+      }
+    }
+
+    &--name {
+      @media(min-width: 960px) {
+        flex-grow: 1;
+        margin-top: 0;
+        margin-bottom: 0;
+
+        &:first-child {
+          margin-right: 20px;
+        }
       }
     }
 
@@ -76,13 +101,20 @@
     width: 100%;
     padding: 15px 20px;
     font-size: 18px;
-    background-color: @grey-94;
     border: 2px solid @grey-90;
     border-radius: 3px;
     outline: none;
-    transition: background-color .15s;
+    transition: border-color .15s;
+
+    &:hover {
+      border-color: @blue-21;
+    }
+    &:focus {
+      border-color: @pink-49;
+    }
 
     &[name="companions-amount"] {
+      flex-grow: 1;
       width: 176px;
       text-align: center;
       border-left: none;
@@ -94,11 +126,6 @@
         background-color: #fff;
         border: none;
       }
-    }
-
-    &:hover,
-    &:focus {
-      background-color: #fff;
     }
 
     &::-moz-placeholder { color: @blue-21; } // not working
@@ -122,6 +149,10 @@
 
     &:not(:last-child) {
       margin-bottom: 40px;
+
+      @media(min-width: 960px) {
+        margin-bottom: 25px;
+      }
     }
   }
 
@@ -149,13 +180,6 @@
     @media(min-width: 700px) {
       background-color: @grey-94;
       border-right: 2px solid @grey-90;
-    }
-  }
-
-  &__fields-wrap {
-    @media(min-width: 700px) {
-      width: 300px;
-      margin-right: 18px;
     }
   }
 }

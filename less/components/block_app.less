@@ -38,6 +38,11 @@
 
   &__list {
     .ul-reset;
+
+    @media(min-width: 960px) {
+      display: flex;
+      justify-content: space-between;
+    }
   }
 
   &__item {
@@ -48,6 +53,10 @@
 
       @media(min-width: 700px) {
         margin-bottom: 40px;
+      }
+
+      @media(min-width: 960px) {
+        margin-bottom: 0;
       }
     }
   }
@@ -76,10 +85,18 @@
       background-color: #fff;
       border: 2px solid @grey-90;
       border-radius: 50%;
+      transition: border-color .15s;
 
       .app__field:checked ~ & {
         background-image: radial-gradient(@pink-49 7px, white 8px);
       }
+    }
+
+    &:hover::before {
+      border-color: @blue-21;
+    }
+    &:active::before {
+      border-color: @pink-49;
     }
   }
 }

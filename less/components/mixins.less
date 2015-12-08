@@ -1,32 +1,11 @@
-////////////
-// Centering
-////////////
+///////////////////////////////////////////////////////////////////////////////////////////////////
+// Most useful
+///////////////////////////////////////////////////////////////////////////////////////////////////
 
 .center() {
   margin-left: auto;
   margin-right: auto;
 }
-
-.inner(@width) {
-  width: @width;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.inner(@min-width, @max-width) {
-  min-width: @min-width;
-  max-width: @max-width;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-
-
-
-
-/////////////
-// Clearfix
-/////////////
 
 .clearfix() {
   &::after {
@@ -40,9 +19,9 @@
 
 
 
-/////////
+///////////////////////////////////////////////////////////////////////////////////////////////////
 // Resets
-/////////
+///////////////////////////////////////////////////////////////////////////////////////////////////
 
 .ul-reset() {
   margin-top: 0;
@@ -77,26 +56,9 @@
 
 
 
-////////
-// Sizes
-////////
-
-.size(@width; @height) {
-  width: @width;
-  height: @height;
-}
-
-.square(@size) {
-  .size(@size; @size);
-}
-
-
-
-
-
-/////////////
+///////////////////////////////////////////////////////////////////////////////////////////////////
 // Underlines
-/////////////
+///////////////////////////////////////////////////////////////////////////////////////////////////
 
 .underline(full-width, @height, @bg-color) {
   position: relative;
@@ -118,7 +80,8 @@
   &::after {
     content: "";
     position: absolute;
-    bottom: 0;
+    // bottom: 0;
+    bottom: 4px;
     left: @gutter;
     right: @gutter;
     height: @height;
@@ -148,8 +111,8 @@
   }
 
   &::before {
-    left: @gutter / 2;
-    right: @gutter / 2;
+    left: @gutter;
+    right: @gutter;
     height: @strip-height;
     background-color: @bg-color;
   }
@@ -167,24 +130,9 @@
 
 
 
-//////////////////////////
-// a short descr goes here
-//////////////////////////
-
-.make-column(@columns; @gutter: @grid-gutter-width) {
-  float: left;
-  width: percentage((@columns / @grid-columns));
-  padding-left:  (@gutter / 2);
-  padding-right: (@gutter / 2);
-}
-
-
-
-
-
-//////////////////////////
-// a short descr goes here
-//////////////////////////
+///////////////////////////////////////////////////////////////////////////////////////////////////
+// Diagonal background
+///////////////////////////////////////////////////////////////////////////////////////////////////
 
 // Диагональный фон. Вариант 1 (подойдет, если фон должен быть скошен только верху).
 .bg-diagonal(@padding-top, @first-color, @second-color, @diagonal-height) {

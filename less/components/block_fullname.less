@@ -8,6 +8,10 @@
     padding: 95px 0 65px;
   }
 
+  @media(min-width: 960px) {
+
+  }
+
   &__text {
     margin-top: 0;
     margin-bottom: 40px;
@@ -16,6 +20,11 @@
     @media(min-width: 700px) {
       width: 490px;
       .center;
+    }
+
+    @media(min-width: 960px) {
+      width: 760px;
+      margin-bottom: 70px;
     }
   }
 
@@ -27,8 +36,21 @@
     }
   }
 
+  &__group {
+    @media(min-width: 960px) {
+      display: flex;
+      justify-content: space-between;
+    }
+  }
+
   &__field-wrap {
     &:last-child {
+      margin-bottom: 0;
+    }
+
+    @media(min-width: 960px) {
+      width: 300px;
+      margin-top: 0;
       margin-bottom: 0;
     }
   }
@@ -49,15 +71,16 @@
     width: 100%;
     padding: 15px 20px;
     font-size: 18px;
-    background-color: @grey-94;
     border: 2px solid @grey-90;
     border-radius: 3px;
     outline: none;
-    transition: background-color .15s;
+    transition: border-color .15s;
 
-    &:hover,
+    &:hover {
+      border-color: @blue-21;
+    }
     &:focus {
-      background-color: #fff;
+      border-color: @pink-49;
     }
 
     &::-moz-placeholder { color: @blue-21; } // not working

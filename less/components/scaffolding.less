@@ -4,35 +4,30 @@
 
 body {
   min-width: 320px;
-  font-size: @font-size-xs;
-  line-height: @line-height-xs;
-  font-family: @font-family-base;
-  color: @text-color;
-  background-color: @body-bg;
+  font-size: @text_font-size--xs;
+  line-height: @text_line-height--xs;
+  font-family: @text_font-family;
+  color: @text_color;
+  background-color: #fff;
 
   @media(min-width: 700px) {
-    font-size: @font-size-sm;
-    line-height: @line-height-sm;
+    font-size: @text_font-size--sm;
+    line-height: @text_line-height--sm;
   }
 }
 
 a {
   text-decoration: none;
-  color: @link-color;
+  color: @link_color;
   transition: color .15s;
 
   &:hover {
     text-decoration: underline;
-    color: @link-color--hover;
+    color: @link_color--hover;
   }
 
   &:active {
     text-decoration: none;
-    color: @link-color--active;
+    color: @link_color--active;
   }
-}
-
-table {
-  margin-top: 20px;
-  margin-bottom: 20px;
 }

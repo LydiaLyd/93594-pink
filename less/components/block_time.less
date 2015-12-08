@@ -8,9 +8,12 @@
     position: relative;
     margin-bottom: 60px;
     padding: 45px 60px 35px;
-    font-size: 0;
     border: 2px solid @grey-90;
     border-radius: 3px;
+  }
+
+  @media(min-width: 960px) {
+    padding-bottom: 15px;
   }
 
   &__heading {
@@ -34,25 +37,43 @@
     }
   }
 
-  &__field-wrap {
+  &__group {
     @media(min-width: 700px) {
-      display: inline-block;
-      vertical-align: top;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+    }
+
+    @media(min-width: 960px) {
+      flex-wrap: nowrap;
+    }
+  }
+
+  &__field-wrap {
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+    @media(min-width: 700px) {
       width: 48%;
       margin-top: 0;
       margin-bottom: 0;
-
-      &:nth-child(2) {
-        margin-right: 4%;
-      }
 
       &:not(:last-child) {
         margin-bottom: 30px;
       }
     }
 
-    &:last-child {
-      margin-bottom: 0;
+    @media(min-width: 960px) {
+      width: 240px;
+
+      &:nth-child(2) {
+        width: 250px;
+      }
+
+      &:not(:last-child) {
+        margin-bottom: 0;
+      }
     }
   }
 
@@ -62,14 +83,22 @@
     padding: 15px 20px;
     font-size: 18px;
     line-height: 28px;
-    background-color: @grey-94;
     border: 2px solid @grey-90;
     border-radius: 3px;
     outline: none;
     transition: background-color .15s;
+    transition: border-color .15s;
+
+    &:hover {
+      border-color: @blue-21;
+    }
+    &:focus {
+      border-color: @pink-49;
+    }
 
     &[name="duration"] {
-      width: 176px;
+      flex-grow: 1;
+      flex-shrink: 1;
       padding-top: 13px;
       padding-bottom: 13px;
       text-align: center;
@@ -77,8 +106,12 @@
       border-right: none;
       border-radius: 0;
 
+      &:hover,
+      &:focus  {
+        border-color: @grey-90;
+      }
+
       @media(min-width: 700px) {
-        width: 114px;
         -moz-appearance: textfield;
 
         &::-webkit-inner-spin-button,

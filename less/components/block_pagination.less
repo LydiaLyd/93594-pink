@@ -53,5 +53,16 @@
     border: 2px solid @grey-90;
     border-radius: 3px;
     color: @blue-21;
+    transition:
+      color .15s,
+      border-color .15s;
+
+    &:hover {
+      text-decoration: none;
+      border-color: @blue-21;
+    }
+    &:active {
+      border-color: fade(@blue-21, 30%);
+    }
   }
 }

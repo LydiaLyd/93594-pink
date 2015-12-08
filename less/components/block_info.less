@@ -18,6 +18,12 @@
       font-size: 40px;
       line-height: 48px;
     }
+
+    @media(min-width: 960px) {
+      padding: 75px 10px;
+      font-size: 50px;
+      line-height: 60px;
+    }
   }
 
   &__heading-part {
@@ -38,6 +44,10 @@
       &:last-child {
         width: 340px;
         .center;
+
+        @media(min-width: 960px) {
+          width: 450px;
+        }
       }
     }
   }
@@ -49,6 +59,12 @@
       padding-top: 80px;
       background-size: 100% 55px;
     }
+
+    @media(min-width: 960px) {
+      padding-top: 90px;
+      padding-bottom: 35px;
+      background-size: 100% 90px;
+    }
   }
 
   &__wrap {
@@ -58,6 +74,13 @@
       width: 620px;
       margin-top: -80px;
       .center;
+    }
+
+    @media(min-width: 960px) {
+      width: 960px;
+      margin-top: -90px;
+      padding-left: 10px;
+      padding-right: 10px;
     }
   }
 
@@ -73,6 +96,14 @@
       padding-right: 0;
       text-align: left;
     }
+
+    @media(min-width: 960px) {
+      display: flex;
+      justify-content: space-between;
+      width: 100%;
+      padding-top: 0;
+      text-align: center;
+    }
   }
 
   &__item {
@@ -81,10 +112,30 @@
 
     &:not(:last-child) {
       margin-bottom: 30px;
+
+      @media(min-width: 960px) {
+        margin-bottom: 0;
+      }
     }
 
     @media(min-width: 700px) {
       width: 315px;
+    }
+
+    @media(min-width: 960px) {
+      width: 300px;
+      margin-left: 0;
+      margin-right: 0;
+    }
+  }
+
+  &__item-img {
+    display: none;
+
+    @media(min-width: 960px) {
+      display: block;
+      .center;
+      margin-bottom: 46px;
     }
   }
 
@@ -96,6 +147,14 @@
     line-height: 24px;
     text-transform: none;
     color: #000;
+
+    @media(min-width: 960px) {
+      margin-bottom: 23px;
+      padding-left: 30px;
+      padding-right: 30px;
+      font-size: 30px;
+      line-height: 30px;
+    }
   }
 
   &__item-text {
@@ -103,6 +162,14 @@
     margin-bottom: 0;
     font-size: 14px;
     line-height: 24px;
+
+    @media(min-width: 960px) {
+      margin-top: 23px;
+      padding-left: 30px;
+      padding-right: 30px;
+      font-size: 18px;
+      line-height: 30px;
+    }
   }
 
   &__img-wrap {
@@ -115,6 +182,10 @@
       width: 268px;
       height: 481px;
       background: none;
+    }
+    
+    @media(min-width: 960px) {
+      display: none;
     }
   }
 

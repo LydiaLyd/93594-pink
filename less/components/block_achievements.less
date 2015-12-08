@@ -12,6 +12,10 @@
     border-radius: 3px;
   }
 
+  @media(min-width: 960px) {
+    padding-bottom: 13px;
+  }
+
   &__heading {
     width: 220px;
     margin: 0 auto 40px;
@@ -36,6 +40,14 @@
 
   &__list {
     .ul-reset;
+
+    @media(min-width: 960px) {
+      display: flex;
+      flex-flow: column wrap;
+      justify-content: flex-start;
+      align-content: space-between;
+      height: 166px;
+    }
   }
 
   &__item {
@@ -43,6 +55,10 @@
 
     &:not(:last-child) {
       margin-bottom: 43px;
+    }
+
+    @media(min-width: 960px) {
+      width: 260px;
     }
   }
 
@@ -63,6 +79,7 @@
     &::after {
       content: "";
       position: absolute;
+      transition: border-color .15s;
     }
 
     &::before {
@@ -88,6 +105,13 @@
       .achievements__field:checked ~ & {
         opacity: 1;
       }
+    }
+
+    &:hover::before {
+      border-color: @blue-21;
+    }
+    &:active::before {
+      border-color: @pink-49;
     }
   }
 }
