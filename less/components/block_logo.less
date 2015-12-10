@@ -21,22 +21,116 @@
     }
   }
 
-  &__img {
-    display: block;
+  &--nav {
+    display: none;
 
-    &--header {
-      width: 74px;
-      height: 24px;
+    @media(min-width: 960px) {
+      display: block;
+    }
+  }
+
+  &__cutted,
+  &__full {
+    fill: #fff;
+    transition: fill .15s;
+  }
+
+  .logo:hover &__cutted,
+  .logo:hover &__full {
+    fill: @pink-49;
+  }
+  .logo:active &__cutted,
+  .logo:active &__full {
+    fill: rgba(255, 255, 255, .3);
+  }
+
+  &__cutted {
+    width: 74px;
+    height: 24px;
+
+    @media(min-width: 700px) {
+      display: none;
+    }
+  }
+
+  &__full {
+    width: 145px;
+    height: 45px;
+
+    &--show-sm {
+      display: none;
 
       @media(min-width: 700px) {
-        width: 145px;
-        height: 40px;
+        display: inline;
       }
     }
 
+    &--show-md {
+      display: none;
+
+      @media(min-width: 960px) {
+        display: inline;
+      }
+    }
+  }
+
+  .logo &__stars {
+    fill: @pink-49;
+
     &--footer {
-      width: 145px;
-      height: 40px;
+      display: none;
+
+      @media(min-width: 960px) {
+        display: inline;
+        fill: @blue-21;
+      }
+    }
+
+    &--letter {
+      @media(min-width: 960px) {
+        fill: @pink-49;
+      }
+    }
+  }
+
+  // SVG logo parts in the footer
+
+  &__glasses-unbroken {
+    fill: @pink-49;
+    transition: fill .15s;
+
+    .logo__full:active & {
+      fill: fade(@blue-21, 30%);
+    }
+
+    @media(min-width: 960px) {
+      display: none;
+    }
+  }
+
+  &__glasses-broken {
+    display: none;
+
+    @media(min-width: 960px) {
+      display: inline;
+      fill: @pink-49;
+      transition: fill .15s;
+
+      .logo__full:active & {
+        fill: fade(@blue-21, 30%);
+      }
+    }
+  }
+
+  &__word {
+    fill: @blue-21;
+    transition: fill .15s;
+
+    .logo__full:hover & {
+      fill: @pink-49;
+    }
+    .logo__full:active & {
+      fill: fade(@blue-21, 30%);
     }
   }
 }

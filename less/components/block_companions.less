@@ -1,23 +1,27 @@
 .companions {
   margin-left: 0;
   margin-right: 0;
-  padding: 40px 20px;
+  padding: 36px 20px 47px;
   background-color: @grey-94;
   border: none;
 
   @media(min-width: 700px) {
     position: relative;
-    display: flex;
-    margin-bottom: 60px;
-    padding: 45px 60px 55px;
+    margin-bottom: 64px;
+    padding: 42px 60px 56px;
     background-color: #fff;
     border: 2px solid @grey-90;
     border-radius: 3px;
   }
 
+  @media(min-width: 960px) {
+    margin-bottom: 65px;
+    padding-bottom: 57px;
+  }
+
   &__heading {
     margin-top: 0;
-    margin-bottom: 40px;
+    margin-bottom: 33px;
     font-size: 14px;
     line-height: 18px;
     text-transform: uppercase;
@@ -29,21 +33,54 @@
       top: 0;
       left: 50%;
       margin-bottom: 0;
-      padding-left: 20px;
-      padding-right: 20px;
+      padding-left: 27px;
+      padding-right: 27px;
       background-color: #fff;
       transform: translate(-50%, -50%);
+    }
+  }
+
+  &__group {
+    flex-grow: 1;
+
+    @media(min-width: 700px) {
+      width: 300px;
+      margin-right: 18px;
+    }
+
+    @media(min-width: 960px) {
+      display: flex;
+      justify-content: space-between;
     }
   }
 
   &__field-wrap {
     &--amount {
       margin-bottom: 30px;
-      padding-bottom: 50px;
+      padding-bottom: 48px;
       border-bottom: 2px solid @grey-90;
 
       @media(min-width: 700px) {
+        padding-bottom: 41px;
+      }
+
+      @media(min-width: 960px) {
         padding-bottom: 40px;
+      }
+    }
+
+    &--name {
+      margin-top: 13px;
+      margin-bottom: 13px;
+
+      @media(min-width: 960px) {
+        flex-grow: 1;
+        margin-top: 0;
+        margin-bottom: 0;
+
+        &:first-child {
+          margin-right: 20px;
+        }
       }
     }
 
@@ -58,8 +95,8 @@
 
   &__label {
     display: block;
-    padding-bottom: 5px;
-    padding-left: 20px;
+    padding-bottom: 4px;
+    padding-left: 25px;
     padding-right: 20px;
     font-size: 14px;
     text-transform: uppercase;
@@ -76,29 +113,37 @@
     width: 100%;
     padding: 15px 20px;
     font-size: 18px;
-    background-color: @grey-94;
     border: 2px solid @grey-90;
     border-radius: 3px;
     outline: none;
-    transition: background-color .15s;
+    transition: border-color .15s;
+
+    &:hover {
+      border-color: @blue-21;
+    }
+    &:focus {
+      border-color: @pink-49;
+    }
 
     &[name="companions-amount"] {
-      width: 176px;
+      flex-grow: 1;
+      width: 156px;
       text-align: center;
       border-left: none;
       border-right: none;
       border-radius: 0;
 
       @media(min-width: 700px) {
+        flex-grow: 0;
         width: 125px;
         background-color: #fff;
         border: none;
       }
     }
 
-    &:hover,
-    &:focus {
-      background-color: #fff;
+    &[name="companion-name"],
+    &[name="companion-nickname"] {
+      padding: 18px 20px;
     }
 
     &::-moz-placeholder { color: @blue-21; } // not working
@@ -122,6 +167,10 @@
 
     &:not(:last-child) {
       margin-bottom: 40px;
+
+      @media(min-width: 960px) {
+        margin-bottom: 21px;
+      }
     }
   }
 
@@ -132,7 +181,7 @@
   }
 
   &__symbol {
-    padding-bottom: 5px;
+    padding-bottom: 4px;
     text-align: center;
     font-size: 14px;
     color: @pink-49;
@@ -140,22 +189,19 @@
 
   &__value {
     width: 58px;
-    padding: 12px;
+    padding: 15px 12px;
     text-align: center;
     border-top: 2px solid @grey-90;
     border-bottom: 2px solid @grey-90;
     border-left: 2px solid @grey-90;
+    border-top-left-radius: 3px;
+    border-bottom-left-radius: 3px;
 
     @media(min-width: 700px) {
       background-color: @grey-94;
       border-right: 2px solid @grey-90;
-    }
-  }
-
-  &__fields-wrap {
-    @media(min-width: 700px) {
-      width: 300px;
-      margin-right: 18px;
+      border-top-right-radius: 3px;
+      border-bottom-right-radius: 3px;
     }
   }
 }

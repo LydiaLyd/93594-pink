@@ -1,17 +1,22 @@
 .app {
   margin-left: 0;
   margin-right: 0;
-  padding: 40px 20px 45px;
+  padding: 36px 20px 41px;
   background-color: @grey-94;
   border: none;
 
   @media(min-width: 700px) {
     position: relative;
-    margin-bottom: 60px;
-    padding: 55px 60px;
+    margin-bottom: 65px;
+    padding: 55px 60px 56px;
     background-color: #fff;
     border: 2px solid @grey-90;
     border-radius: 3px;
+  }
+
+  @media(min-width: 700px) {
+    padding-top: 52px;
+    padding-bottom: 54px;
   }
 
   &__heading {
@@ -38,16 +43,25 @@
 
   &__list {
     .ul-reset;
+
+    @media(min-width: 960px) {
+      display: flex;
+      justify-content: space-between;
+    }
   }
 
   &__item {
     padding-left: 0;
 
     &:not(:last-child) {
-      margin-bottom: 30px;
+      margin-bottom: 35px;
 
       @media(min-width: 700px) {
-        margin-bottom: 40px;
+        margin-bottom: 32px;
+      }
+
+      @media(min-width: 960px) {
+        margin-bottom: 0;
       }
     }
   }
@@ -76,10 +90,18 @@
       background-color: #fff;
       border: 2px solid @grey-90;
       border-radius: 50%;
+      transition: border-color .15s;
 
       .app__field:checked ~ & {
         background-image: radial-gradient(@pink-49 7px, white 8px);
       }
+    }
+
+    &:hover::before {
+      border-color: @blue-21;
+    }
+    &:active::before {
+      border-color: @pink-49;
     }
   }
 }

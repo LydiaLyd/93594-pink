@@ -1,17 +1,38 @@
 .social {
   display: flex;
-  justify-content: space-between;
-  width: 180px;
   .ul-reset;
 
-  &__item {}
+  &__item {
+    margin-left: 6px;
+    margin-right: 6px;
+  }
 
   &__link {
     display: block;
     width: 50px;
     height: 50px;
-    border: 2px solid @grey-90;
+    line-height: 44px;
+    vertical-align: middle;
+    text-align: center;
+    border: 3px solid @grey-90;
     border-radius: 50%;
+    transition: border-color .15s;
+
+    &:hover {
+      border-color: @blue-21;
+    }
+    &:active {
+      border-color: @grey-90;
+    }
+  }
+
+  &__icon {
+    fill: @pink-49;
+    transition: fill .15s;
+
+    .social__link:active & {
+      fill: fade(@pink-49, 30%);
+    }
   }
 
   &__text-hidden {

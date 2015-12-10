@@ -1,5 +1,5 @@
 .date {
-  margin-top: 5px;
+  margin-top: 2px;
   font-size: 12px;
   line-height: 27px;
   text-transform: uppercase;
@@ -23,7 +23,7 @@
         top: 50%;
         left: 0;
         right: 0;
-        z-index: @zi-date-decoration;
+        z-index: @zi_date-decoration;
         border-bottom: 2px dotted @grey-90;
         transform: translateY(-50%);
       }
@@ -31,6 +31,7 @@
   }
 
   &__text {
+    position: relative;
     padding-left: 25px;
     padding-right: 25px;
     background-color: #fff;

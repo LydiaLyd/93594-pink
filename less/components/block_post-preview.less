@@ -1,9 +1,25 @@
 .post-preview {
   line-height: 27px;
 
+  @media(min-width: 700px) {
+    position: relative;
+  }
+
+  &__icon {
+    display: none;
+
+    @media(min-width: 700px) {
+      position: absolute;
+      top: 5px;
+      left: -58px;
+      display: block;
+      fill: @pink-49; // not working
+    }
+  }
+
   &__heading {
     margin-top: 0;
-    margin-bottom: 5px;
+    margin-bottom: 2px;
     font-weight: 700;
     font-size: 18px;
     line-height: 27px;
@@ -24,6 +40,10 @@
     @media(min-width: 700px) {
       font-size: 18px;
       line-height: 30px;
+    }
+
+    @media(min-width: 960px) {
+      margin-top: 22px;
     }
   }
 }

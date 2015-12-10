@@ -1,0 +1,56 @@
+h1, h2, h3, h4, h5, h6 {
+  font-family: @headings_font-family;
+}
+
+h1, h2 {
+  margin-top: 60px;
+  margin-bottom: 20px;
+
+  @media(min-width: 700px) {
+    font-size: 40px;
+    line-height: 48px;
+  }
+  @media(min-width: 1200px) {
+    font-size: 50px;
+    line-height: 60px;
+  }
+}
+
+h1 {
+  font-weight: 300;
+  font-size: @h1_font-size;
+  line-height: @h1_line-height;
+  color: @h1_color;
+
+  @media(min-width: 960px) {
+    font-size: 50px;
+    line-height: 60px;
+  }
+}
+
+h2 {
+  font-weight: 300;
+  font-size: @h2_font-size;
+  line-height: @h2_line-height;
+  color: @h2_color;
+
+  @media(min-width: 960px) {
+    font-size: 50px;
+    line-height: 30px;
+  }
+}
+
+h3 {
+  margin-top: 35px;
+  margin-bottom: 25px;
+  font-size: @h3_font-size;
+  line-height: @h3_line-height;
+  text-transform: uppercase;
+
+  @media(min-width: 700px) {
+    margin-top: 65px;
+    margin-bottom: 30px;
+    font-size: 24px;
+    line-height: 30px;
+  }
+}

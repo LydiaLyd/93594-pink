@@ -2,25 +2,68 @@
   color: #fff;
   text-align: center;
   background: @blue-15 url(../img/bg_intro-xs.jpg) top no-repeat;
-  background-size: auto 460px;
+  background-size: auto 484px;
+
+  @media (min-resolution: 2dppx) {
+    background-image: url(../img/bg_intro-xs-2x.jpg);
+  }
+  @media (min-resolution: 3dppx) {
+    background-image: url(../img/bg_intro-xs-3x.jpg);
+  }
 
   @media(min-width: 700px) {
     background-image: url(../img/bg_intro-sm.jpg);
     background-size: auto;
+  }
+  @media (min-resolution: 2dppx) and (min-width: 700px) {
+    background-image: url(../img/bg_intro-sm-2x.jpg);
+  }
+
+  @media(min-width: 960px) {
+    background-image: url(../img/bg_intro-md.jpg);
+    background-size: auto 854px;
   }
 
   &--main-page {
     background:
       transparent url(../img/bg_iphone-hand-xs.png) left 173px no-repeat,
       @blue-15 url(../img/bg_intro-xs.jpg) top no-repeat;
-    background-size: auto, auto 460px;
+    background-size: auto 286px, auto 488px;
+
+    @media (min-resolution: 2dppx) {
+      background-image:
+        url(../img/bg_iphone-hand-xs-2x.png),
+        url(../img/bg_intro-xs-2x.jpg);
+    }
+    @media (min-resolution: 3dppx) {
+      background-image:
+        url(../img/bg_iphone-hand-xs-3x.png),
+        url(../img/bg_intro-xs-3x.jpg);
+    }
 
     @media(min-width: 700px) {
       background-image:
         url(../img/bg_iphone-hand-sm.png),
         url(../img/bg_intro-sm.jpg);
       background-position: right bottom, top;
-      background-size: auto, auto 727px;
+      background-size: auto 545px, auto 729px;
+    }
+    @media (min-resolution: 2dppx) and (min-width: 700px) {
+      background-image:
+        url(../img/bg_iphone-hand-sm-2x.png),
+        url(../img/bg_intro-sm-2x.jpg);
+    }
+
+    @media(min-width: 960px) {
+      background-image:
+        url(../img/bg_iphone-hand-md.png),
+        url(../img/bg_intro-md.jpg);
+      background-size: auto 645px, auto 854px;
+    }
+    @media (min-resolution: 2dppx) and (min-width: 960px) {
+      background-image:
+        url(../img/bg_iphone-hand-md-2x.png),
+        url(../img/bg_intro-md.jpg);
     }
   }
 
@@ -30,9 +73,19 @@
       .center;
     }
 
+    @media(min-width: 960px) {
+      width: 960px;
+      padding-left: 10px;
+      padding-right: 10px;
+    }
+
     &--main-page {
       @media(min-width: 700px) {
-        padding: 209px 42.85714285714286% 93px 0;
+        padding: 204px 46% 110px 0;
+      }
+
+      @media(min-width: 960px) {
+        padding: 218px 650px 123px 10px;
       }
     }
   }
@@ -43,7 +96,7 @@
     margin-bottom: 0;
     margin: 0 auto;
     padding-top: 95px;
-    padding-bottom: 35px;
+    padding-bottom: 42px;
     font-weight: 300;
     font-size: 24px;
     line-height: 30px;
@@ -52,57 +105,79 @@
     @media(min-width: 700px) {
       width: 585px;
       padding-top: 180px;
-      padding-bottom: 86px;
+      padding-bottom: 76px;
       font-size: 50px;
       line-height: 60px;
     }
 
+    @media(min-width: 960px) {
+      padding-top: 173px;
+      padding-bottom: 101px;
+    }
+
     &--main-page {
-      padding-bottom: 305px;
+      padding-top: 85px;
+      padding-bottom: 313px;
+
       @media(min-width: 700px) {
         width: 190px;
-        margin-bottom: 35px;
+        margin-bottom: 30px;
         padding-top: 0;
         padding-bottom: 0;
         font-size: 40px;
         line-height: 48px;
       }
+
+      @media(min-width: 960px) {
+        width: 235px;
+        margin-bottom: 52px;
+        font-size: 50px;
+        line-height: 60px;
+      }
     }
 
     &--form-page {
-      padding-bottom: 55px;
+      padding-bottom: 52px;
 
       @media(min-width: 700px) {
         width: 475px;
         padding-bottom: 80px;
       }
+
+      @media(min-width: 960px) {
+        width: 755px;
+        padding-top: 173px;
+        padding-bottom: 101px;
+      }
     }
   }
 
   &__content {
-    padding: 30px 20px;
+    padding: 28px 20px 30px;
     line-height: 24px;
     background-color: @blue-15;
 
     @media(min-width: 700px) {
       padding: 0;
       font-size: 18px;
+      text-align: left;
       background: none;
     }
   }
 
   &__text {
-    margin-top: 25px;
+    margin-top: 24px;
     margin-bottom: 0;
     font-weight: 300;
 
     @media(min-width: 700px) {
-      margin-top: 40px;
+      margin-top: 37px;
+      text-align: center;
     }
-  }
 
-  &__text-part {
-    display: block;
+    @media(min-width: 960px) {
+      margin-top: 55px;
+    }
   }
 
   &__imgs-wrap {
