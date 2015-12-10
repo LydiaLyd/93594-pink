@@ -20,7 +20,10 @@
     }
 
     @media(min-width: 960px) {
-      padding: 75px 10px;
+      width: auto;
+      margin-left: 0;
+      margin-right: 0;
+      padding: 66px 10px 81px;
       font-size: 50px;
       line-height: 60px;
     }
@@ -32,7 +35,7 @@
     .center;
 
     &:first-child {
-      margin-bottom: 25px;
+      margin-bottom: 27px;
     }
 
     @media(min-width: 700px) {
@@ -53,7 +56,7 @@
   }
 
   &__content {
-    .bg-diagonal(85px, #fff, @grey-94, 30px);
+    .bg-diagonal(81px, #fff, @grey-94, 30px);
 
     @media(min-width: 700px) {
       padding-top: 80px;
@@ -72,13 +75,13 @@
       display: flex;
       justify-content: space-between;
       width: 620px;
-      margin-top: -80px;
+      margin-top: -76px;
       .center;
     }
 
     @media(min-width: 960px) {
       width: 960px;
-      margin-top: -90px;
+      margin-top: -96px;
       padding-left: 10px;
       padding-right: 10px;
     }
@@ -91,7 +94,7 @@
 
     @media(min-width: 700px) {
       margin-bottom: 0;
-      padding-top: 65px;
+      padding-top: 70px;
       padding-left: 0;
       padding-right: 0;
       text-align: left;
@@ -111,15 +114,31 @@
     .center;
 
     &:not(:last-child) {
-      margin-bottom: 30px;
+      margin-bottom: 31px;
+
+      @media(min-width: 700px) {
+        margin-bottom: 33px;
+      }
 
       @media(min-width: 960px) {
         margin-bottom: 0;
       }
     }
 
+    &:last-child {
+      width: 275px;
+
+      @media(min-width: 700px) {
+        width: 312px;
+      }
+
+      @media(min-width: 960px) {
+        width: 300px;
+      }
+    }
+
     @media(min-width: 700px) {
-      width: 315px;
+      width: 312px;
     }
 
     @media(min-width: 960px) {
@@ -134,14 +153,16 @@
 
     @media(min-width: 960px) {
       display: block;
+      width: 292px;
+      height: 302px;
       .center;
-      margin-bottom: 46px;
+      margin-bottom: 55px;
     }
   }
 
   &__item-heading {
     margin-top: 0;
-    margin-bottom: 10px;
+    margin-bottom: 12px;
     font-weight: 700;
     font-size: 18px;
     line-height: 24px;
@@ -149,7 +170,7 @@
     color: #000;
 
     @media(min-width: 960px) {
-      margin-bottom: 23px;
+      margin-bottom: 25px;
       padding-left: 30px;
       padding-right: 30px;
       font-size: 30px;
@@ -158,7 +179,7 @@
   }
 
   &__item-text {
-    margin-top: 10px;
+    margin-top: 12px;
     margin-bottom: 0;
     font-size: 14px;
     line-height: 24px;
@@ -173,7 +194,7 @@
   }
 
   &__img-wrap {
-    height: 280px;
+    height: 278px;
     background-color: @grey-94;
     overflow: hidden;
 

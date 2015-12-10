@@ -4,6 +4,7 @@
   margin-bottom: 35px;
 
   @media(min-width: 700px) {
+    margin-bottom: 53px;
     padding-left: 0;
     padding-right: 0;
   }
@@ -13,9 +14,9 @@
   }
 
   &__header {
-    margin-bottom: 30px;
-    padding-top: 40px;
-    padding-bottom: 30px;
+    margin-bottom: 31px;
+    padding-top: 34px;
+    padding-bottom: 23px;
     text-align: center;
     border-bottom: 1px solid @grey-90;
 
@@ -23,13 +24,15 @@
       display: flex;
       flex-direction: column;
       align-items: center;
-      margin-bottom: 45px;
+      margin-bottom: 39px;
+      padding-top: 77px;
       padding-bottom: 0;
       border-bottom: none;
     }
 
     @media(min-width: 960px) {
-      padding-top: 105px;
+      margin-bottom: 38px;
+      padding-top: 98px;
     }
   }
 
@@ -42,17 +45,19 @@
     @media(min-width: 700px) {
       order: -2;
       width: 400px;
+      margin-bottom: 24px;
       font-size: 50px;
       line-height: 60px;
     }
 
     @media(min-width: 960px) {
       width: 670px;
-      margin-bottom: 33px;
+      margin-bottom: 24px;
     }
   }
 
   &__headnote {
+    margin-top: 12px;
     margin-bottom: 0;
     font-size: 16px;
     line-height: 27px;
@@ -60,14 +65,14 @@
     @media(min-width: 700px) {
       order: -1;
       margin-top: 0;
-      margin-bottom: 45px;
+      margin-bottom: 29px;
       font-size: 24px;
       line-height: 40px;
     }
 
     @media(min-width: 960px) {
       width: 745px;
-      margin-bottom: 34px;
+      margin-bottom: 29px;
     }
   }
 
@@ -75,11 +80,29 @@
     .children-reset;
   }
 
+  &__content-heading {
+    margin-top: 31px;
+
+    @media(min-width: 700px) {
+      margin-top: 58px;
+      margin-bottom: 22px;
+    }
+  }
+
+  &__text {
+
+  }
+
   &__list {
-    margin-top: 35px;
-    margin-bottom: 35px;
+    margin-top: 25px;
+    margin-bottom: 28px;
     padding-left: 0;
     list-style: none;
+
+    @media(min-width: 700px) {
+      margin-top: 30px;
+      margin-bottom: 60px;
+    }
   }
 
   &__item {
@@ -91,7 +114,11 @@
     }
 
     &:not(:last-child) {
-      margin-bottom: 35px;
+      margin-bottom: 27px;
+
+      @media(min-width: 700px) {
+        margin-bottom: 30px;
+      }
     }
 
     &::before {
@@ -107,17 +134,19 @@
   }
 
   &__quote {
-    margin: 35px 0;
+    margin: 27px 0;
     padding-left: 20px;
     padding-right: 25px;
     border-left: 2px solid @pink-49;
 
     @media(min-width: 700px) {
-      padding-left: 35px;
+      margin-top: 31px;
+      padding-left: 33px;
+      padding-right: 0;
     }
   }
 
-  &__text {
+  &__quote-text {
     margin-top: 0;
     margin-bottom: 0;
   }

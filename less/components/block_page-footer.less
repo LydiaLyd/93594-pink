@@ -1,4 +1,5 @@
 .page-footer {
+  background-color: #fff;
 
   &--main-page {
     display: none;
@@ -12,7 +13,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 45px 20px 50px;
+    padding: 40px 20px 27px;
 
     @media(min-width: 700px) {
       flex-direction: row;
@@ -29,23 +30,28 @@
   }
 
   &__column {
-    &:nth-child(1),
-    &:nth-child(2) {
-      margin-bottom: 40px;
+    &:nth-child(1) {
+      margin-bottom: 41px;
+    }
 
-      @media(min-width: 700px) {
-        margin-bottom: 0;
-      }
+    &:nth-child(2) {
+      margin-bottom: 38px;
     }
 
     &:nth-child(3) {
       line-height: 18px;
     }
+
+    &:nth-child(1),
+    &:nth-child(2) {
+      @media(min-width: 700px) {
+        margin-bottom: 0;
+      }
+    }
   }
 
   &__link {
     display: block;
-    line-height: 34px;
     color: @blue-21;
 
     &:hover {
@@ -60,14 +66,14 @@
     font-size: 14px;
     vertical-align: middle;
 
-    @media(min-width: 700px) {
+    @media(min-width: 960px) {
       font-size: 18px;
       line-height: 18px;
     }
   }
 
   &__icon {
-    margin-left: 15px;
+    margin-left: 7px;
     vertical-align: middle;
     fill: @pink-49;
     transition: fill .15s;

@@ -16,13 +16,13 @@
     justify-content: space-between;
     width: 620px;
     .center;
-    padding-top: 55px;
+    padding-top: 57px;
     padding-bottom: 30px;
 
     @media(min-width: 960px) {
       justify-content: flex-start;
       width: 960px;
-      padding: 35px 10px 65px 10px;
+      padding: 30px 10px 67px;
     }
   }
 
@@ -33,7 +33,7 @@
     margin-right: 45px;
 
     @media(min-width: 960px) {
-      margin-right: 70px;
+      margin-right: 65px;
       width: 301px;
       height: 346px;
     }
@@ -80,12 +80,14 @@
   }
 
   &__text-wrap {
-    width: 300px;
-    padding-top: 43px;
+    width: 311px;
+    padding-top: 39px;
+    padding-right: 5px;
 
     @media(min-width: 960px) {
       flex-grow: 1;
-      padding-top: 90px;
+      width: auto;
+      padding-top: 95px;
       padding-right: 40px;
       font-size: 18px;
       line-height: 30px;
@@ -95,7 +97,7 @@
   &__heading {
     width: 170px;
     margin-top: 0;
-    margin-bottom: 17px;
+    margin-bottom: 10px;
     font-weight: 700;
     font-size: 30px;
     line-height: 36px;
@@ -108,14 +110,24 @@
     }
   }
 
+  &__text-break {
+    @media(min-width: 700px) {
+      display: block;
+    }
+
+    @media(min-width: 960px) {
+      display: inline;
+    }
+  }
+
 
   &__text {
-    margin-top: 17px;
-    margin-bottom: 17px;
+    margin-top: 10px;
+    margin-bottom: 10px;
 
     @media(min-width: 960px) {
       margin-top: 25px;
-      margin-bottom: 25px;
+      margin-bottom: 30px;
     }
   }
 

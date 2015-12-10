@@ -12,29 +12,38 @@
   }
 
   &__row {
-    @media(min-width: 700px) {
-      // empty heading cell
-      &:first-child::before {
-        content: '';
-        display: table-cell;
-      }
-    }
+
   }
 
   &__heading,
   &__cell {
     border: 2px solid @grey-90;
+
+    &:first-child {
+      display: none;
+
+      @media(min-width: 700px) {
+        display: table-cell;
+      }
+    }
   }
 
   &__heading {
-    padding: 15px;
+    padding: 16px 15px 20px;
     color: #fff;
     background-color: @blue-21;
+    background-clip: padding-box;
     border-bottom: none;
 
     @media(min-width: 700px) {
       padding-top: 17px;
       padding-bottom: 17px;
+
+      &:first-child {
+        background-color: transparent;
+        border-top: none;
+        border-left: none;
+      }
 
       &:nth-child(2)::before {
         top: 5px;
@@ -42,8 +51,13 @@
       }
     }
 
+    @media(min-width: 960px) {
+      padding-top: 22px;
+      padding-bottom: 20px;
+    }
+
     // label
-    &:nth-child(2) {
+    &:nth-child(3) {
       .has-label("Хит", @zi_cost-label, 500, @pink-49);
 
       @media(min-width: 700px) {
@@ -55,6 +69,8 @@
 
       @media(min-width: 960px) {
         &::before {
+          top: 11px;
+          left: -25px;
           font-size: 14px;
         }
       }
@@ -67,7 +83,7 @@
   }
 
   &__name {
-    margin-bottom: 3px;
+    margin-bottom: 2px;
     font-size: 18px;
 
     @media(min-width: 700px) {
@@ -77,6 +93,7 @@
     }
 
     @media(min-width: 960px) {
+      margin-bottom: 8px;
       font-size: 18px;
     }
   }
@@ -98,25 +115,23 @@
 
   &__cell {
     position: relative;
-    padding: 15px 25px;
+    padding: 16px 18px 13px;
     background-color: #fff;
+    background-clip: padding-box;
     text-align: right;
 
     @media(min-width: 700px) {
       width: 25%;
-      padding: 8px 15px;
+      padding: 7px 15px;
       text-align: center;
     }
 
     @media(min-width: 960px) {
-      padding: 15px 22px;
+      padding: 14px 22px;
     }
 
     &:first-child {
-      display: none;
-
       @media(min-width: 700px) {
-        display: table-cell;
         font-size: 14px;
         text-align: left;
         text-transform: none;
@@ -135,7 +150,7 @@
       content: attr(data-feature);
       position: absolute;
       top: 50%;
-      left: 25px;
+      left: 23px;
       transform: translateY(-50%);
 
       @media(min-width: 700px) {
