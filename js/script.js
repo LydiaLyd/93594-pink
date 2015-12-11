@@ -9,7 +9,7 @@
         navToggleLines = navbar.querySelector('.navbar__lines'),
         navToggleCounter = 1;
 
-    navToggle.addEventListener('click', function() {
+    navToggle.addEventListener('click', function(event) {
       event.preventDefault();
 
       navToggleCounter++;
@@ -42,7 +42,8 @@
         zoom: 16,
         // customize coordinates
         center: new google.maps.LatLng(59.936352,30.321097),
-        disableDefaultUI: true
+        disableDefaultUI: true,
+        scrollwheel: false
       }
       var map = new google.maps.Map(document.getElementById('map'), mapOptions);
       // customize image
