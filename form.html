@@ -147,340 +147,338 @@
 
 
 
-    <div class="main-wrap">
-      <div class="navbar">
-        <div class="navbar__header">
-          <div class="navbar__wrap">
-            <a class="logo" href="index.html" title="Вернуться на главную">
-              <svg class="logo__cutted" width="74" height="24">
-                <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#word-single"></use>
-              </svg>
-              <svg class="logo__full  logo__full--show-sm" width="145" height="45">
-                <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#glasses-unbroken"></use>
-                <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#word"></use>
-              </svg>
-            </a>
-            <button class="navbar__toggle" type="button">
-              <span class="navbar__lines"></span>
-              <span class="navbar__text-hidden">Переключатель меню</span>
-            </button>
-          </div>
-        </div>
-
-        <div class="navbar__nav">
-          <a class="logo  logo--nav" href="index.html" title="Вернуться на главную">
-            <svg class="logo__full  logo__full--show-md" width="145" height="45">
-              <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#glasses-broken"></use>
+    <div class="navbar">
+      <div class="navbar__header">
+        <div class="navbar__wrap">
+          <a class="logo" href="index.html" title="Вернуться на главную">
+            <svg class="logo__cutted" width="74" height="24">
+              <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#word-single"></use>
+            </svg>
+            <svg class="logo__full  logo__full--show-sm" width="145" height="45">
+              <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#glasses-unbroken"></use>
               <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#word"></use>
-              <use class="logo__stars" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#stars-glasses"></use>
-              <use class="logo__stars" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#star-letter"></use>
             </svg>
           </a>
-          <nav class="main-nav">
-            <ul class="main-nav__list">
-              <li class="main-nav__item">
-                <a class="main-nav__link" href="index.html">Информация</a>
-              </li>
-              <li class="main-nav__item">
-                <a class="main-nav__link" href="blog.html">Блог</a>
-              </li>
-              <li class="main-nav__item">
-                <a class="main-nav__link" href="post.html">Отзывы</a>
-              </li>
-              <li class="main-nav__item">
-                <a class="main-nav__link  main-nav__item--current" href="form.html">Конкурс</a>
-              </li>
-            </ul>
-          </nav>
+          <button class="navbar__toggle" type="button">
+            <span class="navbar__lines"></span>
+            <span class="navbar__text-hidden">Переключатель меню</span>
+          </button>
         </div>
       </div>
 
-
-
-      <div class="intro">
-        <div class="intro__inner">
-          <h1 class="intro__heading  intro__heading--form-page">Конкурс на самое безбашенное путешествие с Пинк</h1>
-        </div>
+      <div class="navbar__nav">
+        <a class="logo  logo--nav" href="index.html" title="Вернуться на главную">
+          <svg class="logo__full  logo__full--show-md" width="145" height="45">
+            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#glasses-broken"></use>
+            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#word"></use>
+            <use class="logo__stars" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#stars-glasses"></use>
+            <use class="logo__stars" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#star-letter"></use>
+          </svg>
+        </a>
+        <nav class="main-nav">
+          <ul class="main-nav__list">
+            <li class="main-nav__item">
+              <a class="main-nav__link" href="index.html">Информация</a>
+            </li>
+            <li class="main-nav__item">
+              <a class="main-nav__link" href="blog.html">Блог</a>
+            </li>
+            <li class="main-nav__item">
+              <a class="main-nav__link" href="post.html">Отзывы</a>
+            </li>
+            <li class="main-nav__item">
+              <a class="main-nav__link  main-nav__item--current" href="form.html">Конкурс</a>
+            </li>
+          </ul>
+        </nav>
       </div>
+    </div>
 
 
 
-      <div class="story-form">
-        <form action="/echo" method="post" enctype="multipart/form-data">
-          <fieldset class="fullname">
-            <p class="fullname__text">Поделитесь своей историей и получите шанс выиграть ценный приз — 1000 миль на вашу бонусную карту! <span class="fullname__text-hidden-xs">Пожалуйста, заполните форму ниже:</span></p>
-            <!-- Добавила обертку, чтобы на широком вьюпорте поля выстраивались в 3 колонки -->
-            <div class="fullname__group">
-              <p class="fullname__field-wrap">
-                <label class="fullname__label" for="firstname">Имя: *</label>
-                <input class="fullname__field" name="firstname" id="firstname" type="text" placeholder="Введите ваше имя" required>
-              </p>
-              <p class="fullname__field-wrap">
-                <label class="fullname__label" for="lastname">Фамилия: *</label>
-                <input class="fullname__field" name="lastname" id="lastname" type="text" placeholder="Укажите фамилию" required>
-              </p>
-              <p class="fullname__field-wrap">
-                <label class="fullname__label" for="patronymic">Отчество:</label>
-                <input class="fullname__field" name="patronymic" id="patronymic" type="text" placeholder="Ну и отчество тоже">
-              </p>
+    <div class="intro">
+      <div class="intro__inner">
+        <h1 class="intro__heading  intro__heading--form-page">Конкурс на самое безбашенное путешествие с Пинк</h1>
+      </div>
+    </div>
+
+
+
+    <div class="story-form">
+      <form action="/echo" method="post" enctype="multipart/form-data">
+        <fieldset class="fullname">
+          <p class="fullname__text">Поделитесь своей историей и получите шанс выиграть ценный приз — 1000 миль на вашу бонусную карту! <span class="fullname__text-hidden-xs">Пожалуйста, заполните форму ниже:</span></p>
+          <!-- Добавила обертку, чтобы на широком вьюпорте поля выстраивались в 3 колонки -->
+          <div class="fullname__group">
+            <p class="fullname__field-wrap">
+              <label class="fullname__label" for="firstname">Имя: *</label>
+              <input class="fullname__field" name="firstname" id="firstname" type="text" placeholder="Введите ваше имя" required>
+            </p>
+            <p class="fullname__field-wrap">
+              <label class="fullname__label" for="lastname">Фамилия: *</label>
+              <input class="fullname__field" name="lastname" id="lastname" type="text" placeholder="Укажите фамилию" required>
+            </p>
+            <p class="fullname__field-wrap">
+              <label class="fullname__label" for="patronymic">Отчество:</label>
+              <input class="fullname__field" name="patronymic" id="patronymic" type="text" placeholder="Ну и отчество тоже">
+            </p>
+          </div>
+        </fieldset>
+
+        <fieldset class="app">
+          <p class="app__heading">С каким приложением путешествовали? *</p>
+          <ul class="app__list">
+            <li class="app__item">
+              <input class="app__field" name="app" id="iOS" type="radio" checked required>
+              <label class="app__label" for="iOS">Pink для iOS</label>
+            </li>
+            <li class="app__item">
+              <input class="app__field" name="app" id="android" type="radio" required>
+              <label class="app__label" for="android">Pink на Android</label>
+            </li>
+            <li class="app__item">
+              <input class="app__field" name="app" id="windows-phone" type="radio" required>
+              <label class="app__label" for="windows-phone">Windows Phone</label>
+            </li>
+          </ul>
+        </fieldset>
+
+        <fieldset class="time">
+          <p class="time__heading">Когда Вы путешествовали? *</p>
+          <!-- Добавила обертку, чтобы на широком вьюпорте поля выстраивались в 3 колонки -->
+          <div class="time__group">
+            <div class="time__field-wrap">
+              <input class="time__field" name="departure-date" id="departure-date" type="date" value="2015-04-01" required>
+              <label class="time__label" for="departure-date">Дата выезда</label>
             </div>
-          </fieldset>
 
-          <fieldset class="app">
-            <p class="app__heading">С каким приложением путешествовали? *</p>
-            <ul class="app__list">
-              <li class="app__item">
-                <input class="app__field" name="app" id="iOS" type="radio" checked required>
-                <label class="app__label" for="iOS">Pink для iOS</label>
-              </li>
-              <li class="app__item">
-                <input class="app__field" name="app" id="android" type="radio" required>
-                <label class="app__label" for="android">Pink на Android</label>
-              </li>
-              <li class="app__item">
-                <input class="app__field" name="app" id="windows-phone" type="radio" required>
-                <label class="app__label" for="windows-phone">Windows Phone</label>
-              </li>
-            </ul>
-          </fieldset>
-
-          <fieldset class="time">
-            <p class="time__heading">Когда Вы путешествовали? *</p>
-            <!-- Добавила обертку, чтобы на широком вьюпорте поля выстраивались в 3 колонки -->
-            <div class="time__group">
-              <div class="time__field-wrap">
-                <input class="time__field" name="departure-date" id="departure-date" type="date" value="2015-04-01" required>
-                <label class="time__label" for="departure-date">Дата выезда</label>
-              </div>
-
-              <div class="time__field-wrap">
-                <div class="time__btns-group">
-                  <button class="btn  btn--minus" type="button">
-                    <i class="icon  icon-minus"></i>
-                    <span class="btn__text-hidden">-</span>
-                  </button>
-                  <input class="time__field" name="duration" id="duration" type="number" placeholder="10 дней" required>
-                  <button class="btn  btn--plus" type="button">
-                    <i class="icon  icon-plus"></i>
-                    <span class="btn__text-hidden">+</span>
-                  </button>
-                </div>
-                <label class="time__label" for="duration">Продолжительность</label>
-              </div>
-
-              <div class="time__field-wrap">
-                <input class="time__field" name="return-date" id="return-date" type="date" value="2015-04-01" required>
-                <label class="time__label" for="return-date">Дата возвращения</label>
-              </div>
-            </div>
-          </fieldset>
-
-          <fieldset class="companions">
-            <p class="companions__heading">Количество попутчиков *</p>
-            <div class="companions__field-wrap  companions__field-wrap--amount">
-              <label class="companions__label  companions__label--text-hidden" for="companions-amount">Количество попутчиков *</label>
-              <div class="companions__btns-group">
-                <button class="btn  btn--minus  btn--amount" type="button">
+            <div class="time__field-wrap">
+              <div class="time__btns-group">
+                <button class="btn  btn--minus" type="button">
+                  <i class="icon  icon-minus"></i>
                   <span class="btn__text-hidden">-</span>
                 </button>
-                <input class="companions__field" name="companions-amount" id="companions-amount" type="number" placeholder="2 чел." required>
-                <button class="btn  btn--plus  btn--amount" type="button">
+                <input class="time__field" name="duration" id="duration" type="number" placeholder="10 дней" required>
+                <button class="btn  btn--plus" type="button">
+                  <i class="icon  icon-plus"></i>
                   <span class="btn__text-hidden">+</span>
                 </button>
               </div>
+              <label class="time__label" for="duration">Продолжительность</label>
             </div>
 
-            <ul class="companions__list">
-              <li class="companions__item">
-                <div class="companions__number">
-                  <div class="companions__symbol">№</div>
-                  <div class="companions__value">1</div>
-                </div>
-                <div class="companions__group">
-                  <p class="companions__field-wrap  companions__field-wrap--name">
-                    <label class="companions__label" for="companion-name-1">Имя: *</label>
-                    <input class="companions__field" name="companion-name" id="companion-name-1" type="text" placeholder="Введите ваше имя" required>
-                  </p>
-                  <p class="companions__field-wrap  companions__field-wrap--name">
-                    <label class="companions__label" for="companion-nickname-1">Прозвище:</label>
-                    <input class="companions__field" name="companion-nickname" id="companion-nickname-1" type="text" placeholder="Ну как же без этого!">
-                  </p>
-                </div>
-                <button class="btn  btn--companions" type="button">Удалить</button>
-              </li>
-
-              <li class="companions__item">
-                <div class="companions__number">
-                  <div class="companions__symbol">№</div>
-                  <div class="companions__value">2</div>
-                </div>
-                <div class="companions__group">
-                  <p class="companions__field-wrap  companions__field-wrap--name">
-                    <label class="companions__label" for="companion-name-2">Имя: *</label>
-                    <input class="companions__field" name="companion-name" id="companion-name-2" type="text" placeholder="Введите ваше имя" required>
-                  </p>
-                  <p class="companions__field-wrap  companions__field-wrap--name">
-                    <label class="companions__label" for="companion-nickname-2">Прозвище:</label>
-                    <input class="companions__field" name="companion-nickname" id="companion-nickname-2" type="text" placeholder="Ну как же без этого!">
-                  </p>
-                </div>
-                <button class="btn  btn--companions" type="button">Удалить</button>
-              </li>
-            </ul>
-          </fieldset>
-
-          <fieldset class="achievements">
-            <p class="achievements__heading">Ваши безбашенные достижения в путешествии</p>
-            <ul class="achievements__list">
-              <li class="achievements__item">
-                <input class="achievements__field" name="achievements" id="achievement-1" type="checkbox" checked>
-                <label class="achievements__label" for="achievement-1">Сделал селфи с акулой</label>
-              </li>
-              <li class="achievements__item">
-                <input class="achievements__field" name="achievements" id="achievement-2" type="checkbox" checked>
-                <label class="achievements__label" for="achievement-2">Обгорел на пляже</label>
-              </li>
-              <li class="achievements__item">
-                <input class="achievements__field" name="achievements" id="achievement-3" type="checkbox">
-                <label class="achievements__label" for="achievement-3">Видел Чака Норриса</label>
-              </li>
-              <li class="achievements__item">
-                <input class="achievements__field" name="achievements" id="achievement-4" type="checkbox">
-                <label class="achievements__label" for="achievement-4">Накупил сувениров</label>
-              </li>
-              <li class="achievements__item">
-                <input class="achievements__field" name="achievements" id="achievement-5" type="checkbox" checked>
-                <label class="achievements__label" for="achievement-5">Удержал башню</label>
-              </li>
-              <li class="achievements__item">
-                <input class="achievements__field" name="achievements" id="achievement-6" type="checkbox">
-                <label class="achievements__label" for="achievement-6">Разгромил отель</label>
-              </li>
-            </ul>
-          </fieldset>
-
-          <fieldset class="photos">
-            <p class="photos__heading">Ваши фотографии из поездки *</p>
-            <div class="photos__field-wrap">
-              <input class="btn  btn--upload-hidden" name="upload-photos" id="upload-photos" type="file" multiple accept="image/*" required>
-              <label class="btn  btn--white  btn--upload" for="upload-photos">Загрузить фото</label>
+            <div class="time__field-wrap">
+              <input class="time__field" name="return-date" id="return-date" type="date" value="2015-04-01" required>
+              <label class="time__label" for="return-date">Дата возвращения</label>
             </div>
-            <ul class="photos__list">
-              <li class="photos__item">
-                <img class="photos__photo" src="img/img_form-img-1.jpg" data-name="img-1.jpg" width="67" height="68" alt="Photo">
-                <button class="btn  btn--cross" type="button">
-                  <i class="icon  icon--cross"></i>
-                  <span class="btn__text-hidden">Delete</span>
-                </button>
-              </li>
-              <li class="photos__item">
-                <img class="photos__photo" src="img/img_form-img-2.jpg" data-name="img-2.jpg" width="68" height="68" alt="Photo">
-                <button class="btn  btn--cross" type="button">
-                  <i class="icon  icon--cross"></i>
-                  <span class="btn__text-hidden">Delete</span>
-                </button>
-              </li>
-              <li class="photos__item">
-                <img class="photos__photo" src="img/img_form-img-3.jpg" data-name="img-3.jpg" width="67" height="68" alt="Photo">
-                <button class="btn  btn--cross" type="button">
-                  <i class="icon  icon--cross"></i>
-                  <span class="btn__text-hidden">Delete</span>
-                </button>
-              </li>
-              <li class="photos__item">
-                <img class="photos__photo" src="img/img_form-img-4.jpg" data-name="img-4.jpg" width="67" height="67" alt="Photo">
-                <button class="btn  btn--cross" type="button">
-                  <i class="icon  icon--cross"></i>
-                  <span class="btn__text-hidden">Delete</span>
-                </button>
-              </li>
-              <li class="photos__item">
-                <img class="photos__photo" src="img/img_form-img-5.jpg" data-name="img-5.jpg" width="68" height="67" alt="Photo">
-                <button class="btn  btn--cross" type="button">
-                  <i class="icon  icon--cross"></i>
-                  <span class="btn__text-hidden">Delete</span>
-                </button>
-              </li>
-              <li class="photos__item">
-                <img class="photos__photo" src="img/img_form-img-6.jpg" data-name="img-6.jpg" width="67" height="67" alt="Photo">
-                <button class="btn  btn--cross" type="button">
-                  <i class="icon  icon--cross"></i>
-                  <span class="btn__text-hidden">Delete</span>
-                </button>
-              </li>
-              <li class="photos__item">
-                <img class="photos__photo" src="img/img_form-img-7.jpg" data-name="img-7.jpg" width="68" height="67" alt="Photo">
-                <button class="btn  btn--cross" type="button">
-                  <i class="icon  icon--cross"></i>
-                  <span class="btn__text-hidden">Delete</span>
-                </button>
-              </li>
-              <li class="photos__item">
-                <img class="photos__photo" src="img/img_form-img-8.jpg" data-name="img-8.jpg" width="68" height="67" alt="Photo">
-                <button class="btn  btn--cross" type="button">
-                  <i class="icon  icon--cross"></i>
-                  <span class="btn__text-hidden">Delete</span>
-                </button>
-              </li>
-            </ul>
-          </fieldset>
-
-          <div class="story-form__bottom">
-            <button class="btn  btn--green  btn--story-form" type="submit">Отправить форму</button>
-            <p class="story-form__prompt"><span class="story-form__symbol">*</span> — обязательные поля</p>
           </div>
-        </form>
-      </div>
+        </fieldset>
 
-
-
-      <footer class="page-footer">
-        <div class="page-footer__inner">
-          <div class="page-footer__column">
-            <a class="logo  logo--footer" href="index.html" title="Вернуться на главную">
-              <svg class="logo__full" width="145" height="45">
-                <use class="logo__glasses-unbroken" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#glasses-unbroken"></use>
-                <use class="logo__word" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#word"></use>
-                <use class="logo__glasses-broken" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#glasses-broken"></use>
-                <use class="logo__stars  logo__stars--footer" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#stars-glasses"></use>
-                <use class="logo__stars  logo__stars--footer  logo__stars--letter" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#star-letter"></use>
-              </svg>
-            </a>
+        <fieldset class="companions">
+          <p class="companions__heading">Количество попутчиков *</p>
+          <div class="companions__field-wrap  companions__field-wrap--amount">
+            <label class="companions__label  companions__label--text-hidden" for="companions-amount">Количество попутчиков *</label>
+            <div class="companions__btns-group">
+              <button class="btn  btn--minus  btn--amount" type="button">
+                <span class="btn__text-hidden">-</span>
+              </button>
+              <input class="companions__field" name="companions-amount" id="companions-amount" type="number" placeholder="2 чел." required>
+              <button class="btn  btn--plus  btn--amount" type="button">
+                <span class="btn__text-hidden">+</span>
+              </button>
+            </div>
           </div>
 
-          <div class="page-footer__column">
-            <ul class="social">
-              <li class="social__item">
-                <a class="social__link" href="#" title="Мы в Twitter">
-                  <svg class="social__icon" width="20" height="14"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-twitter"></use></svg>
-                  <span class="social__text-hidden">Мы в Twitter</span>
-                </a>
-              </li>
-              <li class="social__item">
-                <a class="social__link" href="#" title="Мы на Facebook">
-                  <svg class="social__icon" width="25" height="17"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-facebook"></use></svg>
-                  <span class="social__text-hidden">Мы на Facebook</span>
-                </a>
-              </li>
-              <li class="social__item">
-                <a class="social__link" href="#" title="Мы в Youtube">
-                  <svg class="social__icon" width="20" height="14"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-youtube"></use></svg>
-                  <span class="social__text-hidden">Мы в Youtube</span>
-                </a>
-              </li>
-            </ul>
-          </div>
+          <ul class="companions__list">
+            <li class="companions__item">
+              <div class="companions__number">
+                <div class="companions__symbol">№</div>
+                <div class="companions__value">1</div>
+              </div>
+              <div class="companions__group">
+                <p class="companions__field-wrap  companions__field-wrap--name">
+                  <label class="companions__label" for="companion-name-1">Имя: *</label>
+                  <input class="companions__field" name="companion-name" id="companion-name-1" type="text" placeholder="Введите ваше имя" required>
+                </p>
+                <p class="companions__field-wrap  companions__field-wrap--name">
+                  <label class="companions__label" for="companion-nickname-1">Прозвище:</label>
+                  <input class="companions__field" name="companion-nickname" id="companion-nickname-1" type="text" placeholder="Ну как же без этого!">
+                </p>
+              </div>
+              <button class="btn  btn--companions" type="button">Удалить</button>
+            </li>
 
-          <div class="page-footer__column">
-            <a class="page-footer__link" href="http://htmlacademy.ru" title="Перейти на htmlacademy.ru" target="_blank">
-              <span class="page-footer__text">Разработано:</span>
-              <svg class="page-footer__icon" width="27" height="34"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-htmlacademy"></use></svg>
-              <span class="page-footer__text-hidden">HTML Academy</span>
-            </a>
+            <li class="companions__item">
+              <div class="companions__number">
+                <div class="companions__symbol">№</div>
+                <div class="companions__value">2</div>
+              </div>
+              <div class="companions__group">
+                <p class="companions__field-wrap  companions__field-wrap--name">
+                  <label class="companions__label" for="companion-name-2">Имя: *</label>
+                  <input class="companions__field" name="companion-name" id="companion-name-2" type="text" placeholder="Введите ваше имя" required>
+                </p>
+                <p class="companions__field-wrap  companions__field-wrap--name">
+                  <label class="companions__label" for="companion-nickname-2">Прозвище:</label>
+                  <input class="companions__field" name="companion-nickname" id="companion-nickname-2" type="text" placeholder="Ну как же без этого!">
+                </p>
+              </div>
+              <button class="btn  btn--companions" type="button">Удалить</button>
+            </li>
+          </ul>
+        </fieldset>
+
+        <fieldset class="achievements">
+          <p class="achievements__heading">Ваши безбашенные достижения в путешествии</p>
+          <ul class="achievements__list">
+            <li class="achievements__item">
+              <input class="achievements__field" name="achievements" id="achievement-1" type="checkbox" checked>
+              <label class="achievements__label" for="achievement-1">Сделал селфи с акулой</label>
+            </li>
+            <li class="achievements__item">
+              <input class="achievements__field" name="achievements" id="achievement-2" type="checkbox" checked>
+              <label class="achievements__label" for="achievement-2">Обгорел на пляже</label>
+            </li>
+            <li class="achievements__item">
+              <input class="achievements__field" name="achievements" id="achievement-3" type="checkbox">
+              <label class="achievements__label" for="achievement-3">Видел Чака Норриса</label>
+            </li>
+            <li class="achievements__item">
+              <input class="achievements__field" name="achievements" id="achievement-4" type="checkbox">
+              <label class="achievements__label" for="achievement-4">Накупил сувениров</label>
+            </li>
+            <li class="achievements__item">
+              <input class="achievements__field" name="achievements" id="achievement-5" type="checkbox" checked>
+              <label class="achievements__label" for="achievement-5">Удержал башню</label>
+            </li>
+            <li class="achievements__item">
+              <input class="achievements__field" name="achievements" id="achievement-6" type="checkbox">
+              <label class="achievements__label" for="achievement-6">Разгромил отель</label>
+            </li>
+          </ul>
+        </fieldset>
+
+        <fieldset class="photos">
+          <p class="photos__heading">Ваши фотографии из поездки *</p>
+          <div class="photos__field-wrap">
+            <input class="btn  btn--upload-hidden" name="upload-photos" id="upload-photos" type="file" multiple accept="image/*" required>
+            <label class="btn  btn--white  btn--upload" for="upload-photos">Загрузить фото</label>
           </div>
+          <ul class="photos__list">
+            <li class="photos__item">
+              <img class="photos__photo" src="img/img_form-img-1.jpg" data-name="img-1.jpg" width="67" height="68" alt="Photo">
+              <button class="btn  btn--cross" type="button">
+                <i class="icon  icon--cross"></i>
+                <span class="btn__text-hidden">Delete</span>
+              </button>
+            </li>
+            <li class="photos__item">
+              <img class="photos__photo" src="img/img_form-img-2.jpg" data-name="img-2.jpg" width="68" height="68" alt="Photo">
+              <button class="btn  btn--cross" type="button">
+                <i class="icon  icon--cross"></i>
+                <span class="btn__text-hidden">Delete</span>
+              </button>
+            </li>
+            <li class="photos__item">
+              <img class="photos__photo" src="img/img_form-img-3.jpg" data-name="img-3.jpg" width="67" height="68" alt="Photo">
+              <button class="btn  btn--cross" type="button">
+                <i class="icon  icon--cross"></i>
+                <span class="btn__text-hidden">Delete</span>
+              </button>
+            </li>
+            <li class="photos__item">
+              <img class="photos__photo" src="img/img_form-img-4.jpg" data-name="img-4.jpg" width="67" height="67" alt="Photo">
+              <button class="btn  btn--cross" type="button">
+                <i class="icon  icon--cross"></i>
+                <span class="btn__text-hidden">Delete</span>
+              </button>
+            </li>
+            <li class="photos__item">
+              <img class="photos__photo" src="img/img_form-img-5.jpg" data-name="img-5.jpg" width="68" height="67" alt="Photo">
+              <button class="btn  btn--cross" type="button">
+                <i class="icon  icon--cross"></i>
+                <span class="btn__text-hidden">Delete</span>
+              </button>
+            </li>
+            <li class="photos__item">
+              <img class="photos__photo" src="img/img_form-img-6.jpg" data-name="img-6.jpg" width="67" height="67" alt="Photo">
+              <button class="btn  btn--cross" type="button">
+                <i class="icon  icon--cross"></i>
+                <span class="btn__text-hidden">Delete</span>
+              </button>
+            </li>
+            <li class="photos__item">
+              <img class="photos__photo" src="img/img_form-img-7.jpg" data-name="img-7.jpg" width="68" height="67" alt="Photo">
+              <button class="btn  btn--cross" type="button">
+                <i class="icon  icon--cross"></i>
+                <span class="btn__text-hidden">Delete</span>
+              </button>
+            </li>
+            <li class="photos__item">
+              <img class="photos__photo" src="img/img_form-img-8.jpg" data-name="img-8.jpg" width="68" height="67" alt="Photo">
+              <button class="btn  btn--cross" type="button">
+                <i class="icon  icon--cross"></i>
+                <span class="btn__text-hidden">Delete</span>
+              </button>
+            </li>
+          </ul>
+        </fieldset>
+
+        <div class="story-form__bottom">
+          <button class="btn  btn--green  btn--story-form" type="submit">Отправить форму</button>
+          <p class="story-form__prompt"><span class="story-form__symbol">*</span> — обязательные поля</p>
         </div>
-      </footer>
+      </form>
     </div>
+
+
+
+    <footer class="page-footer">
+      <div class="page-footer__inner">
+        <div class="page-footer__column">
+          <a class="logo  logo--footer" href="index.html" title="Вернуться на главную">
+            <svg class="logo__full" width="145" height="45">
+              <use class="logo__glasses-unbroken" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#glasses-unbroken"></use>
+              <use class="logo__word" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#word"></use>
+              <use class="logo__glasses-broken" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#glasses-broken"></use>
+              <use class="logo__stars  logo__stars--footer" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#stars-glasses"></use>
+              <use class="logo__stars  logo__stars--footer  logo__stars--letter" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#star-letter"></use>
+            </svg>
+          </a>
+        </div>
+
+        <div class="page-footer__column">
+          <ul class="social">
+            <li class="social__item">
+              <a class="social__link" href="#" title="Мы в Twitter">
+                <svg class="social__icon" width="20" height="14"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-twitter"></use></svg>
+                <span class="social__text-hidden">Мы в Twitter</span>
+              </a>
+            </li>
+            <li class="social__item">
+              <a class="social__link" href="#" title="Мы на Facebook">
+                <svg class="social__icon" width="25" height="17"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-facebook"></use></svg>
+                <span class="social__text-hidden">Мы на Facebook</span>
+              </a>
+            </li>
+            <li class="social__item">
+              <a class="social__link" href="#" title="Мы в Youtube">
+                <svg class="social__icon" width="20" height="14"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-youtube"></use></svg>
+                <span class="social__text-hidden">Мы в Youtube</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="page-footer__column">
+          <a class="page-footer__link" href="http://htmlacademy.ru" title="Перейти на htmlacademy.ru" target="_blank">
+            <span class="page-footer__text">Разработано:</span>
+            <svg class="page-footer__icon" width="27" height="34"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-htmlacademy"></use></svg>
+            <span class="page-footer__text-hidden">HTML Academy</span>
+          </a>
+        </div>
+      </div>
+    </footer>
 
 
 
