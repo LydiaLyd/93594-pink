@@ -132,6 +132,12 @@
       border-left: none;
       border-right: none;
       border-radius: 0;
+      -moz-appearance: textfield;
+
+      &::-webkit-inner-spin-button,
+      &::-webkit-outer-spin-button {
+        -webkit-appearance: none;
+      }
 
       @media(min-width: 700px) {
         flex-grow: 0;

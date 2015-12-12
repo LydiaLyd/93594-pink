@@ -29,6 +29,38 @@
 
 
 
+// minus / plus btns
+
+(function() {
+  if (document.querySelector(".time__btns-group")) {
+    var groupTime = document.querySelector(".time__btns-group");
+    var groupCompanions = document.querySelector(".companions__btns-group");
+
+    foo(groupTime);
+    foo(groupCompanions);
+
+    function foo(group) {
+      var minus = group.querySelector(".btn--minus");
+      var plus = group.querySelector(".btn--plus");
+      var amount = group.querySelector("[type=number]");
+
+      minus.addEventListener("click", function(event) {
+        event.preventDefault();
+        if (amount.value > 0) {
+          amount.value--;
+        };
+      });
+
+      plus.addEventListener("click", function(event) {
+        event.preventDefault();
+        amount.value++;
+      })
+    };
+  };
+})();
+
+
+
 // google map
 // TO DO:
 // 1) убрать текст внизу
