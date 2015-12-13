@@ -64,11 +64,10 @@ gulp.task("build", [
   "script"
 ]);
 
-gulp.task("start", ["style"], function() {
+gulp.task("start", ["style", "script"], function() {
   livereload.listen();
-  gulp.watch("less/**/*.less", "style");
-  gulp.watch("js/script.js", "script");
-  gulp.watch("img/*", "images");
+  gulp.watch("less/**/*.less", ["style"]);
+  gulp.watch("js/script.js", ["script"]);
 });
 
 
