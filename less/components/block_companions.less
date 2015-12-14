@@ -128,7 +128,8 @@
     &[name="companions-amount"] {
       flex-grow: 1;
       width: 156px;
-      text-align: center;
+      padding-left: 17%;
+      text-align: left;
       border-left: none;
       border-right: none;
       border-radius: 0;
@@ -142,6 +143,7 @@
       @media(min-width: 700px) {
         flex-grow: 0;
         width: 125px;
+        padding-left: 14%;
         background-color: #fff;
         border: none;
       }
@@ -159,7 +161,28 @@
   }
 
   &__btns-group {
+    position: relative;
     display: flex;
+
+    @media(min-width: 700px) {
+      width: 253px;
+    }
+
+    &::before {
+      content: "чел.";
+      position: absolute;
+      top: 50%;
+      right: 38%;
+      z-index: 1;
+      font-size: 18px;
+      line-height: 28px;
+      background-color: #fff;
+      transform: translateY(-50%);
+
+      @media(min-width: 700px) {
+        right: 36%;
+      }
+    }
   }
 
   &__list {

@@ -32,39 +32,30 @@
 // minus / plus btns
 
 (function() {
-  if (document.querySelector(".time__btns-group")) {
+  if (document.querySelector(".time__btns-group") || document.querySelector(".companions__btns-group")) {
     var groupTime = document.querySelector(".time__btns-group");
     var groupCompanions = document.querySelector(".companions__btns-group");
 
-    foo(groupTime, "10 дней");
-    foo(groupCompanions, "2 чел.");
+    foo(groupTime, "10");
+    foo(groupCompanions, "2");
 
-    function foo(group, initVal) {
+    function foo(group, initVal, class) {
       var minus = group.querySelector(".btn--minus");
       var plus = group.querySelector(".btn--plus");
-      var input = group.querySelector("[type=number]");
-      var amount = initVal;
+      var amount = group.querySelector("[type=number]");
+
+      amount.value = initVal;
 
       minus.addEventListener("click", function(event) {
         event.preventDefault();
-        if (parseFloat(amount) > 0) {
-          amount = parseFloat(amount) - 1;
-          console.log( amount );
-          input.value = amount + " дней";
-          console.log( typeof(input.value) );
-          console.log( input.value.length );
+        if (amount.value > 0) {
+          amount.value--;
         };
       });
 
       plus.addEventListener("click", function(event) {
         event.preventDefault();
-        amount = parseFloat(amount) + 1;
-        console.log( amount );
-        input.value = amount  + " дней";
-        console.log( typeof(input.value) );
-        console.log( input.value.length );
-        console.log( typeof(document.querySelector("[name=duration]").value) );
-        console.log( document.querySelector("[name=duration]").value.length );
+        amount.value++;
       })
     };
   };

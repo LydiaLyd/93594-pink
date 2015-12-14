@@ -102,9 +102,8 @@
       flex-grow: 1;
       flex-shrink: 1;
       width: 156px;
-      padding-top: 13px;
-      padding-bottom: 13px;
-      text-align: center;
+      padding: 13px 0 13px 19%;
+      text-align: left;
       border-left: none;
       border-right: none;
       border-radius: 0;
@@ -122,6 +121,7 @@
 
       @media(min-width: 700px) {
         width: 122px;
+        padding-left: 13%;
       }
     }
 
@@ -157,7 +157,28 @@
   }
 
   &__btns-group {
+    position: relative;
     display: flex;
+
+    &::before {
+      content: "дн.";
+      position: absolute;
+      top: 50%;
+      right: 40%;
+      z-index: 1;
+      font-size: 18px;
+      line-height: 28px;
+      background-color: #fff;
+      transform: translateY(-50%);
+
+      @media(min-width: 700px) {
+        right: 35%;
+      }
+
+      @media(min-width: 1200px) {
+        right: 40%;
+      }
+    }
 
     @media(min-width: 1200px) {
       width: 250px;

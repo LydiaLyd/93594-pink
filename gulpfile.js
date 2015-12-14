@@ -20,6 +20,10 @@ gulp.task("style", function() {
     .pipe(postcss([
       autoprefixer({browsers: ["last 2 versions", "ie 10"]})
     ]))
+    .pipe(csso())
+    .pipe(rename({
+        suffix: ".min"
+    }))
     .pipe(gulp.dest("css"))
     .pipe(livereload());
 });
@@ -64,9 +68,9 @@ gulp.task("build", [
   "script"
 ]);
 
-gulp.task("start", ["style", "script"], function() {
+gulp.task("start", ["style", "minify", "script"], function() {
   livereload.listen();
-  gulp.watch("less/**/*.less", ["style"]);
+  gulp.watch("less/**/*.less", ["style", "minify"]);
   gulp.watch("js/script.js", ["script"]);
 });
 
