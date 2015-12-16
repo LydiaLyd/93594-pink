@@ -23,7 +23,10 @@
     "gulp-livereload": "3.8.x",
     "gulp-csso": "1.0.x",
     "gulp-rename": "1.2.x",
-    "gulp-csscomb": "3.0.x"
+    "gulp-csscomb": "3.0.x",
+    "gulp-concat": "2.6.x",
+    "gulp-uglify": "1.5.x",
+    "gulp-imagemin": "2.4.0"
   },
   "scripts": {
     "pregosha": "npm install > /dev/null",
