@@ -39,7 +39,7 @@
     foo(groupTime, "10");
     foo(groupCompanions, "2");
 
-    function foo(group, initVal, class) {
+    function foo(group, initVal) {
       var minus = group.querySelector(".btn--minus");
       var plus = group.querySelector(".btn--plus");
       var amount = group.querySelector("[type=number]");
@@ -58,6 +58,84 @@
         amount.value++;
       })
     };
+  };
+})();
+
+
+
+// Form sending with ajax
+
+(function() {
+  if (!("FormData" in window) || document.querySelector(".story-form form")) {
+   return;
+  }
+
+  var form = document.querySelector(".story-form form");
+
+  form.addEventListener("submit", function(event) {
+    event.preventDefault();
+
+    var data = new FormData(form);
+
+    request(data, function(response) {
+      console.log(response);
+    });
+  });
+
+
+
+  if ("FileReader" in window) {
+    var area = document.querySelector(".photos__list");
+
+    form.querySelector("#upload-photos").addEventListener("change", function() {
+      var files = this.files;
+
+      for (var i = 0; i < files.length; i++) {
+        preview(files[i]);
+      }
+    });
+  }
+
+
+
+  function request(data, fn) {
+    var xhr = new XMLHttpRequest();
+    var time = (new Date()).getTime();
+
+    xhr.open("post", "https://echo.htmlacademy.ru/adaptive?" + time);
+
+    xhr.addEventListener("readystatechange", function() {
+      if (xhr.readyState == 4) {
+        fn(xhr.responseText);
+      }
+    });
+
+    xhr.send(data);
+  };
+
+  function preview(file) {
+    if (file.type.match(/image.*/)) {
+      var reader = new FileReader();
+
+      reader.addEventListener("load", function(event) {
+        var imgBox = document.createElement("li");
+        var img = document.createElement("img");
+        var btnDelete = document.createElement("button");
+
+        imgBox.classList.add("photos__item");
+        btnDelete.classList.add("btn");
+        btnDelete.classList.add("btn--cross");
+
+        img.src = event.target.result;
+        console.log( "test" );
+        img.alt = file.name;
+
+        area.appendChild(imgBox).appendChild(img);
+        imgBox.appendChild(btnDelete);
+      });
+
+      reader.readAsDataURL(file);
+    }
   };
 })();
 
