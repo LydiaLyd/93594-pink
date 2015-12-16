@@ -66,7 +66,7 @@
 // Form sending with ajax
 
 (function() {
-  if (!("FormData" in window) || document.querySelector(".story-form form")) {
+  if (!("FormData" in window) || !document.querySelector(".story-form form")) {
     return;
   }
 
@@ -126,6 +126,7 @@
         btnDelete.classList.add("btn");
         btnDelete.classList.add("btn--cross");
 
+        img.classList.add("photos__photo");
         img.src = event.target.result;
         console.log( "test" );
         img.alt = file.name;
