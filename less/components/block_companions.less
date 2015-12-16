@@ -8,7 +8,7 @@
   @media(min-width: 700px) {
     position: relative;
     margin-bottom: 64px;
-    padding: 42px 60px 56px;
+    padding: 42px 60px 54px;
     background-color: #fff;
     border: 2px solid @grey-90;
     border-radius: 3px;
@@ -61,10 +61,7 @@
       border-bottom: 2px solid @grey-90;
 
       @media(min-width: 700px) {
-        padding-bottom: 41px;
-      }
-
-      @media(min-width: 1200px) {
+        margin-bottom: 28px;
         padding-bottom: 40px;
       }
     }
@@ -102,6 +99,10 @@
     text-transform: uppercase;
     color: @pink-49;
     cursor: pointer;
+
+    @media(min-width: 700px) {
+      padding-left: 20px;
+    }
 
     &--text-hidden {
       display: none;
@@ -196,6 +197,10 @@
 
     &:not(:last-child) {
       margin-bottom: 40px;
+
+      @media(min-width: 700px) {
+        margin-bottom: 37px;
+      }
 
       @media(min-width: 1200px) {
         margin-bottom: 21px;

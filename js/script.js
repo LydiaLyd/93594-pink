@@ -72,6 +72,10 @@
 
   var form = document.querySelector(".story-form form");
 
+  var popupSuccess = document.querySelector(".popup-success");
+  var popupFailure = document.querySelector(".popup-failure");
+  var btnClosePopup = document.querySelectorAll(".btn--popup");
+
   form.addEventListener("submit", function(event) {
     event.preventDefault();
 
@@ -79,6 +83,7 @@
 
     request(data, function(response) {
       console.log(response);
+      popupSuccess.classList.add("popup-success--show")
     });
   });
 
@@ -95,6 +100,22 @@
       }
     });
   }
+
+
+  for (var j = 0; j < btnClosePopup.length; j++) {
+    var btnClose = btnClosePopup[j];
+
+    btnClose.addEventListener("click", function(event) {
+      event.preventDefault();
+
+      if (popupSuccess.classList.contains("popup-success--show")) {
+        popupSuccess.classList.remove("popup-success--show")
+      };
+      if (popupFailure.classList.contains("popup-failure--show")) {
+        popupFailure.classList.remove("popup-failure--show")
+      };
+    })
+  };
 
 
 
@@ -120,18 +141,23 @@
       reader.addEventListener("load", function(event) {
         var imgBox = document.createElement("li");
         var img = document.createElement("img");
+        var imgName = document.createElement("span");
         var btnDelete = document.createElement("button");
 
         imgBox.classList.add("photos__item");
-        btnDelete.classList.add("btn");
-        btnDelete.classList.add("btn--cross");
 
         img.classList.add("photos__photo");
         img.src = event.target.result;
-        console.log( "test" );
         img.alt = file.name;
 
+        imgName.innerHTML = file.name;
+        imgName.classList.add("photos__name");
+
+        btnDelete.classList.add("btn");
+        btnDelete.classList.add("btn--cross");
+
         area.appendChild(imgBox).appendChild(img);
+        imgBox.appendChild(imgName);
         imgBox.appendChild(btnDelete);
       });
 

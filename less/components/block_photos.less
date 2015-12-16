@@ -1,14 +1,14 @@
 .photos {
   margin-left: 0;
   margin-right: 0;
-  padding: 36px 0 10px;
+  padding: 36px 0 17px;
   background-color: @grey-94;
   border: none;
 
   @media(min-width: 700px) {
     position: relative;
-    margin-bottom: 58px;
-    padding: 40px 0 20px;
+    margin-bottom: 60px;
+    padding: 40px 0 26px;
     background-color: #fff;
     border: 2px solid @grey-90;
     border-radius: 3px;
@@ -42,10 +42,10 @@
   }
 
   &__field-wrap {
-    margin-bottom: 23px;
+    margin-bottom: 28px;
     padding-left: 20px;
     padding-right: 20px;
-    padding-bottom: 33px;
+    padding-bottom: 35px;
     border-bottom: 2px solid  @grey-90;
 
     @media(min-width: 700px) {
@@ -83,61 +83,15 @@
   &__item {
     position: relative;
     width: 68px;
-    margin: 10px 20px;
+    margin: 7px 19px;
 
     @media(min-width: 700px) {
       width: 120px;
-      margin: 23px 35px;
+      margin: 23px 34px;
     }
 
     @media(min-width: 1200px) {
       margin: 11px 27px;
-    }
-
-    &::after {
-      display: block;
-      margin-top: 10px;
-      font-size: 12px;
-      line-height: 18px;
-      text-transform: uppercase;
-      color: @blue-21;
-
-      @media(min-width: 700px) {
-        font-size: 14px;
-        line-height: 26px;
-      }
-    }
-
-    &:nth-child(1)::after {
-      content: "img-1.jpg";
-    }
-
-    &:nth-child(2)::after {
-      content: "img-2.jpg";
-    }
-
-    &:nth-child(3)::after {
-      content: "img-3.jpg";
-    }
-
-    &:nth-child(4)::after {
-      content: "img-4.jpg";
-    }
-
-    &:nth-child(5)::after {
-      content: "img-5.jpg";
-    }
-
-    &:nth-child(6)::after {
-      content: "img-6.jpg";
-    }
-
-    &:nth-child(7)::after {
-      content: "img-7.jpg";
-    }
-
-    &:nth-child(8)::after {
-      content: "img-8.jpg";
     }
   }
 
@@ -145,5 +99,19 @@
     display: block;
     width: 100%;
     height: auto;
+  }
+
+  &__name {
+    display: inline-block;
+    margin-top: 7px;
+    font-size: 12px;
+    line-height: 18px;
+    text-transform: uppercase;
+    color: @blue-21;
+
+    @media(min-width: 700px) {
+      font-size: 14px;
+      line-height: 26px;
+    }
   }
 }
