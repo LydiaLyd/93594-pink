@@ -103,8 +103,8 @@
       flex-grow: 1;
       flex-shrink: 1;
       width: 156px;
-      padding: 13px 0 13px 19%;
-      text-align: left;
+      padding: 13px 84px 13px 0;
+      text-align: right;
       border-left: none;
       border-right: none;
       border-radius: 0;
@@ -121,8 +121,12 @@
       }
 
       @media(min-width: 700px) {
-        width: 122px;
-        padding-left: 13%;
+        width: 112px;
+        padding-right: 60px;
+      }
+
+      @media(min-width: 1200px) {
+        padding-right: 65px;
       }
     }
 
@@ -160,12 +164,21 @@
   &__btns-group {
     position: relative;
     display: flex;
+    width: 280px;
+
+    @media(min-width: 700px) {
+      width: 240px;
+    }
+
+    @media(min-width: 1200px) {
+      width: 250px;
+    }
 
     &::before {
       content: "дн.";
       position: absolute;
       top: 50%;
-      right: 40%;
+      right: 112px;
       z-index: 1;
       font-size: 18px;
       line-height: 28px;
@@ -173,16 +186,12 @@
       transform: translateY(-50%);
 
       @media(min-width: 700px) {
-        right: 35%;
+        right: 92px;
       }
 
       @media(min-width: 1200px) {
-        right: 40%;
+        right: 96px;
       }
-    }
-
-    @media(min-width: 1200px) {
-      width: 250px;
     }
   }
 }
