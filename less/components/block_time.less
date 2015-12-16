@@ -102,12 +102,17 @@
       flex-grow: 1;
       flex-shrink: 1;
       width: 156px;
-      padding-top: 13px;
-      padding-bottom: 13px;
-      text-align: center;
+      padding: 13px 84px 13px 0;
+      text-align: right;
       border-left: none;
       border-right: none;
       border-radius: 0;
+      -moz-appearance: textfield;
+
+      &::-webkit-inner-spin-button,
+      &::-webkit-outer-spin-button {
+        -webkit-appearance: none;
+      }
 
       &:hover,
       &:focus  {
@@ -115,17 +120,12 @@
       }
 
       @media(min-width: 700px) {
-        width: 122px;
-        -moz-appearance: textfield;
-
-        &::-webkit-inner-spin-button,
-        &::-webkit-outer-spin-button {
-          -webkit-appearance: none;
-        }
+        width: 112px;
+        padding-right: 60px;
       }
 
       @media(min-width: 1200px) {
-
+        padding-right: 65px;
       }
     }
 
@@ -141,7 +141,7 @@
   }
 
   &__label {
-    display: block;
+    display: inline-block;
     padding-top: 7px;
     padding-right: 20px;
     padding-left: 20px;
@@ -161,10 +161,36 @@
   }
 
   &__btns-group {
+    position: relative;
     display: flex;
+    width: 280px;
+
+    @media(min-width: 700px) {
+      width: 240px;
+    }
 
     @media(min-width: 1200px) {
       width: 250px;
+    }
+
+    &::before {
+      content: "дн.";
+      position: absolute;
+      top: 50%;
+      right: 112px;
+      z-index: 1;
+      font-size: 18px;
+      line-height: 28px;
+      background-color: #fff;
+      transform: translateY(-50%);
+
+      @media(min-width: 700px) {
+        right: 92px;
+      }
+
+      @media(min-width: 1200px) {
+        right: 96px;
+      }
     }
   }
 }
