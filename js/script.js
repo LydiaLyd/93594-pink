@@ -67,7 +67,7 @@
 
 (function() {
   if (!("FormData" in window) || document.querySelector(".story-form form")) {
-   return;
+    return;
   }
 
   var form = document.querySelector(".story-form form");
