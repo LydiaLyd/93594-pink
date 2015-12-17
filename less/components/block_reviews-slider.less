@@ -88,53 +88,87 @@
   &__slides {
     display: flex;
     width: 300%;
-    transition: transform .25s;
+    transition: transform .35s ease-in-out;
+
+    &--show-first {
+      transform: translateX(0);
+    }
+
+    &--show-second {
+      transform: translateX(-33.3333333333%);
+    }
+
+    &--show-third {
+      transform: translateX(-66.6666666666%);
+    }
   }
 
-  &__toggle[id="quote-1"]:checked ~ &__slides-wrap &__slides  {
-    transform: translateX(0);
-  }
-
-  &__toggle[id="quote-2"]:checked ~ &__slides-wrap &__slides  {
-    transform: translateX(-33.3333333333%);
-  }
-
-  &__toggle[id="quote-3"]:checked ~ &__slides-wrap &__slides  {
-    transform: translateX(-66.6666666666%);
-  }
+  // &__toggle[id="quote-1"]:checked ~ &__slides-wrap &__slides  {
+  //   transform: translateX(0);
+  // }
+  //
+  // &__toggle[id="quote-2"]:checked ~ &__slides-wrap &__slides  {
+  //   transform: translateX(-33.3333333333%);
+  // }
+  //
+  // &__toggle[id="quote-3"]:checked ~ &__slides-wrap &__slides  {
+  //   transform: translateX(-66.6666666666%);
+  // }
 
   &__slide {
     width: 33.3333333333%;
   }
 
-  &__icon-left,
-  &__icon-right {
+  &__btn-prev,
+  &__btn-next {
     display: none;
-    transition: fill .15s;
-
-    &:hover {
-      fill: fade(@blue-21, 60%);
-    }
-    &:active {
-      fill: fade(@blue-21, 10%);
-    }
+    width: 22px;
+    height: 41px;
+    padding: 0;
+    background-color: transparent;
+    border: none;
+    outline: none;
 
     @media(min-width: 1200px) {
       position: absolute;
       display: block;
       top: 213px;
-      width: 22px;
-      height: 41px;
-      fill: fade(@blue-21, 30%);
-      cursor: pointer;
     }
   }
 
-  &__icon-left {
+  &__btn-prev {
     left: 10px;
+
+    &--disabled {
+      opacity: .3;
+    }
   }
 
-  &__icon-right {
+  &__btn-next {
     right: 10px;
+
+    &--disabled {
+      opacity: .3;
+    }
+  }
+
+  &__icon-left,
+  &__icon-right {
+    width: 22px;
+    height: 41px;
+    fill: fade(@blue-21, 30%);
+    transition: fill .15s;
+
+    [class^="reviews-slider__btn"]:hover & {
+      fill: fade(@blue-21, 60%);
+    }
+    [class^="reviews-slider__btn"]:active & {
+      fill: fade(@blue-21, 10%);
+    }
+
+    [class*=disabled]:hover &,
+    [class*=disabled]:active & {
+      fill: fade(@blue-21, 30%);
+    }
   }
 }
