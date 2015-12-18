@@ -165,10 +165,21 @@
   var template = document.querySelector("#companion-template").innerHTML;
   var companionsAmount = document.querySelector("[name=companions-amount]");
 
-  var btnDelete = document.querySelectorAll(".btn--companions");
+  var btnsRemove = document.querySelectorAll(".btn--companions");
 
   changeDuration(groupTime, "10");
   changeAmount(groupCompanions, "2");
+
+  for (var k = 0; k < btnsRemove.lenght; k++) {
+    var btn = btnsRemove[k];
+    btn.addEventListener("click", function(event) {
+      event.preventDefault;
+      console.log( "По клику ничего не происходит" );
+
+      var parent = btn.parentNode;
+      console.log( parent );
+    });
+  };
 
   function changeDuration(group, initVal) {
     var minus = group.querySelector(".btn--minus");
@@ -203,7 +214,8 @@
         amount.value--;
       };
 
-      removeItem();
+      var item = document.querySelector(".companions__item:last-child");
+      list.removeChild(item);
     });
 
     plus.addEventListener("click", function(event) {
@@ -215,24 +227,11 @@
       li.innerHTML = Mustache.render(template, {
         "number-$": companionsAmount.value,
         "companion-name-$": "companion-name-" + companionsAmount.value,
-        "companion-nikname-$": "companion-nikname-" + companionsAmount.value
+        "companion-niсkname-$": "companion-niсkname-" + companionsAmount.value
       });;
 
       list.appendChild(li);
-
-      for (var i = 0; i < btnDelete.lenght; i++) {
-        var btn = btnDelete[i];
-        btn.addEventListener("click", function(event) {
-          event.preventDefault;
-          removeItem();
-        });
-      };
     });
-  };
-
-  function removeItem() {
-    var item = document.querySelector(".companions__item:last-child");
-    list.removeChild(item);
   };
 })();
 
@@ -352,7 +351,7 @@
 
 
 // google map
-// TO DO:
+// TODO:
 // 1) убрать текст внизу
 // 2) куда исчез адрес? исправить
 
