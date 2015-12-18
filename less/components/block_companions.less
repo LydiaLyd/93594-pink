@@ -101,6 +101,7 @@
     cursor: pointer;
 
     @media(min-width: 700px) {
+      height: 33px;
       padding-left: 20px;
     }
 
@@ -150,8 +151,8 @@
       }
     }
 
-    &[name="companion-name"],
-    &[name="companion-nickname"] {
+    &[name^="companion-name"],
+    &[name^="companion-nickname"] {
       padding: 18px 20px;
     }
 

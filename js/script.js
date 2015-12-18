@@ -1,17 +1,3 @@
-// Форма: доработка числовых полей
-
-(function() {
-  if (!document.querySelector("[name=companions-amount]")) return;
-
-  var input = document.querySelector("[name=companions-amount]");
-
-  input.addEventListener("change", function(event) {
-    console.log( "test" );
-  });
-})();
-
-
-
 // navbar
 
 (function() {
@@ -147,18 +133,44 @@
 
 
 
-// minus / plus buttonss
+// Форма: оживляем поля с датой
 
 (function() {
-  if (!document.querySelector(".time__btns-group") || !document.querySelector(".companions__btns-group")) return;
+  if (!document.querySelector(".time")) return;
+
+  moment().format();
+
+  var inputDeparture = document.querySelector("[name=departure-date]");
+  var inputDuration = document.querySelector("[name=duration]");
+  var inputReturn = document.querySelector("[name=return-date]");
+
+  var departure = moment(inputDeparture.value);
+  console.log( departure );
+  var duration = +(inputDuration.value); // почему 0????????????????????????????
+  console.log( duration );
+})();
+
+
+
+// minus / plus buttons
+
+(function() {
+  if (!document.querySelector(".time__btns-group")) return;
 
   var groupTime = document.querySelector(".time__btns-group");
   var groupCompanions = document.querySelector(".companions__btns-group");
 
-  foo(groupTime, "10");
-  foo(groupCompanions, "2");
+  var list = document.querySelector(".companions__list");
+  var item = document.querySelector(".companions__item");
+  var template = document.querySelector("#companion-template").innerHTML;
+  var companionsAmount = document.querySelector("[name=companions-amount]");
 
-  function foo(group, initVal) {
+  var btnDelete = document.querySelectorAll(".btn--companions");
+
+  changeDuration(groupTime, "10");
+  changeAmount(groupCompanions, "2");
+
+  function changeDuration(group, initVal) {
     var minus = group.querySelector(".btn--minus");
     var plus = group.querySelector(".btn--plus");
     var amount = group.querySelector("[type=number]");
@@ -176,6 +188,51 @@
       event.preventDefault();
       amount.value++;
     });
+  };
+
+  function changeAmount(group, initVal) {
+    var minus = group.querySelector(".btn--minus");
+    var plus = group.querySelector(".btn--plus");
+    var amount = group.querySelector("[type=number]");
+
+    amount.value = initVal;
+
+    minus.addEventListener("click", function(event) {
+      event.preventDefault();
+      if (amount.value > 0) {
+        amount.value--;
+      };
+
+      removeItem();
+    });
+
+    plus.addEventListener("click", function(event) {
+      event.preventDefault();
+      amount.value++;
+
+      var li = document.createElement("li");
+      li.classList.add("companions__item");
+      li.innerHTML = Mustache.render(template, {
+        "number-$": companionsAmount.value,
+        "companion-name-$": "companion-name-" + companionsAmount.value,
+        "companion-nikname-$": "companion-nikname-" + companionsAmount.value
+      });;
+
+      list.appendChild(li);
+
+      for (var i = 0; i < btnDelete.lenght; i++) {
+        var btn = btnDelete[i];
+        btn.addEventListener("click", function(event) {
+          event.preventDefault;
+          removeItem();
+        });
+      };
+    });
+  };
+
+  function removeItem() {
+    var item = document.querySelector(".companions__item:last-child");
+    list.removeChild(item);
   };
 })();
 

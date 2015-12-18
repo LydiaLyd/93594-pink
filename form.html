@@ -298,11 +298,11 @@
               <div class="companions__group">
                 <p class="companions__field-wrap  companions__field-wrap--name">
                   <label class="companions__label" for="companion-name-1">Имя: *</label>
-                  <input class="companions__field" name="companion-name" id="companion-name-1" type="text" placeholder="Введите ваше имя" required>
+                  <input class="companions__field" name="companion-name-1" id="companion-name-1" type="text" placeholder="Введите ваше имя" required>
                 </p>
                 <p class="companions__field-wrap  companions__field-wrap--name">
                   <label class="companions__label" for="companion-nickname-1">Прозвище:</label>
-                  <input class="companions__field" name="companion-nickname" id="companion-nickname-1" type="text" placeholder="Ну как же без этого!">
+                  <input class="companions__field" name="companion-nickname-1" id="companion-nickname-1" type="text" placeholder="Ну как же без этого!">
                 </p>
               </div>
               <button class="btn  btn--companions" type="button">Удалить</button>
@@ -316,11 +316,11 @@
               <div class="companions__group">
                 <p class="companions__field-wrap  companions__field-wrap--name">
                   <label class="companions__label" for="companion-name-2">Имя: *</label>
-                  <input class="companions__field" name="companion-name" id="companion-name-2" type="text" placeholder="Введите ваше имя" required>
+                  <input class="companions__field" name="companion-name-2" id="companion-name-2" type="text" placeholder="Введите ваше имя" required>
                 </p>
                 <p class="companions__field-wrap  companions__field-wrap--name">
                   <label class="companions__label" for="companion-nickname-2">Прозвище:</label>
-                  <input class="companions__field" name="companion-nickname" id="companion-nickname-2" type="text" placeholder="Ну как же без этого!">
+                  <input class="companions__field" name="companion-nickname-2" id="companion-nickname-2" type="text" placeholder="Ну как же без этого!">
                 </p>
               </div>
               <button class="btn  btn--companions" type="button">Удалить</button>
@@ -490,13 +490,35 @@
 
 
 
+    <script id="companion-template" type="text/html">
+      <div class="companions__number">
+        <div class="companions__symbol">№</div>
+        <div class="companions__value">{{number-$}}</div>
+      </div>
+      <div class="companions__group">
+        <p class="companions__field-wrap  companions__field-wrap--name">
+          <label class="companions__label" for="{{companion-name-$}}">Имя: *</label>
+          <input class="companions__field" name="{{companion-name-$}}" id="{{companion-name-$}}" type="text" placeholder="Введите ваше имя" required>
+        </p>
+        <p class="companions__field-wrap  companions__field-wrap--name">
+          <label class="companions__label" for="{{companion-nikname-$}}">Прозвище:</label>
+          <input class="companions__field" name="{{companion-nikname-$}}" id="{{companion-nikname-$}}" type="text" placeholder="Ну как же без этого!">
+        </p>
+      </div>
+      <button class="btn  btn--companions" type="button">Удалить</button>
+    </script>
+
     <script id="image-template" type="text/html">
       <img class="photos__photo" src="{{image}}" width="68" height="67" alt="{{name}}" title="{{name}}">
       <button class="btn  btn--cross" type="button"><span class="btn__text-hidden">Удалить</span></button>
       <span class="photos__name">{{name}}</span>
     </script>
+
+
+
     <script src="js/vendors/mustache-2.2.1.min.js"></script>
-    <script src="js/script.min.js"></script>
+    <script src="js/vendors/moment-2.10.6.min.js"></script>
+    <script src="js/script.js"></script>
 
 
 
