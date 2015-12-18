@@ -1,3 +1,17 @@
+// Форма: доработка числовых полей
+
+(function() {
+  if (!document.querySelector("[name=companions-amount]")) return;
+
+  var input = document.querySelector("[name=companions-amount]");
+
+  input.addEventListener("change", function(event) {
+    console.log( "test" );
+  });
+})();
+
+
+
 // navbar
 
 (function() {
@@ -133,35 +147,35 @@
 
 
 
-// minus / plus btns
+// minus / plus buttonss
 
 (function() {
-  if (document.querySelector(".time__btns-group") || document.querySelector(".companions__btns-group")) {
-    var groupTime = document.querySelector(".time__btns-group");
-    var groupCompanions = document.querySelector(".companions__btns-group");
+  if (!document.querySelector(".time__btns-group") || !document.querySelector(".companions__btns-group")) return;
 
-    foo(groupTime, "10");
-    foo(groupCompanions, "2");
+  var groupTime = document.querySelector(".time__btns-group");
+  var groupCompanions = document.querySelector(".companions__btns-group");
 
-    function foo(group, initVal) {
-      var minus = group.querySelector(".btn--minus");
-      var plus = group.querySelector(".btn--plus");
-      var amount = group.querySelector("[type=number]");
+  foo(groupTime, "10");
+  foo(groupCompanions, "2");
 
-      amount.value = initVal;
+  function foo(group, initVal) {
+    var minus = group.querySelector(".btn--minus");
+    var plus = group.querySelector(".btn--plus");
+    var amount = group.querySelector("[type=number]");
 
-      minus.addEventListener("click", function(event) {
-        event.preventDefault();
-        if (amount.value > 0) {
-          amount.value--;
-        };
-      });
+    amount.value = initVal;
 
-      plus.addEventListener("click", function(event) {
-        event.preventDefault();
-        amount.value++;
-      })
-    };
+    minus.addEventListener("click", function(event) {
+      event.preventDefault();
+      if (amount.value > 0) {
+        amount.value--;
+      };
+    });
+
+    plus.addEventListener("click", function(event) {
+      event.preventDefault();
+      amount.value++;
+    });
   };
 })();
 
@@ -170,58 +184,28 @@
 // Form sending with ajax
 
 (function() {
-  if (!("FormData" in window) || !document.querySelector(".story-form form")) {
-    return;
-  }
+  if (!("FormData" in window) || !document.querySelector(".story-form form")) return;
 
   var form = document.querySelector(".story-form form");
+  var area = document.querySelector(".photos__list");
 
-  var popupSuccess = document.querySelector(".popup-success");
-  var popupFailure = document.querySelector(".popup-failure");
-  var btnClosePopup = document.querySelectorAll(".btn--popup");
+  var template = document.querySelector("#image-template").innerHTML;
+  var queue = [];
 
   form.addEventListener("submit", function(event) {
     event.preventDefault();
 
     var data = new FormData(form);
 
+    queue.forEach(function(element) {
+      data.append("images", element.file);
+    });
+
     request(data, function(response) {
       console.log(response);
       popupSuccess.classList.add("popup-success--show")
     });
   });
-
-
-
-  if ("FileReader" in window) {
-    var area = document.querySelector(".photos__list");
-
-    form.querySelector("#upload-photos").addEventListener("change", function() {
-      var files = this.files;
-
-      for (var i = 0; i < files.length; i++) {
-        preview(files[i]);
-      }
-    });
-  }
-
-
-  for (var j = 0; j < btnClosePopup.length; j++) {
-    var btnClose = btnClosePopup[j];
-
-    btnClose.addEventListener("click", function(event) {
-      event.preventDefault();
-
-      if (popupSuccess.classList.contains("popup-success--show")) {
-        popupSuccess.classList.remove("popup-success--show")
-      };
-      if (popupFailure.classList.contains("popup-failure--show")) {
-        popupFailure.classList.remove("popup-failure--show")
-      };
-    })
-  };
-
-
 
   function request(data, fn) {
     var xhr = new XMLHttpRequest();
@@ -238,35 +222,73 @@
     xhr.send(data);
   };
 
-  function preview(file) {
-    if (file.type.match(/image.*/)) {
-      var reader = new FileReader();
+  if ("FileReader" in window) {
+    form.querySelector("#upload-photos").addEventListener("change", function() {
+      var files = this.files;
+      for (var i = 0; i < files.length; i++) {
+        preview(files[i]);
+      };
+      this.value = "";
+    });
 
-      reader.addEventListener("load", function(event) {
-        var imgBox = document.createElement("li");
-        var img = document.createElement("img");
-        var imgName = document.createElement("span");
-        var btnDelete = document.createElement("button");
+    function preview(file) {
+      if (file.type.match(/image.*/)) {
+        var reader = new FileReader();
 
-        imgBox.classList.add("photos__item");
+        reader.addEventListener("load", function(event) {
+          var html = Mustache.render(template, {
+            "image": event.target.result,
+            "name": file.name
+          });
 
-        img.classList.add("photos__photo");
-        img.src = event.target.result;
-        img.alt = file.name;
+          var li = document.createElement("li");
+          li.classList.add("photos__item");
+          li.innerHTML = html;
 
-        imgName.innerHTML = file.name;
-        imgName.classList.add("photos__name");
+          area.appendChild(li);
 
-        btnDelete.classList.add("btn");
-        btnDelete.classList.add("btn--cross");
+          li.querySelector(".btn--cross").addEventListener("click", function(event) {
+            event.preventDefault();
+            removePreview(li);
+          });
 
-        area.appendChild(imgBox).appendChild(img);
-        imgBox.appendChild(imgName);
-        imgBox.appendChild(btnDelete);
+          // file - картинка в base64-кодировке (?), li нужен для удаления
+          queue.push({
+            "file": file,
+            "li": li
+          });
+        });
+
+        reader.readAsDataURL(file);
+      }
+    };
+
+    function removePreview(li) {
+      queue = queue.filter(function(element) {
+        return element.li != li;
       });
 
-      reader.readAsDataURL(file);
-    }
+      li.parentNode.removeChild(li);
+    };
+  }
+
+  var popupSuccess = document.querySelector(".popup-success");
+  var popupFailure = document.querySelector(".popup-failure");
+  var btnClosePopup = document.querySelectorAll(".btn--popup");
+
+  for (var j = 0; j < btnClosePopup.length; j++) {
+    var btnClose = btnClosePopup[j];
+
+    btnClose.addEventListener("click", function(event) {
+      event.preventDefault();
+
+      if (popupSuccess.classList.contains("popup-success--show")) {
+        popupSuccess.classList.remove("popup-success--show")
+      };
+      if (popupFailure.classList.contains("popup-failure--show")) {
+        popupFailure.classList.remove("popup-failure--show")
+      };
+    })
   };
 })();
 

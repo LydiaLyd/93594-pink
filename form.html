@@ -361,50 +361,50 @@
         <fieldset class="photos">
           <p class="photos__heading">Ваши фотографии из поездки *</p>
           <div class="photos__field-wrap">
-            <input class="btn  btn--upload-hidden" name="upload-photos" id="upload-photos" type="file" multiple accept="image/*" required>
+            <input class="btn  btn--upload-hidden" name="upload-photos" id="upload-photos" type="file" multiple accept="image/*">
             <label class="btn  btn--white  btn--upload" for="upload-photos">Загрузить фото</label>
           </div>
           <ul class="photos__list">
-            <li class="photos__item">
-              <img class="photos__photo" src="img/img_form-img-1.jpg" data-name="img-1.jpg" width="67" height="68" alt="Photo">
+            <!-- <li class="photos__item">
+              <img class="photos__photo" src="img/img_form-img-1.jpg"  width="67" height="68" alt="Photo">
               <span class="photos__name">img-1.jpg</span>
-              <button class="btn  btn--cross" type="button"><span class="btn__text-hidden">Delete</span></button>
+              <button class="btn  btn--cross" type="button"><span class="btn__text-hidden">Удалить</span></button>
             </li>
             <li class="photos__item">
-              <img class="photos__photo" src="img/img_form-img-2.jpg" data-name="img-2.jpg" width="68" height="68" alt="Photo">
-              <button class="btn  btn--cross" type="button"><span class="btn__text-hidden">Delete</span></button>
+              <img class="photos__photo" src="img/img_form-img-2.jpg" width="68" height="68" alt="Photo">
+              <button class="btn  btn--cross" type="button"><span class="btn__text-hidden">Удалить</span></button>
               <span class="photos__name">img-2.jpg</span>
             </li>
             <li class="photos__item">
-              <img class="photos__photo" src="img/img_form-img-3.jpg" data-name="img-3.jpg" width="67" height="68" alt="Photo">
-              <button class="btn  btn--cross" type="button"><span class="btn__text-hidden">Delete</span></button>
+              <img class="photos__photo" src="img/img_form-img-3.jpg" width="67" height="68" alt="Photo">
+              <button class="btn  btn--cross" type="button"><span class="btn__text-hidden">Удалить</span></button>
               <span class="photos__name">img-3.jpg</span>
             </li>
             <li class="photos__item">
-              <img class="photos__photo" src="img/img_form-img-4.jpg" data-name="img-4.jpg" width="67" height="67" alt="Photo">
-              <button class="btn  btn--cross" type="button"><span class="btn__text-hidden">Delete</span></button>
+              <img class="photos__photo" src="img/img_form-img-4.jpg" width="67" height="67" alt="Photo">
+              <button class="btn  btn--cross" type="button"><span class="btn__text-hidden">Удалить</span></button>
               <span class="photos__name">img-4.jpg</span>
             </li>
             <li class="photos__item">
-              <img class="photos__photo" src="img/img_form-img-5.jpg" data-name="img-5.jpg" width="68" height="67" alt="Photo">
-              <button class="btn  btn--cross" type="button"><span class="btn__text-hidden">Delete</span></button>
+              <img class="photos__photo" src="img/img_form-img-5.jpg" width="68" height="67" alt="Photo">
+              <button class="btn  btn--cross" type="button"><span class="btn__text-hidden">Удалить</span></button>
               <span class="photos__name">img-5.jpg</span>
             </li>
             <li class="photos__item">
-              <img class="photos__photo" src="img/img_form-img-6.jpg" data-name="img-6.jpg" width="67" height="67" alt="Photo">
-              <button class="btn  btn--cross" type="button"><span class="btn__text-hidden">Delete</span></button>
+              <img class="photos__photo" src="img/img_form-img-6.jpg" width="67" height="67" alt="Photo">
+              <button class="btn  btn--cross" type="button"><span class="btn__text-hidden">Удалить</span></button>
               <span class="photos__name">img-6.jpg</span>
             </li>
             <li class="photos__item">
-              <img class="photos__photo" src="img/img_form-img-7.jpg" data-name="img-7.jpg" width="68" height="67" alt="Photo">
-              <button class="btn  btn--cross" type="button"><span class="btn__text-hidden">Delete</span></button>
+              <img class="photos__photo" src="img/img_form-img-7.jpg" width="68" height="67" alt="Photo">
+              <button class="btn  btn--cross" type="button"><span class="btn__text-hidden">Удалить</span></button>
               <span class="photos__name">img-7.jpg</span>
             </li>
             <li class="photos__item">
-              <img class="photos__photo" src="img/img_form-img-8.jpg" data-name="img-8.jpg" width="68" height="67" alt="Photo">
-              <button class="btn  btn--cross" type="button"><span class="btn__text-hidden">Delete</span></button>
+              <img class="photos__photo" src="img/img_form-img-8.jpg" width="68" height="67" alt="Photo">
+              <button class="btn  btn--cross" type="button"><span class="btn__text-hidden">Удалить</span></button>
               <span class="photos__name">img-8.jpg</span>
-            </li>
+            </li> -->
           </ul>
         </fieldset>
 
@@ -490,6 +490,12 @@
 
 
 
+    <script id="image-template" type="text/html">
+      <img class="photos__photo" src="{{image}}" width="68" height="67" alt="{{name}}" title="{{name}}">
+      <button class="btn  btn--cross" type="button"><span class="btn__text-hidden">Удалить</span></button>
+      <span class="photos__name">{{name}}</span>
+    </script>
+    <script src="js/vendors/mustache-2.2.1.min.js"></script>
     <script src="js/script.min.js"></script>
 
 
