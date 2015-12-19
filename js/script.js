@@ -136,7 +136,9 @@
 // Форма: оживляем поля с датой
 
 (function() {
-  if (!document.querySelector(".time")) return;
+  if (!document.querySelector(".time")) {
+    return
+  };
 
   moment().format();
 
@@ -145,9 +147,9 @@
   var inputReturn = document.querySelector("[name=return-date]");
 
   var departure = moment(inputDeparture.value);
-  console.log( departure );
+  // console.log( departure );
   var duration = +(inputDuration.value); // почему 0????????????????????????????
-  console.log( duration );
+  // console.log( duration );
 })();
 
 
@@ -155,30 +157,42 @@
 // minus / plus buttons
 
 (function() {
-  if (!document.querySelector(".time__btns-group")) return;
+  if (!document.querySelector(".time__btns-group")) {
+    return
+  };
 
   var groupTime = document.querySelector(".time__btns-group");
   var groupCompanions = document.querySelector(".companions__btns-group");
 
   var list = document.querySelector(".companions__list");
-  var item = document.querySelector(".companions__item");
   var template = document.querySelector("#companion-template").innerHTML;
   var companionsAmount = document.querySelector("[name=companions-amount]");
 
-  var btnsRemove = document.querySelectorAll(".btn--companions");
+  var btnRemove = document.querySelectorAll(".btn--companions");
 
   changeDuration(groupTime, "10");
   changeAmount(groupCompanions, "2");
 
-  for (var k = 0; k < btnsRemove.lenght; k++) {
-    var btn = btnsRemove[k];
+  addFuncRemove(btnRemove[0]);
+  addFuncRemove(btnRemove[1]);
+
+  function addFuncRemove(btn) {
     btn.addEventListener("click", function(event) {
       event.preventDefault;
-      console.log( "По клику ничего не происходит" );
-
-      var parent = btn.parentNode;
-      console.log( parent );
+      companionsAmount.value--;
+      var li = btn.parentNode;
+      var list = li.parentNode;
+      list.removeChild(li);
+      changeNum();
     });
+  };
+
+  function changeNum() {
+    var numbers = document.querySelectorAll(".companions__value");
+    for (var i = 0; i < numbers.length; i++) {
+      var num = numbers[i];
+      num.innerHTML = i + 1;
+    };
   };
 
   function changeDuration(group, initVal) {
@@ -231,6 +245,15 @@
       });;
 
       list.appendChild(li);
+
+      var btnRemove = li.querySelector(".btn--companions");
+      btnRemove.addEventListener("click", function(event) {
+        event.preventDefault;
+        var list = li.parentNode;
+        list.removeChild(li);
+        amount.value--;
+        changeNum();
+      });
     });
   };
 })();
