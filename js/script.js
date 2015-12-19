@@ -182,6 +182,7 @@
     var amount = group.querySelector("[type=number]");
 
     amount.value = initVal;
+    setDate();
 
     minus.addEventListener("click", function(event) {
       event.preventDefault();
@@ -241,13 +242,12 @@
   };
 
   function setDate() {
-    var dateDeparture = document.querySelector("[name=departure-date]").value;
-    var dateReturn = document.querySelector("[name=return-date]").value;
+    var inputDeparture = document.querySelector("[name=departure-date]");
+    var inputReturn = document.querySelector("[name=return-date]");
     var duration = +document.querySelector("[name=duration]").value;
 
-    // оО почему дата возвращения не меняется?
-    dateReturn = moment(dateDeparture).add(duration, "days");
-    console.log( "Return date: " + dateReturn );
+    dateReturn = moment(inputDeparture.value).add(duration, "days").format("YYYY-MM-DD");
+    inputReturn.value = dateReturn;
   };
 })();
 
