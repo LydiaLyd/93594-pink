@@ -133,33 +133,14 @@
 
 
 
-// Форма: оживляем поля с датой
-
-(function() {
-  if (!document.querySelector(".time")) {
-    return
-  };
-
-  moment().format();
-
-  var inputDeparture = document.querySelector("[name=departure-date]");
-  var inputDuration = document.querySelector("[name=duration]");
-  var inputReturn = document.querySelector("[name=return-date]");
-
-  var departure = moment(inputDeparture.value);
-  // console.log( departure );
-  var duration = +(inputDuration.value); // почему 0????????????????????????????
-  // console.log( duration );
-})();
-
-
-
 // minus / plus buttons
 
 (function() {
   if (!document.querySelector(".time__btns-group")) {
     return
   };
+
+  moment().format();
 
   var groupTime = document.querySelector(".time__btns-group");
   var groupCompanions = document.querySelector(".companions__btns-group");
@@ -206,12 +187,14 @@
       event.preventDefault();
       if (amount.value > 0) {
         amount.value--;
+        setDate()
       };
     });
 
     plus.addEventListener("click", function(event) {
       event.preventDefault();
       amount.value++;
+      setDate()
     });
   };
 
@@ -255,6 +238,16 @@
         changeNum();
       });
     });
+  };
+
+  function setDate() {
+    var dateDeparture = document.querySelector("[name=departure-date]").value;
+    var dateReturn = document.querySelector("[name=return-date]").value;
+    var duration = +document.querySelector("[name=duration]").value;
+
+    // оО почему дата возвращения не меняется?
+    dateReturn = moment(dateDeparture).add(duration, "days");
+    console.log( "Return date: " + dateReturn );
   };
 })();
 
