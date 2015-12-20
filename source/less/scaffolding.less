@@ -1,0 +1,33 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+body {
+  min-width: 320px;
+  font-size: @text_font-size--xs;
+  line-height: @text_line-height--xs;
+  font-family: @text_font-family;
+  color: @text_color;
+  background-color: #fff;
+
+  @media(min-width: 700px) {
+    font-size: @text_font-size--sm;
+    line-height: @text_line-height--sm;
+  }
+}
+
+a {
+  text-decoration: none;
+  color: @link_color;
+  transition: color .15s;
+
+  &:hover {
+    text-decoration: underline;
+    color: @link_color--hover;
+  }
+
+  &:active {
+    text-decoration: none;
+    color: @link_color--active;
+  }
+}

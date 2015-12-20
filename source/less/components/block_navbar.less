@@ -1,0 +1,177 @@
+.navbar {
+  position: fixed;
+  top: 0;
+  z-index: @zi_navbar;
+  width: 100%;
+
+  @media(min-width: 1200px) {
+    position: absolute;
+    background-color: fade(@blue-15, 70%);
+  }
+
+  &__header {
+    position: relative;
+    z-index: @zi_navbar-header;
+    background-color: fade(@blue-15, 70%);
+    border-bottom: 1px solid transparent;
+    transition:
+      background-color .25s,
+      border-color .15s;
+
+    // don't know how to name it better
+    &--active {
+      background-color: @nav-link_bg--xs;
+      border-bottom: 1px solid #000;
+    }
+
+    @media(min-width: 1200px) {
+      display: none;
+    }
+  }
+
+  &__wrap {
+    display: flex;
+    justify-content: space-between;
+
+    @media(min-width: 700px) {
+      align-items: center;
+      width: 88.57142857142857%;
+      .center;
+      padding-left: 0;
+      padding-right: 0;
+    }
+  }
+
+  &__toggle {
+    position: relative;
+    width: 90px;
+    height: 66px;
+    padding: 20px 20px;
+    border: none;
+    outline: none;
+    background-color: transparent;
+
+    @media(min-width: 700px) {
+      width: 50px;
+      padding-left: 0;
+      padding-right: 0;
+    }
+  }
+
+  &__lines {
+    position: absolute;
+    top: 31px;
+    right: 17px;
+    width: 50px;
+    height: 4px;
+    background-color: #fff;
+    transition:
+      width .15s,
+      background-color .15s;
+
+    @media(min-width: 700px) {
+      top: 32px;
+      right: 0;
+    }
+
+    &::before, &::after {
+      content: '';
+      position: absolute;
+      right: 0;
+      width: 100%;
+      height: 4px;
+      background-color: #fff;
+      transition:
+        left .25s,
+        width .25s,
+        background-color .25s,
+        transform .25s;
+    }
+
+    &::before {
+      top: -10px;
+      transform-origin: right top;
+    }
+
+    &::after {
+      top: 10px;
+      transform-origin: right bottom;
+    }
+
+    .navbar__toggle:hover &,
+    .navbar__toggle:hover &::before,
+    .navbar__toggle:hover &::after {
+      background-color: @pink-49;
+    }
+
+    .navbar__toggle:active &,
+    .navbar__toggle:active &::before,
+    .navbar__toggle:active &::after {
+      background-color: fade(@pink-49, 30%);
+    }
+
+    // crossing lines
+    &--cross {
+      width: 23px;
+      background-color: transparent;
+
+      &::before, &::after {
+        width: 28px;
+      }
+
+      &::before {
+        top: -9px;
+        transform: rotate(-45deg);
+      }
+
+      &::after {
+        top: 9px;
+        transform: rotate(45deg);
+      }
+
+      .navbar__toggle:hover &,
+      .navbar__toggle:active & {
+        background-color: transparent;
+      }
+
+      .navbar__toggle:hover &::before,
+      .navbar__toggle:hover &::after {
+        background-color: @pink-49;
+      }
+
+      .navbar__toggle:active &::before,
+      .navbar__toggle:active &::after {
+        background-color: fade(@pink-49, 30%);
+      }
+    }
+  }
+
+  &__text-hidden {
+    display: none;
+  }
+
+  &__nav {
+    position: absolute;
+    width: 100%;
+    z-index: @zi_navbar-nav;
+    transform: translateY(-1000px);
+    transition: transform 0s;
+
+    &--drop-down {
+      transform: translateY(0);
+      transition: transform .45s ease-out;
+    }
+
+    @media(min-width: 1200px) {
+      position: static;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 960px;
+      .center;
+      padding-left: 10px;
+      padding-right: 10px;
+      transform: none;
+    }
+  }
+}
