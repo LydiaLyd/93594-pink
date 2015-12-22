@@ -1,7 +1,7 @@
 (function() {
   if (!document.querySelector(".time__btns-group")) {
     return
-  };
+  }
 
   moment().format();
 
@@ -29,15 +29,15 @@
       list.removeChild(li);
       changeNum();
     });
-  };
+  }
 
   function changeNum() {
     var numbers = document.querySelectorAll(".companions__value");
     for (var i = 0; i < numbers.length; i++) {
       var num = numbers[i];
       num.innerHTML = i + 1;
-    };
-  };
+    }
+  }
 
   function changeDuration(group, initVal) {
     var minus = group.querySelector(".btn--minus");
@@ -52,7 +52,7 @@
       if (amount.value > 0) {
         amount.value--;
         setDate()
-      };
+      }
     });
 
     plus.addEventListener("click", function(event) {
@@ -60,7 +60,7 @@
       amount.value++;
       setDate()
     });
-  };
+  }
 
   function changeAmount(group, initVal) {
     var minus = group.querySelector(".btn--minus");
@@ -89,7 +89,7 @@
         "number-$": companionsAmount.value,
         "companion-name-$": "companion-name-" + companionsAmount.value,
         "companion-niсkname-$": "companion-niсkname-" + companionsAmount.value
-      });;
+      });
 
       list.appendChild(li);
 
@@ -102,7 +102,7 @@
         changeNum();
       });
     });
-  };
+  }
 
   function setDate() {
     var inputDeparture = document.querySelector("[name=departure-date]");
@@ -111,5 +111,5 @@
 
     dateReturn = moment(inputDeparture.value).add(duration, "days").format("YYYY-MM-DD");
     inputReturn.value = dateReturn;
-  };
+  }
 })();

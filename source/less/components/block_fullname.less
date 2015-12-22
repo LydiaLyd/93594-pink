@@ -9,7 +9,7 @@
   }
 
   @media(min-width: 1200px) {
-
+    padding-bottom: 64px;
   }
 
   &__text {
@@ -66,6 +66,7 @@
 
   &__label {
     display: inline-block;
+    vertical-align: top;
     padding-left: 22px;
     padding-right: 22px;
     padding-bottom: 4px;
@@ -73,6 +74,14 @@
     text-transform: uppercase;
     color: @pink-49;
     cursor: pointer;
+
+    @media(min-width: 700px) {
+      padding-bottom: 6px;
+    }
+
+    @media(min-width: 1200px) {
+      padding-bottom: 4px;
+    }
   }
 
   &__field {

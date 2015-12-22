@@ -66,9 +66,14 @@ gulp.task("clean", function() {
     .pipe(clean());
 });
 
+/**
+ * Плагин htmlmin добавляет закрывающие теги </source>.
+ * Валидатор из-за этого ругается.
+ * Пришлось выключить.
+ */
 gulp.task("html", function() {
   return gulp.src("source/*.html")
-    .pipe(htmlmin({collapseWhitespace: true}))
+    // .pipe(htmlmin({collapseWhitespace: true}))
     .pipe(gulp.dest("build"));
 });
 
@@ -85,8 +90,8 @@ gulp.task("build", function(callback) {
 
 gulp.task("start", ["style", "script"], function() {
   livereload.listen();
-  gulp.watch("less/**/*.less", ["style"]);
-  gulp.watch("js/script.js", ["script"]);
+  gulp.watch("source/less/**/*.less", ["style"]);
+  gulp.watch("source/js/*.js", ["script"]);
 });
 
 

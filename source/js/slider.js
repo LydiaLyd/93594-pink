@@ -1,5 +1,7 @@
 (function() {
-  if (!document.querySelector(".reviews-slider")) return;
+  if (!document.querySelector(".reviews-slider")) {
+    return;
+  }
 
   var slider = document.querySelector(".reviews-slider");
 
@@ -47,13 +49,12 @@
       slides.classList.remove("reviews-slider__slides--show-first");
       slides.classList.add("reviews-slider__slides--show-second");
       prev.classList.remove("reviews-slider__btn-prev--disabled");
-    }
-    if (counter == 2) {
+    } else if (counter == 2) {
       slides.classList.remove("reviews-slider__slides--show-second");
       slides.classList.add("reviews-slider__slides--show-third");
       next.classList.add("reviews-slider__btn-next--disabled");
     }
-  })
+  });
 
   prev.addEventListener("click", function(event) {
     event.preventDefault();
@@ -65,8 +66,7 @@
       slides.classList.remove("reviews-slider__slides--show-second");
       slides.classList.add("reviews-slider__slides--show-first");
       prev.classList.add("reviews-slider__btn-prev--disabled");
-    }
-    if (counter == 1) {
+    } else if (counter == 1) {
       slides.classList.remove("reviews-slider__slides--show-third");
       slides.classList.add("reviews-slider__slides--show-second");
       next.classList.remove("reviews-slider__btn-next--disabled");

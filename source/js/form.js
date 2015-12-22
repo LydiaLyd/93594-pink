@@ -1,5 +1,7 @@
 (function() {
-  if (!("FormData" in window) || !document.querySelector(".story-form form")) return;
+  if (!("FormData" in window) || !document.querySelector(".story-form form")) {
+    return;
+  }
 
   var form = document.querySelector(".story-form form");
   var area = document.querySelector(".photos__list");
@@ -35,7 +37,7 @@
     });
 
     xhr.send(data);
-  };
+  }
 
   if ("FileReader" in window) {
     form.querySelector("#upload-photos").addEventListener("change", function() {
@@ -44,7 +46,7 @@
         preview(files[i]);
       };
       this.value = "";
-    });
+    })
 
     function preview(file) {
       if (file.type.match(/image.*/)) {
@@ -76,7 +78,7 @@
 
         reader.readAsDataURL(file);
       }
-    };
+    }
 
     function removePreview(li) {
       queue = queue.filter(function(element) {
@@ -84,7 +86,7 @@
       });
 
       li.parentNode.removeChild(li);
-    };
+    }
   }
 
   var popupSuccess = document.querySelector(".popup-success");
@@ -99,10 +101,9 @@
 
       if (popupSuccess.classList.contains("popup-success--show")) {
         popupSuccess.classList.remove("popup-success--show")
-      };
-      if (popupFailure.classList.contains("popup-failure--show")) {
+      } else if (popupFailure.classList.contains("popup-failure--show")) {
         popupFailure.classList.remove("popup-failure--show")
       };
     })
-  };
+  }
 })();
