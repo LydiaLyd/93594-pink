@@ -196,43 +196,29 @@
 }
 
 // Маска внизу блока в виде перевернутого треугольника
-.bg-triangle(@padding-bottom, @zi-triangle, @triangle-height, @first-color, @second-color) {
+.bg-triangle(@zi-triangle, @triangle-height, @first-color, @second-color) {
   position: relative;
-  padding-bottom: @padding-bottom;
 
-  &::before, &::after {
-    content: '';
+  &::after {
+    content: "";
     position: absolute;
-    bottom: 0;
+    top: 100%;
+    right: 0;
+    left: 0;
     z-index: @zi-triangle;
-    width: 50%;
     height: @triangle-height;
   }
 
-  &::before {
-    left: 0;
-    background:
-      transparent
-      linear-gradient(
-        to top right,
-        @first-color 0%,
-        @first-color 50%,
-        @second-color 50%,
-        @second-color 100%)
-        no-repeat;
-  }
-
   &::after {
-    right: 0;
-    background:
-      transparent
-      linear-gradient(
-        to bottom right,
-        @second-color 0%,
-        @second-color 50%,
-        @first-color 50%,
-        @first-color 100%)
-        no-repeat;
+    background-color: transparent;
+    background-image:
+      // этот градиент нужен для того, чтобы убрать микроскопический разрыв
+      linear-gradient(@second-color 0%, @second-color 100%),
+      linear-gradient(to top right, @first-color 0%, @first-color 50%, @second-color 50%, @second-color 100%),
+      linear-gradient(to bottom right, @second-color 0%, @second-color 50%, @first-color 50%, @first-color 100%);
+    background-size: 2px @triangle-height, 50% @triangle-height, 50% @triangle-height;
+    background-repeat: no-repeat, no-repeat, no-repeat;
+    background-position: center, top left, top right;
   }
 }
 

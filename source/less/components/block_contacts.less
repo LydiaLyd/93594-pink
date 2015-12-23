@@ -1,25 +1,28 @@
 .contacts {
   padding-top: 42px;
+  padding-bottom: 40px;
   text-align: center;
   background-color: #fff;
   // bottom mask
-  .bg-triangle(70px, @zi_contacts-triangle-mask, 30px, transparent, #fff);
+  .bg-triangle(@zi_contacts-triangle-mask, 30px, transparent, #fff);
 
   @media(min-width: 700px) {
     padding-top: 46px;
-    padding-bottom: 98px;
+    padding-bottom: 28px;
 
-    &::before, &::after {
+    &::after {
       height: 70px;
+      background-size: 2px 70px, 50% 70px, 50% 70px;
     }
   }
 
   @media(min-width: 1200px) {
     padding-top: 64px;
-    padding-bottom: 120px;
+    padding-bottom: 0;
 
       &::before, &::after {
         height: 120px;
+        background-size: 2px 120px, 50% 120px, 50% 120px;
       }
   }
 
