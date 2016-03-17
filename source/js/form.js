@@ -9,6 +9,8 @@
   var template = document.querySelector("#image-template").innerHTML;
   var queue = [];
 
+  var btnSubmit = form.querySelector(".btn--story-form");
+
   form.addEventListener("submit", function(event) {
     event.preventDefault();
 
@@ -30,8 +32,11 @@
 
     xhr.open("post", "https://echo.htmlacademy.ru/adaptive?" + time);
 
+    btnSubmit.classList.add("btn--in-progress");
+
     xhr.addEventListener("readystatechange", function() {
       if (xhr.readyState == 4) {
+        btnSubmit.classList.remove("btn--in-progress");
         fn(xhr.responseText);
       }
     });

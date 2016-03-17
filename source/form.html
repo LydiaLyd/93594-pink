@@ -4,8 +4,11 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>HTML Academy: Пинк</title>
-    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,700,600&amp;subset=latin,cyrillic' rel='stylesheet' type='text/css'>
     <link href="css/style.min.css" rel="stylesheet">
+    <script>
+      document.createElement( "picture" );
+    </script>
+    <script src="js/vendors/picturefill-3.0.1.min.js" async></script>
   </head>
   <body>
 
@@ -208,7 +211,6 @@
       <form action="https://echo.htmlacademy.ru/adaptive?" method="post" enctype="multipart/form-data">
         <fieldset class="fullname">
           <p class="fullname__text">Поделитесь своей историей и получите шанс выиграть ценный приз — 1000 миль на вашу бонусную карту! <span class="fullname__text-hidden-xs">Пожалуйста, заполните форму ниже:</span></p>
-          <!-- Добавила обертку, чтобы на широком вьюпорте поля выстраивались в 3 колонки -->
           <div class="fullname__group">
             <p class="fullname__field-wrap">
               <label class="fullname__label" for="firstname">Имя: *</label>
@@ -245,7 +247,6 @@
 
         <fieldset class="time">
           <p class="time__heading">Когда Вы путешествовали? *</p>
-          <!-- Добавила обертку, чтобы на широком вьюпорте поля выстраивались в 3 колонки -->
           <div class="time__group">
             <div class="time__field-wrap">
               <input class="time__field" name="departure-date" id="departure-date" type="date" value="2015-04-01" required>
@@ -364,48 +365,7 @@
             <input class="btn  btn--upload-hidden" name="upload-photos" id="upload-photos" type="file" multiple accept="image/*">
             <label class="btn  btn--white  btn--upload" for="upload-photos">Загрузить фото</label>
           </div>
-          <ul class="photos__list">
-            <!-- <li class="photos__item">
-              <img class="photos__photo" src="img/img_form-img-1.jpg"  width="67" height="68" alt="Photo">
-              <span class="photos__name">img-1.jpg</span>
-              <button class="btn  btn--cross" type="button"><span class="btn__text-hidden">Удалить</span></button>
-            </li>
-            <li class="photos__item">
-              <img class="photos__photo" src="img/img_form-img-2.jpg" width="68" height="68" alt="Photo">
-              <button class="btn  btn--cross" type="button"><span class="btn__text-hidden">Удалить</span></button>
-              <span class="photos__name">img-2.jpg</span>
-            </li>
-            <li class="photos__item">
-              <img class="photos__photo" src="img/img_form-img-3.jpg" width="67" height="68" alt="Photo">
-              <button class="btn  btn--cross" type="button"><span class="btn__text-hidden">Удалить</span></button>
-              <span class="photos__name">img-3.jpg</span>
-            </li>
-            <li class="photos__item">
-              <img class="photos__photo" src="img/img_form-img-4.jpg" width="67" height="67" alt="Photo">
-              <button class="btn  btn--cross" type="button"><span class="btn__text-hidden">Удалить</span></button>
-              <span class="photos__name">img-4.jpg</span>
-            </li>
-            <li class="photos__item">
-              <img class="photos__photo" src="img/img_form-img-5.jpg" width="68" height="67" alt="Photo">
-              <button class="btn  btn--cross" type="button"><span class="btn__text-hidden">Удалить</span></button>
-              <span class="photos__name">img-5.jpg</span>
-            </li>
-            <li class="photos__item">
-              <img class="photos__photo" src="img/img_form-img-6.jpg" width="67" height="67" alt="Photo">
-              <button class="btn  btn--cross" type="button"><span class="btn__text-hidden">Удалить</span></button>
-              <span class="photos__name">img-6.jpg</span>
-            </li>
-            <li class="photos__item">
-              <img class="photos__photo" src="img/img_form-img-7.jpg" width="68" height="67" alt="Photo">
-              <button class="btn  btn--cross" type="button"><span class="btn__text-hidden">Удалить</span></button>
-              <span class="photos__name">img-7.jpg</span>
-            </li>
-            <li class="photos__item">
-              <img class="photos__photo" src="img/img_form-img-8.jpg" width="68" height="67" alt="Photo">
-              <button class="btn  btn--cross" type="button"><span class="btn__text-hidden">Удалить</span></button>
-              <span class="photos__name">img-8.jpg</span>
-            </li> -->
-          </ul>
+          <ul class="photos__list"></ul>
         </fieldset>
 
         <div class="story-form__bottom">
